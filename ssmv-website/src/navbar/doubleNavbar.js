@@ -4,7 +4,11 @@ import { FaFacebookSquare , FaTwitterSquare, FaYoutubeSquare} from 'react-icons/
 import './navbar.css';
   
 const DoubleNavbar = () => {
-  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [isNavExpanded, setIsNavExpanded] = useState(true);
+
+  const handleclicked=()=>{
+    setIsNavExpanded(!isNavExpanded);
+  }
 
   return (
     <>
@@ -27,11 +31,11 @@ const DoubleNavbar = () => {
                 </ul>
             </div>
         </nav>
-        <nav className="navbar-bottom">
-            <div className="Logo">
+        <nav className='navbar-bottom'>
+            <div className='logo'>
                 <img src="" alt="loading"/>
             </div>
-            <div className="main-menu">
+            { isNavExpanded && <div className="main-menu">
                 <ul>
                     <li><a href="/#">About Us</a></li>
                     <li><a href="/#">Academics</a></li>
@@ -39,9 +43,9 @@ const DoubleNavbar = () => {
                     <li><a href="/#">Services</a></li>
                     <li><a href="/#">Media</a></li>
                 </ul>
-            </div>
+            </div> }   
             <div id='mobile'>
-                <i id='bars' onClick={() => { setIsNavExpanded(!isNavExpanded)}} className={isNavExpanded ? "fas fa-bars" : "fas fa-times"}></i>
+                <i id='bars' onClick={handleclicked} className={isNavExpanded ? "fas fa-times" : "fas fa-bars"}></i>
             </div>
       </nav>
     </>

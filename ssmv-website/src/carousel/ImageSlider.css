@@ -1,0 +1,28 @@
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #1B2E56;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 400;
+  }
+
+  .btn:hover {
+    background-color: rgb(255, 255, 255);
+    opacity: 50%;
+  }
+
+  @media screen and (max-width: 769px){
+    .image-slider{
+      max-width: 441px;
+      min-width: 156px;
+      max-height: 543px;
+    }
+  }
