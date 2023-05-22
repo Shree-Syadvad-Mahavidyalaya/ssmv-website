@@ -1,0 +1,66 @@
+
+.footer{
+    background-color: #2B2F3B;
+    display: flex;
+    color: white;
+    text-align: left;
+}
+.footer-about{
+    margin-left: 300px;
+    margin-right: 50px;
+    width: 25%;
+    text-align: left;
+}
+
+.support-column{
+    display: flex;
+}
+.Quick-links{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.Contact-Us{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.icon2{
+    margin-top: 10px;
+}
+.Social-media{
+    
+    color: white;
+    background-color: #2B2F3B;
+    display: flex;
+    width: 100%;
+    
+}
+@media (max-width:760px){
+    .footer{
+        width: 100%;
+        display: list-item;
+    }
+    .footer-about{
+        margin: 5px;
+        padding: 0px;
+        width: 100%;
+    }
+    .Contact-Us{
+        margin: 5px;
+    }
+    .Support{
+        margin: 5px;
+    }
+    .Quick-links{
+        margin: 5px;
+    }
+    h6{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .Social-media{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+}
