@@ -1,2 +1,1 @@
 # ssmv-website
-sneha agrawal
