@@ -2,6 +2,9 @@ import './App.css';
 import DoubleNavbar from './navbar/doubleNavbar';
 import ImageSlider from "./carousel/ImageSlider";
 import AboutUs from './section/about us/about us';
+import Foot from "../src/components/Foot"
+import News from "./components/News"
+import Courses from "../src/components/Courses.js"
 
 function App() {
   const slides = [
@@ -23,7 +26,15 @@ function App() {
       <div>
         <AboutUs/>
       </div>
+      <div>
+        <Courses/>
+      </div>
+      <div>
+        <News/>
+      </div>
+      <div><Foot/></div>
     </>
+    // <div className="App">
   );
 };
 
