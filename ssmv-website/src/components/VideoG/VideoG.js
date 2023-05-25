@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const VideoG = () => {
   return (
@@ -8,4 +8,4 @@ const VideoG = () => {
   )
 }
 
-export default VideoG
+export default VideoG;
