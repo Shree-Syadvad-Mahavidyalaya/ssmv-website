@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Shree-Syadvad-Mahavidyalaya/ssmv-website/static/css/main.f3ad43a9.css",
-    "main.js": "/Shree-Syadvad-Mahavidyalaya/ssmv-website/static/js/main.07db3626.js",
-    "static/js/787.18dd2cb2.chunk.js": "/Shree-Syadvad-Mahavidyalaya/ssmv-website/static/js/787.18dd2cb2.chunk.js",
-    "index.html": "/Shree-Syadvad-Mahavidyalaya/ssmv-website/index.html",
-    "main.f3ad43a9.css.map": "/Shree-Syadvad-Mahavidyalaya/ssmv-website/static/css/main.f3ad43a9.css.map",
-    "main.07db3626.js.map": "/Shree-Syadvad-Mahavidyalaya/ssmv-website/static/js/main.07db3626.js.map",
-    "787.18dd2cb2.chunk.js.map": "/Shree-Syadvad-Mahavidyalaya/ssmv-website/static/js/787.18dd2cb2.chunk.js.map"
+    "main.css": "/ssmv-website/static/css/main.f3ad43a9.css",
+    "main.js": "/ssmv-website/static/js/main.a409885d.js",
+    "static/js/787.18dd2cb2.chunk.js": "/ssmv-website/static/js/787.18dd2cb2.chunk.js",
+    "index.html": "/ssmv-website/index.html",
+    "main.f3ad43a9.css.map": "/ssmv-website/static/css/main.f3ad43a9.css.map",
+    "main.a409885d.js.map": "/ssmv-website/static/js/main.a409885d.js.map",
+    "787.18dd2cb2.chunk.js.map": "/ssmv-website/static/js/787.18dd2cb2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f3ad43a9.css",
-    "static/js/main.07db3626.js"
+    "static/js/main.a409885d.js"
   ]
 }
