@@ -52,11 +52,11 @@ const DoubleNavbar = () => {
                     
                     <li><a href="/#">Academics</a>
                         <ul>
-                                <li><a href= "/">BA (Shastri)</a>
-                                    <ul className='sub-submenu'>
-                                        <li><a href='/'>course1</a></li>
+                                <li><a href= "/">BA (Shastri) </a>
+                                    {/* <ul className='sub-submenu'>
+                                        <li><a href='/'>List of Courses</a></li>
                                         <li><a href='/'>course2</a></li>
-                                    </ul>
+                                    </ul> */}
                                 </li>
                                 <li><a href= "/">MA (Aacharya)</a></li>
                         </ul>

@@ -11,16 +11,16 @@
 }
 
 .Alumni-container{
-    margin-top: 10px;
+    /* margin-top: 10px;
     margin-left: 70px;
     margin-right: 70px;
-    padding: -18px 20px;
+    padding: -18px 20px; */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
     flex-direction: column;
     background: #1B2E56;
-    box-shadow: 20px 20px 50px 15px rgb(179, 171, 171);
+    /* box-shadow: 20px 20px 50px 15px rgb(179, 171, 171); */
 }
 
 .cont-alumni{

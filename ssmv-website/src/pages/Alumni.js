@@ -4,7 +4,9 @@ import AlumniSpotlight from '../components/carousel/AlumniSpotlight/AlumniSpotli
 import ImageSlider from "../components/carousel/ImageSlider/ImageSlider";
 import AboutAlumni from '../components/AboutAlumni/AboutAlumni';
 import Events from '../components/events/Events';
+import LatestSSMV from '../components/carousel/LatestSSMV/LatestSSMV';
 import VideoG from '../components/VideoG/VideoG';
+import Testimonials from '../components/carousel/Testimonials/Testimonials';
 
 const Alumni = () => {
   const slides = [
@@ -24,7 +26,9 @@ const Alumni = () => {
     <div><AboutAlumni/></div>
     <div><AlumniSpotlight/></div>
     <div><Events/></div>
+    <div><LatestSSMV/></div>
     <div><VideoG/></div>
+    <div><Testimonials/></div>
     </>
   )
 }
