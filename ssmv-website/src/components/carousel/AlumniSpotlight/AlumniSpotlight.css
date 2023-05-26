@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#alum{
+    margin: 20px 20px;
+    color: #45cb70;
+}
+
+.Alumni-container{
+    /* margin-top: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding: -18px 20px; */
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    flex-direction: column;
+    background: #1B2E56;
+    /* box-shadow: 20px 20px 50px 15px rgb(179, 171, 171); */
+}
+
+.cont-alumni{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 8px 20px;
+    background: #45cb70;
+    height: 250px;
+    width: 200px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.dot {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 4px solid #1B2E56;
+}
+
+.cont-alumni p{
+    color: #1B2E56;
+}
+
+.alumni-about{
+    margin: 20px 170px;
+    color: #ffffff;
+    font-weight: 300;
+    text-align: center;
+}
