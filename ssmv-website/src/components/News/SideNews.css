@@ -16,50 +16,54 @@
  
   .news{
       /* display: flex; */
-      width: 800px;
+      width: 50rem;
       /* height: 1200px; */
   }
   .main-news{
       width: 50%;
-      margin: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
   }
   .img{
     display: flex;
     text-align: left;
+    size: 2000rem;
   }
-  .main-text{
+  /* .main-text{
     text-align: left;
     padding-left:10px;
     padding-right: 100px;
-  }
+  } */
   .side-news{
-    margin-right: 160px;
+    margin-right: 250px;
     height: 555px;
+    margin-top: 10px;
+    height: 100%;
+    align-items: flex-start;
     
   }
   .text{
+    margin-top: 0px;
+    padding-top: 0px;
     text-align: left;
     margin-left: 10px;
+    /* margin-bottom: 10px; */
   }
   .cardlist{
     display: flex;
     margin: 10px;
+    width: 100%;
+    margin-bottom:45px ;
   }
-  ul{
-    margin-right: 150px;
+  .date{
+    text-align: justify;
+    margin: 0px;
   }
-  /* ::-webkit-scrollbar{
-    width: 1.5rem;
+  .desc{
+    width: 675px;
   }
-  ::-webkit-scrollbar-track{
-    background-color: black;
-  }
-  ::-webkit-scrollbar-thumb{
-    background-color: black;
-    border: 5px solid transparent;
-    border-radius: 9px;
-    background-clip: content-box;
-  } */
+  
   @media (max-width: 760px){
     .nav{
       /* position: relative; */
@@ -67,11 +71,36 @@
     }
     .newscomponent{
       width: 100%;
+      display: inline-block;
+    }
+    .NewsSection{
+      display: inline-block;
     }
     a{
       font-size: small;
     }
-    
+    .main-text{
+      width: 100%;
+    }
+    .text{
+      width: 100%;
+      font-size: xx-small;
+    }
+    .bold{
+      width: 360px;
+      height: 70px;
+    }
+    .side-news{
+      width: 100%;
+    }
+    .desc{
+      width: 245px;
+      height: 100px;
+    }
+    .cardlist{
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
     .main-news{
       text-align: center;
       width: auto;
