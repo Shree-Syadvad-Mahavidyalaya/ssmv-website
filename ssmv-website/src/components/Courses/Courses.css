@@ -4,7 +4,7 @@
   margin-left: 380px;
   margin-top: 50px;
 }
-h2{
+#courses-heading{
   color: white;
 }
 .course-img{
@@ -16,12 +16,13 @@ h2{
   padding-right: 50px;
   height: 100%;
 }
-btn{
+
+/* btn{
   border: 1px solid white;
   box-shadow: white;
   padding: 5px;
   margin-top: 50px;
-}
+} */
 
 .maindiv{
   background-color: #192E59;
@@ -41,9 +42,7 @@ btn{
   overflow: hidden;
   margin-top: 20px;
 }
-h2{
-  font-family: poppins;
-}
+
 .courses-card{
   border-radius: 8px;
   display: flex;
@@ -58,11 +57,11 @@ h2{
   margin-left: 200px;
   
 }
-.content{
+/* .content{
   text-align: left;
   padding: 50px;
   color: white;
-}
+} */
 
 
 
@@ -74,9 +73,9 @@ h2{
     margin-right: 0px;
     width: 100%;
   }
-  .content{
+  /* .content{
     padding-left: 50px;
-  }
+  } */
   .maindiv{
     align-items: center;
   }
@@ -111,11 +110,11 @@ h2{
     font-size:xx-small;
     margin: 0px;
   }
-  btn{
+  /* btn{
     border: 0.5px solid white;
     box-shadow: white;
     padding: 5px;
     margin-top: 5px;
     font-size: xx-small;
-  }
+  } */
 }

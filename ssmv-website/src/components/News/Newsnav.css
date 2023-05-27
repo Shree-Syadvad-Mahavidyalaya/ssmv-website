@@ -28,7 +28,7 @@
     height: calc(var(--underline-height) / 2);
     mix-blend-mode: initial;
   }
-  a {
+  .a {
     display: inline-block;
     z-index: 10;
     width: 20%;
@@ -36,7 +36,7 @@
     text-align: center;
     cursor: pointer;
   }
-  a:after{
+  .a:after{
     content: "";
     position: absolute;
     background-color: black;
@@ -74,7 +74,7 @@ a:hover:after{
       width: 100%;
       padding-right:0px ;
     }
-    a{
+    .a{
       width: 60px;
       padding:0px;
       font-size: xx-small;

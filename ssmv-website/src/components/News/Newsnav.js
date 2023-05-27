@@ -16,11 +16,11 @@ const Newsnav = () => {
           <div className="underline"></div>
           <div className="underline"></div>
           </div>
-            <a onClick={() => setNewsId("HomeNews")} id="home">Home</a>
-            <a onClick={() => setNewsId("VideoNews")}>Videos</a>
-            <a onClick={() => setNewsId("PlaylistNews")}>Playlists</a>&nbsp;&nbsp;
-            <a onClick={() => setNewsId("CommunityNews")}>Community</a>&nbsp;&nbsp;
-            <a onClick={() => setNewsId("ChannelNews")}>Channels</a>
+            <a className='a' onClick={() => setNewsId("HomeNews")} id="home">Home</a>
+            <a className='a' onClick={() => setNewsId("VideoNews")}>Videos</a>
+            <a className='a' onClick={() => setNewsId("PlaylistNews")}>Playlists</a>&nbsp;&nbsp;
+            <a className='a' onClick={() => setNewsId("CommunityNews")}>Community</a>&nbsp;&nbsp;
+            <a className='a' onClick={() => setNewsId("ChannelNews")}>Channels</a>
         </nav>
         <div className='NewsSection'>
         <SideNews NewsId={NewsId}/>

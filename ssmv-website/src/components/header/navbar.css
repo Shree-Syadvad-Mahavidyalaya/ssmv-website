@@ -160,7 +160,7 @@ li{
         margin: 0px -13px;
         padding: 0px -2px;
         display: flex;
-        gap: 0.4rem;
+        gap: 3px;
         align-items: center;
         padding: 8px 15px;
     }
