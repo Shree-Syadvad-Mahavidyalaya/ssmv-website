@@ -1,0 +1,111 @@
+.footer-content{
+    width: 70%;
+    display: flex;
+    margin-left: 350px;
+    margin-top: 100px;
+    /* margin-bottom: 100px; */
+}
+.footer{
+    background-color: #2B2F3B;
+    display: flex;
+    color: white;
+    text-align: left;
+    align-items:center;
+    position: relative;
+}
+.footer-about{
+    width: 300px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.support-column{
+    display: flex;
+}
+.Quick-links{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.Contact-Us{
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 300px;
+}
+.foot-head{
+    font-size:larger;
+}
+.foot-desc{
+    font-size: medium;
+}
+.icon2{
+    margin-top: 10px;
+}
+.Support{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.Social-media{
+    
+    color: white;
+    background-color: #2B2F3B;
+    display: flex;
+    width: 100%;
+    padding-bottom: 100px;
+    
+}
+
+@media (max-width:760px){
+    .footer{
+        width: 100%;
+        display: list-item;
+    }
+    .footer-content{
+        width: 100%;
+        margin-left: 0px;
+        display: flex;
+        font-size: xx-small;
+        
+        /* margin-top: 100px; */
+        /* margin-bottom: 100px; */
+    }
+    .footer-about{
+        margin: 5px;
+        padding: 0px;
+        width: 100%;
+    }
+    .Contact-Us{
+        margin: 5px;
+    }
+    .Support{
+        margin: 5px;
+    }
+    .Quick-links{
+        margin: 5px;
+    }
+    h6{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .Social-media{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .foot-head{
+        font-size:x-small;
+    }
+    .foot-desc{
+        font-size: xx-small;
+    }
+    .Social-media{
+    
+        color: white;
+        background-color: #2B2F3B;
+        display: flex;
+        width: 100%;
+        /* padding-bottom: 100px; */
+        
+    }
+}

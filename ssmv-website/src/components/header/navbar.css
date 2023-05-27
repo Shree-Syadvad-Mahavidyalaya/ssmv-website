@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .navbar-top{
@@ -11,6 +11,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0 6rem;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 li{

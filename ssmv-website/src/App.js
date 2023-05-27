@@ -3,7 +3,6 @@ import Home from './pages/Home';
 import {Routes, Route} from "react-router-dom";
 import Alumni from './pages/Alumni';
 
-
 function App() {
   return (
     <>

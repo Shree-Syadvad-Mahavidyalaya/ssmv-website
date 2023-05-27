@@ -7,6 +7,9 @@
   pointer-events: none;
 }
 
+.NewsSection{
+  display: flex;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +38,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+
+:root {
+  --underline-height: .5em;
+  --transition-duration: .5s;
+}
+
+
+body {
+  font-family: system-ui, sans-serif;
+  background: whitesmoke;
+  min-height: 100vh;
+}
+
+.newscomponent{
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.Foot{
+  align-items: center;
 }
