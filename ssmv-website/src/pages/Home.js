@@ -8,9 +8,9 @@ import Newsnav from '../components/News/Newsnav'
 
 function Home () {
     const slides = [
-    { url: "./1.jpg", title: "img1" },
-    { url: "./2.jpg", title: "img2" },
-    { url: "./3.jpg", title: "img3" },
+    { url: "https://i.ibb.co/mGYVThg/1.jpg", title: "img1" },
+    { url: "https://i.ibb.co/GVmQMJV/2.jpg", title: "img2" },
+    { url: "https://i.ibb.co/TYsbCBt/3.jpg", title: "img3" },
   ];
   const containerStyles = {
     width: "100%",

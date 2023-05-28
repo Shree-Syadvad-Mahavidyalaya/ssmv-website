@@ -4,7 +4,7 @@ import { FaFacebookSquare , FaTwitterSquare, FaYoutubeSquare} from 'react-icons/
 import './navbar.css';
   
 const DoubleNavbar = () => {
-  const [isNavExpanded, setIsNavExpanded] = useState(true);
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   const handleclicked=()=>{
     setIsNavExpanded(!isNavExpanded);
