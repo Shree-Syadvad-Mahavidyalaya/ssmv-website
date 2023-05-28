@@ -4,7 +4,7 @@ import { FaFacebookSquare , FaTwitterSquare, FaYoutubeSquare} from 'react-icons/
 import './navbar.css';
   
 const DoubleNavbar = () => {
-  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [isNavExpanded, setIsNavExpanded] = useState(true);
 
   const handleclicked=()=>{
     setIsNavExpanded(!isNavExpanded);
@@ -14,7 +14,7 @@ const DoubleNavbar = () => {
     <>
         <nav className="navbar-top">
             <div className="top-section-links">
-                <ul classname = "section-links-indiv">
+                <ul className = "section-links-indiv">
                     <li><a href = "/#"> Admission </a></li>
                     <li><a href = "/Alumni"> Alumni </a> </li>
                     <li><a href = "/#"> Donate </a></li>
