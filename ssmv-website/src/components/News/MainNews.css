@@ -1,6 +1,7 @@
 .newscomponent{
     align-items: center;
     margin-bottom: 10px;
+    width: 100% !important;
     /* margin-left: 50px; */
   }
   .news{
@@ -19,4 +20,12 @@ img{
   text-align: left;
   width: 700px;
   /* width: 100%; */
+}
+@media (max-width: 760px) {
+  .main-news{
+    width: 360px;
+  }
+  .main-text{
+    width: 100%;
+  }
 }

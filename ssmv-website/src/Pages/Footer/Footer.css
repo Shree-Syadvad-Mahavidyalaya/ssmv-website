@@ -92,7 +92,6 @@
         margin: 0px;
         padding: 0px;
         width: 100%;
-        display: none;
     }
     .foot-head{
         font-size:x-small;
@@ -102,8 +101,10 @@
     }
     .Social-media{
     
-        display: none;
-        
+        color: white;
+        background-color: #2B2F3B;
+        display: flex;
+        width: 100%;
         /* padding-bottom: 100px; */
         
     }

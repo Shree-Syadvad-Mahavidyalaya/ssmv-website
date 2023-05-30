@@ -1,25 +1,28 @@
 import { useState } from 'react';
 import './App.css';
-import Foot from "../src/components/Footer/Foot"
-import MainNews from "./components/News/MainNews"
-import SideNews from "./components/News/SideNews"
-import Courses from "../src/components/Courses/Courses"
-import {Route,Switch,Redirect} from 'react-router-dom';
-import { Newsnav } from './components/News/Newsnav';
-import AboutUs from './components/AboutUs/AboutUs';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import AboutUs from './Pages/AboutUs/AboutUs';
+import Administration from './Pages/Administration/Administration';
+import Group from '../src/Pages/Group/Group'
+import AnnualReport from './Pages/AboutUs/AnnualReport/AnnualReport';
+import Founder from './Pages/Founder/Founder';
+import Principle from './Pages/Principle/Principle';
 
 function App() {
   return (
     <>
-     
-    <div className="App">
-      <Courses/>
-      <Newsnav/>
-      <Foot/>
-    </div> 
-    
-    {/* <AboutUs/> */}
-    
+     <Router>
+       <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/AboutUs' element={<AboutUs/>} />
+    <Route path='/Admin' element={<Administration/>}/>
+    <Route path='/Group' element={<Group/>}/>
+    <Route path='/Report' element={<AnnualReport/>}/>
+    <Route path='/Founder' element={<Founder/>}/>
+    <Route path='/Principle' element={<Principle/>}/>
+    </Routes>
+    </Router>
     </>
   );
 }
