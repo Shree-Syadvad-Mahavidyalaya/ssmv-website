@@ -34,14 +34,14 @@ h1{
     margin-top: 32px;
 }
 
-.box p{
+.box_no p{
     text-align: center;
     font-size: 2rem;
     color: #45cb70;
     font-weight: bold;
 }
 
-.box span{
+.box_no span{
     color: #1B2E56;
     font-weight: 400;
 }
@@ -70,7 +70,7 @@ h1{
         margin-top: 15px;
     }
 
-    .box p {
+    .box_no p {
         text-align: center;
         font-size: 28px;
         color: #45cb70;

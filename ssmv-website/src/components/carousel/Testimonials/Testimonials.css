@@ -20,7 +20,7 @@
 
 .boxes1{
     flex: 20%;
-    background: #782f2f;
+    background: #1B2E56;
     height: 250px;
     border-top-left-radius: 14px;
     border-bottom-left-radius: 14px;
@@ -28,7 +28,7 @@
 
 .boxes2{
     flex: 20%;
-    background: #782f2f;
+    background: #1B2E56;
     height: 250px;
     border-top-right-radius: 14px;
     border-bottom-right-radius: 14px;
@@ -37,7 +37,6 @@
 .test-Body{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
     height: 250px;
 }
 
@@ -46,9 +45,38 @@
     background: #f3c8c8;
     width: 170px;
     height: 250px;
-    border-left: 5px solid red;
+    border-left: 6px solid #45cb70;
 }
 
 .cont-body-test{
     flex: 75%;
+    background: #f7f8fb;
+    padding-left: 20px;
+}
+
+.fa-quote-left{
+    color: #45cb70;
+}
+
+
+@media screen and (max-width: 769px){
+    .boxes2{
+        display: none;
+    }
+
+    .boxes1{
+        display: none;
+    }
+    #body-containers{
+        padding: 20px 5px;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .cont-body-test {
+        flex: 75% 1;
+        background: #f7f8fb;
+        padding-left: 13px;
+        font-size: 10px;
+    }
 }

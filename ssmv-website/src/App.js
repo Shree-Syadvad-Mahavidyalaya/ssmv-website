@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './pages/Home';
-import {Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Alumni from './pages/Alumni';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Administration from './pages/Administration/Administration';
@@ -12,8 +12,9 @@ import Principle from './pages/Principle/Principle';
 function App() {
   return (
     <>
+    <Router>
       <Routes>
-      <Route exact path='/' element={<Home/>} />
+      <Route exact path='/ssmv-website' element={<Home/>} />
       <Route path='/Alumni' element={<Alumni/>} />
       <Route path='/About Us/SSMV' element={<AboutUs/>} />
       <Route path='/Admininstration/College Administration' element={<Administration/>}/>
@@ -22,6 +23,7 @@ function App() {
       <Route path='/About Us/Founder' element={<Founder/>}/>
       <Route path='/About Us/Principle' element={<Principle/>}/>
       </Routes>
+    </Router>
     </>
   );
 };

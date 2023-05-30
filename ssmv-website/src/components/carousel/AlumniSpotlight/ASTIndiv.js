@@ -1,10 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-
-export default function ASTIndiv (props) {
+export default function ASTIndiv(props) {
   return (
-    <div className='card'>
-        <img src={props.url} alt=''/>
+    <div className='card1' >
+        <img className='alumni-img' src={props.url} alt=''/>
         <p>{props.name}</p>
         <hr></hr>
         <p>{props.designation}</p>

@@ -11,40 +11,34 @@
 }
 
 .Alumni-container{
-    /* margin-top: 10px;
+    margin-top: 10px;
     margin-left: 70px;
     margin-right: 70px;
-    padding: -18px 20px; */
+    padding: -18px 20px;
     display: flex;
-    /* justify-content: space-between; */
-    /* align-items: center; */
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
     background: #1B2E56;
     /* box-shadow: 20px 20px 50px 15px rgb(179, 171, 171); */
 }
 
-.cont-alumni{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    margin: 8px 20px;
+.alumni-img{
+    width: 100%;
+    height: 12em;
+    object-fit: cover;
+}
+
+.card1{
+    max-width: 320px;
+    margin: auto 1rem;
+    text-align: center;
     background: #45cb70;
-    height: 250px;
-    width: 200px;
-    padding: 25px;
-    border-radius: 10px;
 }
 
-.dot {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    border: 4px solid #1B2E56;
-}
 
-.cont-alumni p{
+.cont-alumni p {
+    font-size: 22px;
     color: #1B2E56;
 }
 
@@ -54,3 +48,25 @@
     font-weight: 300;
     text-align: center;
 }
+
+@media screen and (max-width: 769px) {
+    .alumni-about{
+        margin: 15px 20px;
+        color: #ffffff;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .Alumni-container{
+        margin-top: 10px;
+        margin-left: 17px;
+        margin-right: 17px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        background: #1B2E56;
+        /* box-shadow: 20px 20px 50px 15px rgb(179, 171, 171); */
+    }
+}
+

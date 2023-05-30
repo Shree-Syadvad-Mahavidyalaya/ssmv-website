@@ -1,23 +1,28 @@
 import React from 'react'
 import './Testimonials.css'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { Testimonialsdata, responsive } from "./Testimonialsdata";
+import Tsms from "./Tsms";
 
 const Testimonials = () => {
+
+  const Td = Testimonialsdata.map((item) => (
+    <Tsms
+      // name={item.name}
+      url={item.imageurl}
+      // price={item.price}
+      para={item.para}
+    />
+  ));
   return (
-    <div className='testimonials'>
-    <h2 id='h2'>Testimonials</h2>
-    <div id='body-containers'>
-        <div className='boxes1'></div>
-        <div className='test-Body'>
-            <div className='img-test'><img src=' ' alt=''/></div>
-            <div className='cont-body-test'>
-                <i class="fa-solid fa-quote-left fa-5x color-blue"></i>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum ex</p>
-            </div>
-        </div>
-        <div className='boxes2'></div>
-    </div>
-    </div>
-  )
+    <div className='Testimonials'>
+          <h2 id='h2'>Testimonials</h2>
+    <Carousel responsive={responsive}>
+            {Td}
+    </Carousel>
+   </div>
+   )
 }
 
 export default Testimonials
