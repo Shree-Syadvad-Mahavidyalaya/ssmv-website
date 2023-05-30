@@ -7,6 +7,9 @@ import Events from '../components/events/Events';
 import LatestSSMV from '../components/carousel/LatestSSMV/LatestSSMV';
 import VideoG from '../components/VideoG/VideoG';
 import Testimonials from '../components/carousel/Testimonials/Testimonials';
+import SocialMedia from '../components/SocialMedia/SocialMedia';
+import Foot from '.././components/Footer/Foot'
+
 
 const Alumni = () => {
   const slides = [
@@ -19,6 +22,7 @@ const Alumni = () => {
     height: "410px",
     margin: "0",
   };
+
   return (
     <>
     <div><DoubleNavbar /></div>
@@ -29,6 +33,8 @@ const Alumni = () => {
     <div><LatestSSMV/></div>
     <div><VideoG/></div>
     <div><Testimonials/></div>
+    <div><SocialMedia/></div>
+    <div><Foot/></div>
     </>
   )
 }

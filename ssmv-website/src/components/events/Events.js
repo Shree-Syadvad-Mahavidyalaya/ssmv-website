@@ -20,7 +20,10 @@ const Events = () => {
 
     return (
         <div className="events-container">
-            <h1>Events</h1>
+        <div id='heading1'>
+          <h2>Events</h2>
+          <button className='view-btn'>View All</button>
+        </div>
             <Carousel responsive={responsive}>
             {product}
             </Carousel>

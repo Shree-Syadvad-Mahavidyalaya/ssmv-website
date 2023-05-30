@@ -47,3 +47,33 @@ h1{
 }
 
 
+
+@media screen and (max-width: 769px) {
+    h1{
+        text-align: center;
+        padding: 12px 12px;
+        color: #1B2E56;
+        font-size: 25px;
+    }
+
+    .container-1 p {
+        text-align: center;
+        padding: 0px 50px;
+    }
+
+    .container-2 {
+        display: flex;
+        flex-direction: row;
+        padding: 12px 12px;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-top: 15px;
+    }
+
+    .box p {
+        text-align: center;
+        font-size: 28px;
+        color: #45cb70;
+        font-weight: bold;
+    }
+}

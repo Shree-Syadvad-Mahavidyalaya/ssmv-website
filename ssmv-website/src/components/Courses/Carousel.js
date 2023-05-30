@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable import/no-anonymous-default-export */
 import React from 'react';
 import Carousel from "react-multi-carousel";
 import '../Courses/Courses.css'
