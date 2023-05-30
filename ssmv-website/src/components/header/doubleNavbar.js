@@ -39,10 +39,10 @@ const DoubleNavbar = () => {
                 <ul>
                     <li><a href="/#">About Us</a> 
                             <ul>
-                                <li><a href= "/">SSMV</a></li>
-                                <li><a href= "/">Annual Report</a></li>
-                                <li><a href= "/">Founder</a></li>
-                                <li><a href= "/">Principle</a></li>
+                                <li><a href= "/About Us/SSMV">SSMV</a></li>
+                                <li><a href= "/About Us/Annual Report">Annual Report</a></li>
+                                <li><a href= "/About Us/Founder">Founder</a></li>
+                                <li><a href= "/About Us/Principle">Principle</a></li>
                                 <li><a href= "/">Objectives</a></li>
                                 <li><a href= "/">SSMV Map</a></li>
                                 <li><a href= "/">Temple</a></li>
@@ -63,9 +63,9 @@ const DoubleNavbar = () => {
                     </li>
                     <li><a href="/#">Administration</a>
                     <ul>
-                                <li><a href= "/">College Administration</a></li>
+                                <li><a href= "/Admininstration/College Administration">College Administration</a></li>
                                 <li><a href= "/">Managing Committee</a></li>
-                                <li><a href= "/">Group 3/4</a></li>
+                                <li><a href= "/Administration/Group">Group 3/4</a></li>
                         </ul>
                     </li>
                     <li><a href="/#">Services</a>

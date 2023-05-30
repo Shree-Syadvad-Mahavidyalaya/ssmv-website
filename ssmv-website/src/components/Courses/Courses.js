@@ -6,7 +6,7 @@ export const Courses = () => {
     
     
     <div className='maindiv'>
-      <h2 id='courses-heading'>ONLINE COURSES</h2>
+      <h2 className='course-head' >ONLINE COURSES</h2>
       <Carousel/>
     {/* <div className='cards'>
     <div className='courses-card'>

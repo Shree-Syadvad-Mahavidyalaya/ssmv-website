@@ -12,7 +12,7 @@ const Card = (props) => {
       <div className="text">
         <p className="date">{props.value.date}</p>
         <p className="desc">
-         <b className="bold">{props.value.desc}</b> 
+         <b className="side-bold">{props.value.desc}</b> 
         </p>
       </div>
     </div>
@@ -81,6 +81,7 @@ const SideNews = (props) => {
       {props.NewsId === "PlaylistNews"?(
         
       <div className="side-news">
+        <p>playlist</p>
         {news.map((item, index) =>
           index === mainNewsId ? null : (
             <div onClick={() => setMainNewsId(index)}>

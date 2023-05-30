@@ -1,12 +1,14 @@
 import React from 'react'
-import Carousel from '../Courses/Carousel'
+import Aboutcarousel from './Aboutcarousel'
 import '../AboutUs/About.css'
-import Foot  from '../Footer/Foot'
+import Foot from '../../components/Footer/Foot'
 
 const AboutUs = () => {
   return (
     <div>
-        <Carousel/>
+      <div className='carousel'>
+        <Aboutcarousel/>
+        </div>
         <div className='div'>
             <h3 className='head'><b>ABOUT US</b></h3>
         <div className='box2'>
