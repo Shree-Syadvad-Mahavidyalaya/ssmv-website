@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import Foot from '../../Footer/Foot'
+import Footer from '../../../components/Footer/Footer'
 import '../AnnualReport/AnnualReport.css'
 
 
@@ -32,7 +33,7 @@ const AnnualReport = () => {
             <a className='report-box'>Annual Accounts_2017-18_Hindi & English</a>
         </div>
         </div>
-        <Foot className="Foot"/>
+        <Footer/>
     </div>
   )
 }

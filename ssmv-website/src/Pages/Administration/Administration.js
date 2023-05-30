@@ -1,6 +1,6 @@
 import React from 'react'
 import './Administration.css'
-import Foot from '../../components/Footer/Foot'
+import Foot from '../../components/Footer/Footer'
 
 const Administration = () => {
   return (
@@ -8,7 +8,7 @@ const Administration = () => {
     <div className='Admin-card1'>
         <div className='Admin1'  width="100%" height="300px">
         <div className='admin-head1'>
-        <img src="https://source.unsplash.com/random/150x150/?news" className='admin-img1' />
+        <img src="https://source.unsplash.com/random/150x150/?news" className='admin-img1' alt=''/>
         <div className='admin-text1'>
         <p className='admin-head1'><b>Lorem ipsum dolor sit amet,</b></p>
         <p className='admin-desig1'>PRINCIPAL</p>
@@ -24,7 +24,7 @@ const Administration = () => {
 <div className='Admin2'  width="100%" height="300px">
 <div className='admin-head2'>
 <div className='border'>
-<img src="https://source.unsplash.com/random/150x150/?news" className='admin-img2' />
+<img src="https://source.unsplash.com/random/150x150/?news" className='admin-img2' alt=''/>
 </div>
 <div className='admin-text2'>
 <p className='admin-Head2'><b>Lorem ipsum dolor sit amet,</b></p>
@@ -40,7 +40,7 @@ const Administration = () => {
 <div className='Admin2'  width="100%" height="300px">
 <div className='admin-head2'>
 <div className='border'>
-<img src="https://source.unsplash.com/random/150x150/?news" className='admin-img2' />
+<img src="https://source.unsplash.com/random/150x150/?news" className='admin-img2' alt=''/>
 </div>
 <div className='admin-text2'>
 <p className='admin-Head2'><b>Lorem ipsum dolor sit amet,</b></p>

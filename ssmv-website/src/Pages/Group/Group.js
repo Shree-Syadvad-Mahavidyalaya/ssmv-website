@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Group/Group.css'
-import Foot from '../Footer/Foot'
+import Footer from '../../components/Footer/Footer'
 
 const data = [
     { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
@@ -38,7 +38,7 @@ const Group = () => {
         </div>
 
     </div>
-    <Foot/>
+    <Footer/>
     </>
   )
 }

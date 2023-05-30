@@ -3,7 +3,7 @@ import DoubleNavbar from '../components/header/doubleNavbar';
 import ImageSlider from "../components/carousel/ImageSlider/ImageSlider";
 import AboutUs from '../components/about us/about us';
 import Courses from '../components/Courses/Courses'
-import Foot from '../components/Footer/Foot'
+import Footer from '../components/Footer/Footer'
 import Newsnav from '../components/News/Newsnav'
 
 function Home () {
@@ -25,7 +25,7 @@ function Home () {
       <div><AboutUs/></div>
       <div><Newsnav/></div>
       <div><Courses/></div>
-      <div><Foot/></div>
+      <div><Footer/></div>
     </>
   )
 };
