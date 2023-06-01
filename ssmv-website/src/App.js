@@ -8,6 +8,7 @@ import Group from '../src/pages/Group/Group'
 import AnnualReport from './pages/AboutUs/AnnualReport/AnnualReport';
 import Founder from './pages/Founder/Founder';
 import Principle from './pages/Principle/Principle';
+import Admission from './pages/Admission';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/About Us/Annual Report' element={<AnnualReport/>}/>
       <Route path='/About Us/Founder' element={<Founder/>}/>
       <Route path='/About Us/Principle' element={<Principle/>}/>
+      <Route path='/Admission' element={<Admission/>}/>
       </Routes>
     </Router>
     </>

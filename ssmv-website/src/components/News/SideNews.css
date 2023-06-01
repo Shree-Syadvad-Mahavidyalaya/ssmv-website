@@ -5,7 +5,7 @@
   
   body {
     font-family: system-ui, sans-serif;
-    background: whitesmoke;
+    background: rgb(255, 255, 255);
     min-height: 100vh;
   }
   .newscomponent{
@@ -16,19 +16,19 @@
  
   .news{
       /* display: flex; */
-      /* width: 50rem; */
+      width: 50rem;
       /* height: 1200px; */
   }
   .main-news{
-      /* width: 50%; */
-      /* margin-right: 20px; */
+      width: 50%;
+      margin-right: 20px;
       margin-top: 20px;
       margin-bottom: 20px;
   }
-  .img{
+  .img1{
     display: flex;
     text-align: left;
-    /* size: 2000rem; */
+    size: 2000rem;
   }
   /* .main-text{
     text-align: left;
@@ -36,10 +36,10 @@
     padding-right: 100px;
   } */
   .side-news{
-    /* margin-right: 250px; */
+    margin-right: 250px;
     height: 555px;
     margin-top: 10px;
-    height: 100%;
+    height: 80%;
     align-items: flex-start;
     
   }

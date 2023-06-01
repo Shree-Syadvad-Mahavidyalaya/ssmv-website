@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from "react"
 import { FaFacebookSquare , FaTwitterSquare, FaYoutubeSquare} from 'react-icons/fa';
 import './navbar.css';
   
 const DoubleNavbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(true);
+
+  useEffect(()=>{
+    window.addEventListener("resize", ()=>{setIsNavExpanded(window.innerWidth>765)})
+  });
 
   const handleclicked=()=>{
     setIsNavExpanded(!isNavExpanded);
@@ -15,7 +19,7 @@ const DoubleNavbar = () => {
         <nav className="navbar-top">
             <div className="top-section-links">
                 <ul className = "section-links-indiv">
-                    <li><a href = "/#"> Admission </a></li>
+                    <li><a href = "/Admission"> Admission </a></li>
                     <li><a href = "/Alumni"> Alumni </a> </li>
                     <li><a href = "/#"> Donate </a></li>
                     <li><a href = "/#"> Grievances </a></li>
@@ -37,8 +41,8 @@ const DoubleNavbar = () => {
             </div>
             { isNavExpanded && <div className="main-menu">
                 <ul>
-                    <li><a href="/#">About Us</a> 
-                            <ul>
+                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>About Us</a> 
+                            <ul id="abt">
                                 <li><a href= "/About Us/SSMV">SSMV</a></li>
                                 <li><a href= "/About Us/Annual Report">Annual Report</a></li>
                                 <li><a href= "/About Us/Founder">Founder</a></li>
@@ -50,26 +54,22 @@ const DoubleNavbar = () => {
                             </ul>
                     </li> 
                     
-                    <li><a href="/#">Academics</a>
-                        <ul>
+                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Academics</a>
+                        <ul id="acads">
                                 <li><a href= "/">BA (Shastri) </a>
-                                    {/* <ul className='sub-submenu'>
-                                        <li><a href='/'>List of Courses</a></li>
-                                        <li><a href='/'>course2</a></li>
-                                    </ul> */}
                                 </li>
                                 <li><a href= "/">MA (Aacharya)</a></li>
                         </ul>
                     </li>
-                    <li><a href="/#">Administration</a>
-                    <ul>
+                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Administration</a>
+                    <ul id="admn">
                                 <li><a href= "/Admininstration/College Administration">College Administration</a></li>
                                 <li><a href= "/">Managing Committee</a></li>
                                 <li><a href= "/Administration/Group">Group 3/4</a></li>
                         </ul>
                     </li>
-                    <li><a href="/#">Services</a>
-                        <ul>
+                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Services</a>
+                        <ul id='ss'> 
                                 <li><a href= "/">Hostel</a></li>
                                 <li><a href= "/">Library</a></li>
                                 <li><a href= "/">Computer Lab</a></li>
@@ -77,7 +77,7 @@ const DoubleNavbar = () => {
                                 <li><a href= "/">Yoga and Kamakanda</a></li>
                         </ul>
                     </li>
-                    <li><a href="/#">Media</a></li>
+                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Media</a></li>
                 </ul>
             </div> }   
             <div id='mobile'>

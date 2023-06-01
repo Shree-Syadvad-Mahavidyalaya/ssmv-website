@@ -8,7 +8,7 @@ import MainNews from "./MainNews";
 const Card = (props) => {
   return (
     <div className="cardlist">
-      <img src={props.value.img} alt="img" width="100px" height="100px" />
+      <img src={props.value.img} alt="img" width="100px" height="100px" className="img1"/>
       <div className="text">
         <p className="date">{props.value.date}</p>
         <p className="desc">

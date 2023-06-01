@@ -209,6 +209,7 @@ li{
         font-family: 'Nunito Sans', sans-serif;
         font-weight: 600;
         padding: 5px;
+        /* border-bottom: 2px solid white; */
     }
     #mobile {
         display: block;
@@ -218,16 +219,53 @@ li{
         font-size: 24px;
         cursor: pointer;
     }
-    .main-menu ul li ul{
-        display:none;
+    .main-menu ul li #abt{
+        /* display:none; */
         position: absolute;
         background: #1B2E56;
         z-index: 1;
-        top: 7px;
+        top: 0px;
         right: 100%;
         padding: 4px 11px;
         margin-right: 0px;
-        height: 343px;
+        height: 335px;
+        border-radius: 0px;
+    }
+    .main-menu ul li #acads{
+        /* display:none; */
+        position: absolute;
+        background: #1B2E56;
+        z-index: 1;
+        top: 112px;
+        right: 100%;
+        padding: 4px 11px;
+        margin-right: 0px;
+        height: 110px;
+        border-radius: 0px;
+    }
+    .main-menu ul li #admn{
+        /* display:none; */
+        position: absolute;
+        background: #1B2E56;
+        z-index: 1;
+        top: 163px;
+        right: 100%;
+        padding: 4px 11px;
+        margin-right: 0px;
+        height: 159px;
+        border-radius: 0px;
+    }
+    .main-menu ul li #ss{
+        /* display:none; */
+        position: absolute;
+        background: #1B2E56;
+        z-index: 1;
+        top: 241px;
+        right: 100%;
+        padding: 4px 11px;
+        margin-right: 0px;
+        height: 222px;
+        border-radius: 0px;
     }
     
     .main-menu ul li:hover ul{
