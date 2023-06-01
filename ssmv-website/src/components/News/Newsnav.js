@@ -1,19 +1,16 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { useState } from "react";
 import SideNews from './SideNews';
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import '../News/Newsnav.css';
 
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-
-export const Newsnav = () => {
+const Newsnav = () => {
     
     const [NewsId, setNewsId] = useState("HomeNews");
     return (
     <div>
       
-        <nav>
+        <nav className='navnews'>
           <div className='div-underline'>
           </div>
             <a href="#" className='atag' onClick={() => setNewsId("HomeNews")} >Home</a>
@@ -37,5 +34,6 @@ export const Newsnav = () => {
         </div>
     </div>
   )
-}
+};
 
+export default Newsnav;

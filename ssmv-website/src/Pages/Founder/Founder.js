@@ -1,15 +1,17 @@
 import React from 'react'
 import '../Founder/Founder.css'
-import Foot from '../../components/Footer/Foot'
+import Foot from '../../components/Footer/Footer'
+import DoubleNavbar from '../../components/header/doubleNavbar'
 
 const Founder = () => {
   return (
     <div>
+        <DoubleNavbar/>
         <div>
         <div className='founder-div'>
             <h3 className='founder-head'>
                 <div className='founder-border'>
-            <img src="https://source.unsplash.com/random/150x150/?news" className='founder-img' />
+            <img src="https://source.unsplash.com/random/150x150/?news" className='founder-img' alt=''/>
             </div>
             <div className='founder-name'>
                 <b>Shree Syadwad Mahavidyalaya</b>

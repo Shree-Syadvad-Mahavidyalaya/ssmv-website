@@ -1,10 +1,12 @@
 import React from 'react'
-import Foot from '../../Footer/Foot'
+import Foot from '../../../components/Footer/Footer'
 import Messcarousel from './Messcarousel'
+import DoubleNavbar from '../../../components/header/doubleNavbar'
 
 const Mess = () => {
   return (
     <div>
+      <DoubleNavbar/>
       <div className='mess-carousel'>
         <Messcarousel/>
         </div>

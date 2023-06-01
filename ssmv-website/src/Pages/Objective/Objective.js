@@ -1,10 +1,12 @@
 import React from 'react'
-import Foot from '../Footer/Foot'
+import Foot from '../../components/Footer/Footer'
 import '../Objective/Objective.css'
+import DoubleNavbar from '../../components/header/doubleNavbar'
 
 const Objective = () => {
   return (
     <div>
+      <DoubleNavbar/>
         <div className='objective-div'>
             <h3 className='objective-head'><b>OBJECTIVES OF THE UNIVERSITY</b></h3>
         <div className='objective-box'>

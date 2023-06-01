@@ -6,6 +6,7 @@
   height: 40vmin;
   pointer-events: none;
 }
+
 .NewsSection{
   display: flex;
 }
@@ -50,9 +51,10 @@
 
 body {
   font-family: system-ui, sans-serif;
-  background: whitesmoke;
+  background: rgb(255, 255, 255);
   min-height: 100vh;
 }
+
 .newscomponent{
   align-items: center;
   margin-bottom: 10px;
@@ -60,4 +62,22 @@ body {
 
 .Foot{
   align-items: center;
+}
+
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  /* this makes sure the padding and the border is included in the box sizing */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+  overflow-x: inherit;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Group/Group.css'
-import Foot from '../Footer/Foot'
+import Footer from '../../components/Footer/Footer'
+import DoubleNavbar from '../../components/header/doubleNavbar'
 
 const data = [
     { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
@@ -16,6 +17,7 @@ const data = [
 const Group = () => {
   return (
       <>
+      <DoubleNavbar/>
     <div>
         <div className="Table">
             <table>
@@ -38,7 +40,7 @@ const Group = () => {
         </div>
 
     </div>
-    <Foot/>
+    <Footer/>
     </>
   )
 }

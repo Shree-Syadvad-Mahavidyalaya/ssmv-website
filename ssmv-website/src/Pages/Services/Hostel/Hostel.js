@@ -1,10 +1,12 @@
 import React from 'react'
-import Foot from '../../Footer/Foot'
+import Foot from '../../../components/Footer/Footer'
 import Hostelcarousel from './Hostelcarousel'
+import DoubleNavbar from '../../../components/header/doubleNavbar'
 
 const Hostel = () => {
   return (
     <div>
+        <DoubleNavbar/>
       <div className='hostel-carousel'>
         <Hostelcarousel/>
         </div>

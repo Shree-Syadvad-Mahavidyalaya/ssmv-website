@@ -1,6 +1,7 @@
 import React from 'react'
 import '../BA/BA.css'
-import Foot from '../../Footer/Foot'
+import Foot from '../../../components/Footer/Footer'
+import DoubleNavbar from '../../../components/header/doubleNavbar'
 
 const BAcourses = [
     { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
@@ -17,6 +18,7 @@ const BAcourses = [
 const BA = () => {
   return (
     <>
+    <DoubleNavbar/>
     <div>
         <div className="Table">
             <table>

@@ -1,10 +1,12 @@
 import React from 'react'
-import Foot from '../../Footer/Foot'
+import Foot from '../../../components/Footer/Footer'
 import Computercarousel from './Computercarousel'
+import DoubleNavbar from '../../../components/header/doubleNavbar'
 
 const Computer = () => {
   return (
     <div>
+      <DoubleNavbar/>
       <div className='computer-carousel'>
         <Computercarousel/>
         </div>

@@ -17,16 +17,18 @@ img{
   width: 100%;
 }
 .main-news{
+   text-align: left; 
+/* .main-news{ */
   width: 700px;
-}
+} 
 .main-text{
   text-align: left;
   width: 700px;
-  /* width: 100%; */
+  width: 100%;
 }
 @media (max-width: 760px) {
   .main-news{
-    width: 360px;
+    width: 404px;
   }
   .main-text{
     width: 100%;

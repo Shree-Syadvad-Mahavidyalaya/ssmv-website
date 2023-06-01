@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../News/SideNews.css";
 import MainNews from "./MainNews";
-import { Scrollbars } from "react-custom-scrollbars";
-import Newsnav  from "./Newsnav";
+// import { Scrollbars } from "react-custom-scrollbars";
+// import Newsnav  from "./Newsnav";
 // import Card from './Card'
 // import useCollapse from 'react-collapsed';
 const Card = (props) => {

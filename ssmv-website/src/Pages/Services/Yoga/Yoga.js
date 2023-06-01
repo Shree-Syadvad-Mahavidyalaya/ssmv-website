@@ -1,10 +1,12 @@
 import React from 'react'
-import Foot from '../../Footer/Foot'
+import Foot from '../../../components/Footer/Footer'
 import Yogacarousel from './Yogacarousel'
+import DoubleNavbar from '../../../components/header/doubleNavbar'
 
 const Yoga = () => {
   return (
     <div>
+      <DoubleNavbar/>
       <div className='yoga-carousel'>
         <Yogacarousel/>
         </div>

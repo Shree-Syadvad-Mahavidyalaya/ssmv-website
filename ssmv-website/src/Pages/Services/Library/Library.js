@@ -1,10 +1,12 @@
 import React from 'react'
-import Foot from '../../Footer/Foot'
+import Foot from '../../../components/Footer/Footer'
 import Libraryimgcarousel from './Libraryimgcarousel'
+import DoubleNavbar from '../../../components/header/doubleNavbar'
 
 const Library = () => {
   return (
     <div>
+      <DoubleNavbar/>
       <div className='library-carousel'>
         <Libraryimgcarousel/>
         </div>

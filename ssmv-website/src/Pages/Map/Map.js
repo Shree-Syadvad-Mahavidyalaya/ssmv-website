@@ -1,7 +1,8 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react';
-import Foot from '../Footer/Foot';
+import Foot from '../../components/Footer/Footer';
 import '../Map/Map.css'
+import DoubleNavbar from '../../components/header/doubleNavbar';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Map = () => {
@@ -14,6 +15,7 @@ const Map = () => {
       };
   return (
     <>
+    <DoubleNavbar/>
         <div className='map'>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "" }}

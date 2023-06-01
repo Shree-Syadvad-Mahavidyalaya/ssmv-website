@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
 /* *,
 *:before,
 *:after{
@@ -33,7 +38,7 @@
     text-align: center;
     cursor: pointer;
   }
-  a:after{
+  .a:after{
     content: "";
     position: absolute;
     background-color: black;
@@ -49,7 +54,7 @@
 a:hover:after{
     width: 25%;
 } */
-  nav {
+  .navnews {
     position: relative;
     white-space: nowrap;
     background: white;
@@ -72,16 +77,8 @@ a:hover::before, a:focus::before {
   transform-origin: left top;
   transform: scale(1, 1);
 } */
-ol, ul {
-  list-style: none;
-  text-decoration: none;
-}
-li {
-  display: inline-block;
-  padding: 20px 0 20px;
-  vertical-align: middle;
-}
-.atag:hover, a:focus, a:active {
+
+.atag:hover, .atag:focus, .atag:active {
   color: black;
   text-decoration: none !important;
 }
@@ -125,7 +122,7 @@ li {
   background-color: #000;
   text-decoration: none !important;
 }
-.atag:hover::before, a:focus::before {
+.atag:hover::before, .atag:focus::before {
   transform-origin: left top;
   transform: scale(1, 1);
   text-decoration: none !important;
@@ -137,16 +134,18 @@ li {
       margin: 0px;
       
     }
-    nav{
-      margin: 0px;
+    .navnews{
+      margin: 11px 0px;
+      margin-top: 40px;
       width: 100%;
       padding-right:0px ;
       padding: 0px;
+      height: 41px;
     }
     .atag{
-      width: 40px;
+      width: 52px;
       padding:1px;
-      font-size: 7px;
+      font-size: 8px;
     }
     
     .underline {

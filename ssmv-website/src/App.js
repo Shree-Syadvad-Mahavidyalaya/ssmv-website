@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import './App.css';
+import Home from './Pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Administration from './Pages/Administration/Administration';
 import Group from '../src/Pages/Group/Group'
@@ -26,26 +25,31 @@ function App() {
      <Router>
        <Routes>
     <Route path='/' element={<Home/>}/>
-    <Route path='/AboutUs' element={<AboutUs/>} />
-    <Route path='/Admin' element={<Administration/>}/>
-    <Route path='/Group' element={<Group/>}/>
-    <Route path='/Report' element={<AnnualReport/>}/>
-    <Route path='/Founder' element={<Founder/>}/>
-    <Route path='/Principle' element={<Principle/>}/>
-    <Route path='/Objective' element={<Objective/>}/>
-    <Route path='/Map' element={<Map/>}/>
+    <Route path='/About Us/Objectives' element={<Objective/>}/>
+    <Route path='/About Us/Map' element={<Map/>}/>
     <Route path='/Donate' element={<Donate/>}/>
-    <Route path='/BA' element={<BA/>}/>
-    <Route path='/MA' element={<MA/>}/>
-    <Route path='/Hostel' element={<Hostel/>}/>
-    <Route path='/Computer' element={<Computer/>}/>
-    <Route path='/Library' element={<Library/>}/>
-    <Route path='/Mess' element={<Mess/>}/>
-    <Route path='/Yoga' element={<Yoga/>}/>
+    <Route path='/Courses/BA' element={<BA/>}/>
+    <Route path='/Courses/MA' element={<MA/>}/>
+    <Route path='/Services/Hostel' element={<Hostel/>}/>
+    <Route path='/Services/Computer' element={<Computer/>}/>
+    <Route path='/Services/Library' element={<Library/>}/>
+    <Route path='/Services/Mess' element={<Mess/>}/>
+    <Route path='/Services/Yoga' element={<Yoga/>}/>
     </Routes>
+    
+      <Routes>
+      <Route exact path='/ssmv-website' element={<Home/>} />
+      
+      <Route path='/About Us/SSMV' element={<AboutUs/>} />
+      <Route path='/Admininstration/College Administration' element={<Administration/>}/>
+      <Route path='/Administration/Group' element={<Group/>}/>
+      <Route path='/About Us/Annual Report' element={<AnnualReport/>}/>
+      <Route path='/About Us/Founder' element={<Founder/>}/>
+      <Route path='/About Us/Principle' element={<Principle/>}/>
+      </Routes>
     </Router>
     </>
   );
-}
+};
 
 export default App;

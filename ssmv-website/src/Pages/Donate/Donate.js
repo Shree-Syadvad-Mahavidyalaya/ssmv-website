@@ -1,11 +1,13 @@
 import React from 'react'
-import Foot from '../Footer/Foot'
+import Foot from '../../components/Footer/Footer'
 import '../Donate/Donate.css';
 import Donatecarousel from './Donatecarousel';
+import DoubleNavbar from '../../components/header/doubleNavbar';
 
 const Donate = () => {
   return (
     <div>
+      <DoubleNavbar/>
       <div className='carousel'>
         <Donatecarousel/>
         </div>

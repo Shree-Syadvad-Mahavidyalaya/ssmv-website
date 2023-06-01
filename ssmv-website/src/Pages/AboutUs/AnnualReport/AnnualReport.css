@@ -10,10 +10,13 @@
     font-weight: 300;
     
 }
-.box{
-    background-color: #f2f7e5
+.mainreport-box{
+    background-color: #f2f7e5;
+    border: 5px solid #174873;
+    
 }
-.head{
+.report-head{
     padding: 20px;
     background-color: #174873;
+    color: white;
 }
