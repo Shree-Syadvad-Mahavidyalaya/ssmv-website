@@ -127,6 +127,10 @@ a:hover::before, a:focus::before {
   transform: scale(1, 1);
   text-decoration: none !important;
 }
+.NewsSection{
+  width: 75%;
+  margin: auto;
+}
 
   @media (max-width:760px) {
     .NewsSection{
