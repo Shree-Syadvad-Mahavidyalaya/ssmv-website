@@ -1,0 +1,42 @@
+.auth-form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 10rem;
+    border: 1px solid rgb(21, 19, 116);
+    border-radius: 10px;
+    margin: 5rem 25rem;
+  }
+
+.auth-form-container h2{
+    text-align: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-form input{
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #eddfeb;
+  }
+
+  .login-form label {
+    text-align: left;
+    padding: 0.25rem 0;
+  }
+
+  .login-form button {
+    border: none;
+    background-color: rgb(110, 189, 199);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #130d69;
+    font-size: 1rem;
+  }
+
+

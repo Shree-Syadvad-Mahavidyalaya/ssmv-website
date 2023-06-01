@@ -23,7 +23,7 @@ const DoubleNavbar = () => {
                     <li><a href = "/Alumni"> Alumni </a> </li>
                     <li><a href = "/#"> Donate </a></li>
                     <li><a href = "/#"> Grievances </a></li>
-                    <li><a href = "/#"> Login </a></li>
+                    <li><a href = "/Login"> Login </a></li>
                 </ul>
             </div>
             {/* sociaol media links */}

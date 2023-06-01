@@ -9,6 +9,7 @@ import AnnualReport from './pages/AboutUs/AnnualReport/AnnualReport';
 import Founder from './pages/Founder/Founder';
 import Principle from './pages/Principle/Principle';
 import Admission from './pages/Admission';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path='/About Us/Founder' element={<Founder/>}/>
       <Route path='/About Us/Principle' element={<Principle/>}/>
       <Route path='/Admission' element={<Admission/>}/>
+      <Route path='/Login' element={<LoginPage/>}/>
       </Routes>
     </Router>
     </>
