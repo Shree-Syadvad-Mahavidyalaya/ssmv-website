@@ -10,6 +10,15 @@ import Founder from './Pages/Founder/Founder';
 import Principle from './Pages/Principle/Principle';
 import Objective from './Pages/Objective/Objective';
 import Map from './Pages/Map/Map';
+import Donate from './Pages/Donate/Donate';
+import BA from './Pages/Courses/BA/BA';
+import MA from './Pages/Courses/MA/MA';
+import Hostel from './Pages/Services/Hostel/Hostel';
+import Computer from './Pages/Services/Computer/Computer';
+import Library from './Pages/Services/Library/Library';
+import Mess from './Pages/Services/Mess/Mess';
+import Yoga from './Pages/Services/Yoga/Yoga';
+
 
 function App() {
   return (
@@ -25,6 +34,14 @@ function App() {
     <Route path='/Principle' element={<Principle/>}/>
     <Route path='/Objective' element={<Objective/>}/>
     <Route path='/Map' element={<Map/>}/>
+    <Route path='/Donate' element={<Donate/>}/>
+    <Route path='/BA' element={<BA/>}/>
+    <Route path='/MA' element={<MA/>}/>
+    <Route path='/Hostel' element={<Hostel/>}/>
+    <Route path='/Computer' element={<Computer/>}/>
+    <Route path='/Library' element={<Library/>}/>
+    <Route path='/Mess' element={<Mess/>}/>
+    <Route path='/Yoga' element={<Yoga/>}/>
     </Routes>
     </Router>
     </>

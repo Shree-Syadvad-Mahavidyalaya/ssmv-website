@@ -1,0 +1,47 @@
+import React from 'react'
+import '../BA/BA.css'
+import Foot from '../../Footer/Foot'
+
+const MAcourses = [
+    { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
+    { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
+    { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
+    { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
+    { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
+    { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
+    { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
+    { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
+    { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
+]
+
+const MA = () => {
+  return (
+    <>
+    <div>
+        <div className="Table">
+            <table>
+                
+                <tr>
+                    <th scope="col">Course</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Department</th>
+                </tr>
+                {MAcourses.map((val, key) => {
+                    return (
+                        <tr scope="row" key={key}>
+                            <td>{val.name}</td>
+                            <td>{val.designation}</td>
+                            <td>{val.department}</td>
+                        </tr>
+                    )
+                })}
+            </table>
+        </div>
+
+    </div>
+    <Foot/>
+    </>
+  )
+}
+
+export default MA
