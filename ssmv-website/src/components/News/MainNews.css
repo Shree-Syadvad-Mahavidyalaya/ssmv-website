@@ -13,6 +13,9 @@ img{
   /* display: flex; */
   text-align: left;
 }
+.main-img{
+  width: 100%;
+}
 .main-news{
   width: 700px;
 }

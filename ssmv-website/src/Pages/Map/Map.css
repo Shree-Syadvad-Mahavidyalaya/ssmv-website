@@ -1,0 +1,9 @@
+.map{
+    margin: auto;
+    /* margin: 20px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 80vh;
+    justify-content: center;
+}

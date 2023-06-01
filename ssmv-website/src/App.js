@@ -8,6 +8,8 @@ import Group from '../src/Pages/Group/Group'
 import AnnualReport from './Pages/AboutUs/AnnualReport/AnnualReport';
 import Founder from './Pages/Founder/Founder';
 import Principle from './Pages/Principle/Principle';
+import Objective from './Pages/Objective/Objective';
+import Map from './Pages/Map/Map';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
     <Route path='/Report' element={<AnnualReport/>}/>
     <Route path='/Founder' element={<Founder/>}/>
     <Route path='/Principle' element={<Principle/>}/>
+    <Route path='/Objective' element={<Objective/>}/>
+    <Route path='/Map' element={<Map/>}/>
     </Routes>
     </Router>
     </>

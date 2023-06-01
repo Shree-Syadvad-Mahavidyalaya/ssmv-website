@@ -1,4 +1,4 @@
-.box{
+.objective-box{
     box-sizing: border-box;
     border: 5px solid red;
     border-color:  #174873;
@@ -8,47 +8,34 @@
     align-items: center;
     margin-left: 120px;
 }
-.about-img{
-    width: 100%;
-    height: 900px;
-}
-.carousel{
-    width: 100%;
-    height: 100%;
-}
-.head{
+
+
+.objective-head{
     background-color: #174873;
     color: white;
     margin: 0px;
     width: 90%;
+    font-family: Times New Roman,Times,serif;
     margin-left: 120px;
+    padding: 20px;
 }
-.div{
+.objective-div{
     align-items: center;
     text-align: center;
     margin: 50px;
 }
 @media (max-width:760px) {
-    .div{
+    .objective-div{
         margin: 5px;
     }
-    .head{
+    .objective-head{
         margin: 0px;
-        height:80px;
+        height:170px;
         padding: 10px;
-        width: 350px;
+        height: auto;
     }
-    .box{
+    .objective-box{
         margin: 0px;
         margin-right: 0px;
-        width: 350px;
-    }
-    .name{
-        font-size: medium;
-        margin: 10px;
-        margin-left: 20px;
-    }
-    .desig{
-        font-size: small;
     }
 }
