@@ -1,10 +1,12 @@
 import React from 'react'
 import '../Founder/Founder.css'
 import Foot from '../../components/Footer/Footer'
+import DoubleNavbar from '../../components/header/doubleNavbar'
 
 const Founder = () => {
   return (
     <div>
+        <DoubleNavbar/>
         <div>
         <div className='founder-div'>
             <h3 className='founder-head'>

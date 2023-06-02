@@ -2,10 +2,12 @@ import React from 'react'
 import Aboutcarousel from './Aboutcarousel'
 import '../AboutUs/About.css'
 import Footer from '../../components/Footer/Footer'
+import DoubleNavbar from '../../components/header/doubleNavbar'
 
 const AboutUs = () => {
   return (
     <div>
+      <DoubleNavbar/>
       <div className='carousel'>
         <Aboutcarousel/>
         </div>

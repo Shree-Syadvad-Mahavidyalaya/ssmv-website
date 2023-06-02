@@ -1,10 +1,12 @@
 import React from 'react'
 import Footer from '../../components/Footer/Footer'
 import '../Principle/principle.css'
+import DoubleNavbar from '../../components/header/doubleNavbar'
 
 const Principle = () => {
   return (
     <div>
+        <DoubleNavbar/>
         <div>
         <div className='principle-div'>
             <h3 className='principle-head'>

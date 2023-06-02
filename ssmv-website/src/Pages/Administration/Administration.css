@@ -50,3 +50,25 @@
     margin-left: 40px;
     border: 4px solid white;
 }
+@media (max-width:760px) {
+    .admin-desc2{
+        font-size: x-small;
+    }
+    .admin-desig2{
+        font-size: x-small;
+    }
+    .admin-Head2{
+        font-size: x-small;
+    }
+    .Admin2{
+        display: block;
+    }
+    .admin-img2{
+        width: 100%;
+    }
+    .border{
+        width: 300px;
+        margin-left:20px ;
+        margin-top: 20px;
+    }
+}

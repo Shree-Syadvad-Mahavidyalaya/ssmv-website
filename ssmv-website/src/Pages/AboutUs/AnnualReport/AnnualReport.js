@@ -2,14 +2,16 @@
 import React from 'react'
 import Footer from '../../../components/Footer/Footer'
 import '../AnnualReport/AnnualReport.css'
+import DoubleNavbar from '../../../components/header/doubleNavbar'
 
 
 const AnnualReport = () => {
   return (
     <div>
+      <DoubleNavbar/>
         <div className='div'>
-            <h3 className='head'><b className='box-head'>Annual Reports/Annual Accounts</b></h3>
-        <div className='box'>
+            <h3 className='report-head'><b className='box-head'>Annual Reports/Annual Accounts</b></h3>
+        <div className='mainreport-box'>
             <a className='report-box'>Account and Audit Report 2021-22 for Hindi click here and for English click here</a>
             <a className='report-box'>Annual Report 2020-21 English and Hindi Version</a>
             <a className='report-box'>Annual Report for the session 2019-20.</a>

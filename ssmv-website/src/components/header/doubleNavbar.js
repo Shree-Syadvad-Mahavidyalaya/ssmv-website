@@ -21,7 +21,7 @@ const DoubleNavbar = () => {
                 <ul className = "section-links-indiv">
                     <li><a href = "/Admission"> Admission </a></li>
                     <li><a href = "/Alumni"> Alumni </a> </li>
-                    <li><a href = "/#"> Donate </a></li>
+                    <li><a href = "/Donate"> Donate </a></li>
                     <li><a href = "/#"> Grievances </a></li>
                     <li><a href = "/Login"> Login </a></li>
                 </ul>
@@ -47,18 +47,17 @@ const DoubleNavbar = () => {
                                 <li><a href= "/About Us/Annual Report">Annual Report</a></li>
                                 <li><a href= "/About Us/Founder">Founder</a></li>
                                 <li><a href= "/About Us/Principle">Principle</a></li>
-                                <li><a href= "/">Objectives</a></li>
-                                <li><a href= "/">SSMV Map</a></li>
+                                <li><a href= "/About Us/Objectives">Objectives</a></li>
+                                <li><a href= "/About Us/Map">SSMV Map</a></li>
                                 <li><a href= "/">Temple</a></li>
                                 <li><a href= "/">Kulgeet</a></li>
                             </ul>
                     </li> 
                     
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Academics</a>
-                        <ul id="acads">
-                                <li><a href= "/">BA (Shastri) </a>
-                                </li>
-                                <li><a href= "/">MA (Aacharya)</a></li>
+                        <ul id='acads'>
+                                <li><a href= "/Courses/BA">BA (Shastri) </a></li>
+                                <li><a href= "/Courses/MA">MA (Aacharya)</a></li>
                         </ul>
                     </li>
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Administration</a>
@@ -69,12 +68,12 @@ const DoubleNavbar = () => {
                         </ul>
                     </li>
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Services</a>
-                        <ul id='ss'> 
-                                <li><a href= "/">Hostel</a></li>
-                                <li><a href= "/">Library</a></li>
-                                <li><a href= "/">Computer Lab</a></li>
-                                <li><a href= "/">Mess</a></li>
-                                <li><a href= "/">Yoga and Kamakanda</a></li>
+                        <ul id='ss'>
+                                <li><a href= "/Services/Hostel">Hostel</a></li>
+                                <li><a href= "/Services/Library">Library</a></li>
+                                <li><a href= "/Services/Computer">Computer Lab</a></li>
+                                <li><a href= "/Services/Mess">Mess</a></li>
+                                <li><a href= "/Services/Yoga">Yoga and Kamakanda</a></li>
                         </ul>
                     </li>
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Media</a></li>

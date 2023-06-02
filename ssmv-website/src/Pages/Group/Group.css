@@ -17,16 +17,20 @@ tr{
 }
  
 table {
-    border: 5px solid forestgreen;
+    border: 5px solid #174873;
     width: 90%;
     height: 90%;
     margin: auto;
+    background-color: #f2f7e5;
 }
  
 th {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #174873 !important;
+    border-width: 5px;
+    background-color: #174873;
     text-align: center;
     align-items: center;
+    color: white;
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 1000;
     text-transform: uppercase;
@@ -35,9 +39,10 @@ th {
 td {
     text-align: center;
     margin: 5px;
-    font-family:poppins;
+    font-family:'Times New Roman', Times, serif;
     font-weight: 600;
-    font-size:medium;
+    font-size:larger;
+    border-top: 5px solid black;
 }
 
 table td,

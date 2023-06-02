@@ -46,3 +46,25 @@
     font-size: large;
     margin: 0;
 }
+@media (max-width:760px) {
+    .principle-div{
+        margin: 5px;
+    }
+    .principle-head{
+        margin: 0px;
+        height:170px;
+        padding: 10px;
+    }
+    .principle-box{
+        margin: 0px;
+        margin-right: 0px;
+    }
+    .principle-name{
+        font-size: medium;
+        margin: 10px;
+        margin-left: 20px;
+    }
+    .principle-desig{
+        font-size: small;
+    }
+}

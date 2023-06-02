@@ -46,3 +46,28 @@
     font-size: large;
     margin: 0;
 }
+
+@media (max-width:760px) {
+    .founder-div{
+        margin: 5px;
+    }
+    .founder-head{
+        margin: 0px;
+        height:170px;
+        padding: 10px;
+        width: 350px;
+    }
+    .founder-box{
+        margin: 0px;
+        margin-right: 0px;
+        width: 350px;
+    }
+    .founder-name{
+        font-size: medium;
+        margin: 10px;
+        margin-left: 20px;
+    }
+    .founder-desig{
+        font-size: small;
+    }
+}
