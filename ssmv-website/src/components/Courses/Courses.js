@@ -18,7 +18,10 @@ export const Courses = () => {
 
   return (
     <div className='Courses'>
-      <h2>ONLINE COURSES</h2>
+      <div className='heading_c'>
+        <h2>ONLINE COURSES</h2>
+        <button id='view-course'><a href='/ViewAll/AllCourses'>View All</a></button>
+      </div>
       <Carousel responsive = {responsive} width ="100%">
       {Courses_data}
       </Carousel>

@@ -7,10 +7,25 @@
 .Courses{
   background: #1B2E56;
 }
-.Courses h2{
-  text-align: center;
+.Courses .heading_c{
   color: #45cb70;
-  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin: 10px 281px;
+}
+
+#view-course{
+  padding: 10px;
+  background: #45cb70;
+  border: none;
+}
+
+#view-course a{
+  color: white;
+  text-decoration: none;
 }
 
 .Courses-Cards{

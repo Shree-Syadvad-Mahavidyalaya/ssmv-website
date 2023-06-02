@@ -10,6 +10,7 @@ import Founder from './pages/Founder/Founder';
 import Principle from './pages/Principle/Principle';
 import Admission from './pages/Admission';
 import LoginPage from './pages/LoginPage';
+import AllCourses from './components/AllCourse/AllCourses';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path='/About Us/Principle' element={<Principle/>}/>
       <Route path='/Admission' element={<Admission/>}/>
       <Route path='/Login' element={<LoginPage/>}/>
+      <Route path='/ViewAll/AllCourses' element={<AllCourses/>}/>
       </Routes>
     </Router>
     </>
