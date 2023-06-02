@@ -1,6 +1,6 @@
 import React from 'react'
 import DoubleNavbar from '../components/header/doubleNavbar';
-// import ImageSlider from "../components/carousel/ImageSlider/ImageSlider";
+import ImageSlider from "../components/carousel/ImageSlider/ImageSlider";
 import AboutUs from '../components/about us/about us';
 import Courses from '../components/Courses/Courses'
 import Footer from '../components/Footer/Footer'
@@ -21,7 +21,7 @@ function Home () {
   return (
     <>
       <DoubleNavbar />
-      {/* <div style={containerStyles}><ImageSlider slides={slides} /></div> */}
+      <div style={containerStyles}><ImageSlider slides={slides} /></div>
       <div><AboutUs/></div>
       <div><Newsnav/></div>
       <div><Courses/></div>
