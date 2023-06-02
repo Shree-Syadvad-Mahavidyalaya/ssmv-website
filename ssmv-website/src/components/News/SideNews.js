@@ -48,6 +48,21 @@ const SideNews = (props) => {
       img: "https://source.unsplash.com/random/?500x500news",
       date: "24th July 2020",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      img: "https://source.unsplash.com/random/?500x500news",
+      date: "24th July 2020",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      img: "https://source.unsplash.com/random/?500x500news",
+      date: "24th July 2020",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      img: "https://source.unsplash.com/random/?500x500news",
+      date: "24th July 2020",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     }
   ];
 
