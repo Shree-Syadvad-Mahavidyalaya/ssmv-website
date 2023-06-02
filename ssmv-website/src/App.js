@@ -1,22 +1,22 @@
 import './App.css';
-import Home from './Pages/Home';
+import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AboutUs from './Pages/AboutUs/AboutUs';
-import Administration from './Pages/Administration/Administration';
-import Group from '../src/Pages/Group/Group'
-import AnnualReport from './Pages/AboutUs/AnnualReport/AnnualReport';
-import Founder from './Pages/Founder/Founder';
-import Principle from './Pages/Principle/Principle';
-import Objective from './Pages/Objective/Objective';
-import Map from './Pages/Map/Map';
-import Donate from './Pages/Donate/Donate';
-import BA from './Pages/Courses/BA/BA';
-import MA from './Pages/Courses/MA/MA';
-import Hostel from './Pages/Services/Hostel/Hostel';
-import Computer from './Pages/Services/Computer/Computer';
-import Library from './Pages/Services/Library/Library';
-import Mess from './Pages/Services/Mess/Mess';
-import Yoga from './Pages/Services/Yoga/Yoga';
+import AboutUs from './pages/AboutUs/AboutUs';
+import Administration from './pages/Administration/Administration';
+import Group from '../src/pages/Group/Group'
+import AnnualReport from './pages/AboutUs/AnnualReport/AnnualReport';
+import Founder from './pages/Founder/Founder';
+import Principle from './pages/Principle/Principle';
+import Objective from './pages/Objective/Objective';
+import Map from './pages/Map/Map';
+import Donate from './pages/Donate/Donate';
+import BA from './pages/Courses/BA/BA';
+import MA from './pages/Courses/MA/MA';
+import Hostel from './pages/Services/Hostel/Hostel';
+import Computer from './pages/Services/Computer/Computer';
+import Library from './pages/Services/Library/Library';
+import Mess from './pages/Services/Mess/Mess';
+import Yoga from './pages/Services/Yoga/Yoga';
 
 
 function App() {

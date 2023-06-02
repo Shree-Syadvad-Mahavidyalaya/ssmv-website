@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from "react-multi-carousel";
-import '../Yoga/Yoga.css'
+import './Yoga.css'
 
 const Yogacarousel = () => {
   return (

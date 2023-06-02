@@ -92,11 +92,11 @@ const SideNews = (props) => {
             </div>
           )
         )}
-      </div>): null},
+      </div>): null}
       {props.NewsId === "PlaylistNews"?(
         
       <div className="side-news">
-        <p>playlist</p>
+        
         {news.map((item, index) =>
           index === mainNewsId ? null : (
             <div onClick={() => setMainNewsId(index)}>
