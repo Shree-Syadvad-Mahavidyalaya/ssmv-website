@@ -1,7 +1,7 @@
 import './App.css';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import Alumni from './pages/Alumni';
+import Alumni from './pages/Alumni';
 import Admission from './pages/Admission';
 import LoginPage from './pages/LoginPage';
 import AllCourses from './components/AllCourse/AllCourses';
@@ -29,7 +29,7 @@ function App() {
      <Router>
       <Routes>
         <Route path='/ssmv-website' element={<Home/>}/>
-        {/* <Route path='/Alumni' element={<Alumni/>} /> */}
+        <Route path='/Alumni' element={<Alumni/>} />
         <Route path='/Admission' element={<Admission/>}/>
         <Route path='/Login' element={<LoginPage/>}/>
         <Route path='/ViewAll/AllCourses' element={<AllCourses/>}/>

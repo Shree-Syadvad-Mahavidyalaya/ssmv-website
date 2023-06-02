@@ -8,10 +8,10 @@ import LatestSSMV from '../components/carousel/LatestSSMV/LatestSSMV';
 import VideoG from '../components/VideoG/VideoG';
 import Testimonials from '../components/carousel/Testimonials/Testimonials';
 import SocialMedia from '../components/SocialMedia/SocialMedia';
-import Footer from '.././components/Footer/Footer'
+import Footer from '../components/Footer/Footer'
 
 
-function Alumni {
+const Alumni = () => {
     
   const slides = [
     { url: "https://i.ibb.co/mGYVThg/1.jpg", title: "img1" },
@@ -26,6 +26,7 @@ function Alumni {
   };
 
   return (
+    <>
     <div><DoubleNavbar /></div>
     <div style={containerStyles}><ImageSlider slides={slides} /></div>
     <div><AboutAlumni/></div>
@@ -36,6 +37,7 @@ function Alumni {
     <div><Testimonials/></div>
     <div><SocialMedia/></div>
     <div><Footer/></div>
+    </>
   )
 }
 
