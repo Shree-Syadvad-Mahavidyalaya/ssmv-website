@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/ssmv-website/static/css/main.9f1e4fa5.css",
-    "main.js": "/ssmv-website/static/js/main.d5d00784.js",
+    "main.js": "/ssmv-website/static/js/main.27ef4ff2.js",
     "static/js/787.18dd2cb2.chunk.js": "/ssmv-website/static/js/787.18dd2cb2.chunk.js",
     "static/media/revicons.eot": "/ssmv-website/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/ssmv-website/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/ssmv-website/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/ssmv-website/index.html",
     "main.9f1e4fa5.css.map": "/ssmv-website/static/css/main.9f1e4fa5.css.map",
-    "main.d5d00784.js.map": "/ssmv-website/static/js/main.d5d00784.js.map",
+    "main.27ef4ff2.js.map": "/ssmv-website/static/js/main.27ef4ff2.js.map",
     "787.18dd2cb2.chunk.js.map": "/ssmv-website/static/js/787.18dd2cb2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f1e4fa5.css",
-    "static/js/main.d5d00784.js"
+    "static/js/main.27ef4ff2.js"
   ]
 }
