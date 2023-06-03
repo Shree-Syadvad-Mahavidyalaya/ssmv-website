@@ -1,0 +1,18 @@
+.gallery-boxes-videos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 3rem;
+    padding: 0rem 8rem;
+}
+
+.box1-videos{
+    height: 190px;
+    width: 250px;
+    background: #6a8385;
+    border-radius: 14px;
+    border-top: 7px solid #45cb70;
+    margin: 20px 0px;
+}

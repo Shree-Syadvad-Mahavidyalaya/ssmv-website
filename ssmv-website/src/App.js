@@ -11,6 +11,9 @@ import Principle from './pages/Principle/Principle';
 import Admission from './pages/Admission';
 import LoginPage from './pages/LoginPage';
 import AllCourses from './components/AllCourse/AllCourses';
+import AllEvents from './components/AllEvents/AllEvents';
+import AllVG from './components/AllGallery/AllVG';
+import Grev from './components/Greviances/Grev';
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
       <Route path='/Admission' element={<Admission/>}/>
       <Route path='/Login' element={<LoginPage/>}/>
       <Route path='/ViewAll/AllCourses' element={<AllCourses/>}/>
+      <Route path='/ViewAll/AllEvents' element={<AllEvents/>}/>
+      <Route path='/ViewAll/Videos' element={<AllVG/>}/>
+      <Route path='/Greviances' element={<Grev/>}/>
       </Routes>
     </Router>
     </>

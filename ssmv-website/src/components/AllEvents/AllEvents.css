@@ -1,0 +1,32 @@
+.viewALL-container-events{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 150px;
+    padding: 20px 20px;
+}
+
+.Viewcards-events {
+    margin: 1rem 1rem;
+    text-align: center;
+    font-family: arial;
+    border-radius: 14px;
+    box-shadow: 1.5px 1.5px 12px 0px lightslategray;
+    display: flex;
+    flex-direction: row;
+}
+
+.AEvents-image {
+    width: 100%;
+    height: 12em;
+    object-fit: cover;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.Viewcards-events div{
+    text-align: left;
+    padding: 20px;
+    color: #45cb70;
+    background: #1B2E56;
+}

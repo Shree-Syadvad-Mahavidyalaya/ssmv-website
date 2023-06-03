@@ -21,12 +21,12 @@ const DoubleNavbar = () => {
                 <ul className = "section-links-indiv">
                     <li><a href = "/Admission"> Admission </a></li>
                     <li><a href = "/Alumni"> Alumni </a> </li>
-                    <li><a href = "/#"> Donate </a></li>
-                    <li><a href = "/#"> Grievances </a></li>
+                    <li><a href = "/"> Donate </a></li>
+                    <li><a href = "/Greviances"> Grievances </a></li>
                     <li><a href = "/Login"> Login </a></li>
                 </ul>
             </div>
-            {/* sociaol media links */}
+            {/* social media links */}
             <div className="social-media-icons">
                 <ul className="social-media-desktop">
                     <li><a href="/#"> <FaFacebookSquare className="facebook"/></a></li>
