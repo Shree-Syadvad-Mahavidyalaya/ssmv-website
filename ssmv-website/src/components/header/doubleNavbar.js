@@ -6,7 +6,7 @@ import './navbar.css';
   
 const DoubleNavbar = () => {
   const navigate = useNavigate();
-  const [isNavExpanded, setIsNavExpanded] = useState(true);
+  const [isNavExpanded, setIsNavExpanded] = useState(window.innerWidth>765);
 
   useEffect(()=>{
     window.addEventListener("resize", ()=>{setIsNavExpanded(window.innerWidth>765)})
