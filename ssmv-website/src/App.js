@@ -49,6 +49,7 @@ function App() {
         <Route path='/Services/Library' element={<Library/>}/>
         <Route path='/Services/Mess' element={<Mess/>}/>
         <Route path='/Services/Yoga' element={<Yoga/>}/>
+        <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>
     </>
