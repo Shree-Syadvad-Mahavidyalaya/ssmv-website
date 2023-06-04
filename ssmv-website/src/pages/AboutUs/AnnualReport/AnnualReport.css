@@ -1,0 +1,22 @@
+.report-box{
+    display:block;
+    text-decoration: none !important;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-family: Times New Roman,Times,serif;
+    font-size: larger;
+    color: black;
+    font-weight: 300;
+    
+}
+.mainreport-box{
+    background-color: #f2f7e5;
+    border: 5px solid #174873;
+    
+}
+.report-head{
+    padding: 20px;
+    background-color: #174873;
+    color: white;
+}
