@@ -30,7 +30,7 @@ const Newsnav = () => {
   </nav> */}
         
         <div className='NewsSection'>
-        <SideNews NewsId={NewsId}/>
+        <SideNews NewsId={NewsId} width='700px'/>
         </div>
     </div>
   )

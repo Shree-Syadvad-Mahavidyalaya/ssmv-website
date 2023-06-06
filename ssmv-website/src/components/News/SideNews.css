@@ -36,11 +36,16 @@
     padding-right: 100px;
   } */
   .side-news{
-    margin-right: 250px;
-    height: 555px;
+    /* margin-right: 250px; */
+    height: 500px;
+    width: auto;
     margin-top: 10px;
-    height: 80%;
-    align-items: flex-start;
+    /* height: 100%; */
+    /* align-items: flex-start; */
+    display: block;
+    /* float: left; */
+    overflow-y: auto;
+   
     
   }
   .text{
@@ -48,6 +53,7 @@
     padding-top: 0px;
     text-align: left;
     margin-left: 10px;
+    width:600px;
     /* margin-bottom: 10px; */
   }
   .cardlist{
@@ -55,6 +61,7 @@
     margin: 10px;
     width: 100%;
     margin-bottom:45px ;
+    
   }
   .date{
     text-align: justify;

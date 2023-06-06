@@ -8,15 +8,17 @@ import LatestSSMV from '../components/carousel/LatestSSMV/LatestSSMV';
 import VideoG from '../components/VideoG/VideoG';
 import Testimonials from '../components/carousel/Testimonials/Testimonials';
 import SocialMedia from '../components/SocialMedia/SocialMedia';
-import Footer from '.././components/Footer/Footer'
+import Footer from '../components/Footer/Footer'
 
 
 const Alumni = () => {
+    
   const slides = [
     { url: "https://i.ibb.co/mGYVThg/1.jpg", title: "img1" },
     { url: "https://i.ibb.co/GVmQMJV/2.jpg", title: "img2" },
     { url: "https://i.ibb.co/TYsbCBt/3.jpg", title: "img3" },
   ];
+
   const containerStyles = {
     width: "100%",
     height: "410px",

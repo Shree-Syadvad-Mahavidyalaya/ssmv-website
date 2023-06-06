@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { useState } from "react"
 import { FaFacebookSquare , FaTwitterSquare, FaYoutubeSquare} from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import './navbar.css';
   
 const DoubleNavbar = () => {
-  const [isNavExpanded, setIsNavExpanded] = useState(true);
+  const navigate = useNavigate();
+  const [isNavExpanded, setIsNavExpanded] = useState(window.innerWidth>765);
 
   useEffect(()=>{
     window.addEventListener("resize", ()=>{setIsNavExpanded(window.innerWidth>765)})
@@ -14,16 +16,22 @@ const DoubleNavbar = () => {
     setIsNavExpanded(!isNavExpanded);
   }
 
+  const handleClick = (event) => {
+    event.preventDefault();
+    navigate(event.target.getAttribute("href"));
+    
+  };
+
   return (
     <>
         <nav className="navbar-top">
             <div className="top-section-links">
                 <ul className = "section-links-indiv">
-                    <li><a href = "/Admission"> Admission </a></li>
-                    <li><a href = "/Alumni"> Alumni </a> </li>
-                    <li><a href = "/"> Donate </a></li>
-                    <li><a href = "/Greviances"> Grievances </a></li>
-                    <li><a href = "/Login"> Login </a></li>
+                    <li><a href= "/Admission" onClick={handleClick}> Admission </a></li>
+                    <li><a href = "/Alumni" onClick={handleClick}> Alumni </a> </li>
+                    <li><a href = "/Donate" onClick={handleClick}> Donate </a></li>
+                    <li><a href = "/Greviances" onClick={handleClick}> Grievances </a></li>
+                    <li><a href = "/Login" onClick={handleClick}> Login </a></li>
                 </ul>
             </div>
             {/* social media links */}
@@ -43,38 +51,37 @@ const DoubleNavbar = () => {
                 <ul>
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>About Us</a> 
                             <ul id="abt">
-                                <li><a href= "/About Us/SSMV">SSMV</a></li>
-                                <li><a href= "/About Us/Annual Report">Annual Report</a></li>
-                                <li><a href= "/About Us/Founder">Founder</a></li>
-                                <li><a href= "/About Us/Principle">Principle</a></li>
-                                <li><a href= "/">Objectives</a></li>
-                                <li><a href= "/">SSMV Map</a></li>
-                                <li><a href= "/">Temple</a></li>
-                                <li><a href= "/">Kulgeet</a></li>
+                                <li><a href= "/About Us/SSMV" onClick={handleClick}>SSMV</a></li>
+                                <li><a href= "/About Us/Annual Report" onClick={handleClick}>Annual Report</a></li>
+                                <li><a href= "/About Us/Founder" onClick={handleClick}>Founder</a></li>
+                                <li><a href= "/About Us/Principle" onClick={handleClick}>Principle</a></li>
+                                <li><a href= "/About Us/Objectives" onClick={handleClick}>Objectives</a></li>
+                                <li><a href= "/About Us/Map" onClick={handleClick}>SSMV Map</a></li>
+                                <li><a href= "/" onClick={handleClick}>Temple</a></li>
+                                <li><a href= "/" onClick={handleClick}>Kulgeet</a></li>
                             </ul>
                     </li> 
                     
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Academics</a>
-                        <ul id="acads">
-                                <li><a href= "/">BA (Shastri) </a>
-                                </li>
-                                <li><a href= "/">MA (Aacharya)</a></li>
+                        <ul id='acads'>
+                                <li><a href= "/Courses/BA" onClick={handleClick}>BA (Shastri)  </a></li>
+                                <li><a href= "/Courses/MA" onClick={handleClick}>MA (Aacharya)  </a></li>
                         </ul>
                     </li>
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Administration</a>
                     <ul id="admn">
-                                <li><a href= "/Admininstration/College Administration">College Administration</a></li>
-                                <li><a href= "/">Managing Committee</a></li>
-                                <li><a href= "/Administration/Group">Group 3/4</a></li>
+                                <li><a href= "/Admininstration/College Administration" onClick={handleClick}>College Administration</a></li>
+                                <li><a href= "/" onClick={handleClick}>Managing Committee</a></li>
+                                <li><a href= "/Administration/Group" onClick={handleClick}>Group 3/4</a></li>
                         </ul>
                     </li>
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Services</a>
-                        <ul id='ss'> 
-                                <li><a href= "/">Hostel</a></li>
-                                <li><a href= "/">Library</a></li>
-                                <li><a href= "/">Computer Lab</a></li>
-                                <li><a href= "/">Mess</a></li>
-                                <li><a href= "/">Yoga and Kamakanda</a></li>
+                        <ul id='ss'>
+                                <li><a href= "/Services/Hostel" onClick={handleClick}>Hostel</a></li>
+                                <li><a href= "/Services/Library" onClick={handleClick}>Library</a></li>
+                                <li><a href= "/Services/Computer" onClick={handleClick}>Computer Lab</a></li>
+                                <li><a href= "/Services/Mess"onClick={handleClick}>Mess</a></li>
+                                <li><a href= "/Services/Yoga" onClick={handleClick}>Yoga and Kamakanda</a></li>
                         </ul>
                     </li>
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Media</a></li>
