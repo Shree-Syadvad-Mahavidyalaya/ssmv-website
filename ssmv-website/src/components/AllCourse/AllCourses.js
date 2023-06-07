@@ -12,6 +12,8 @@ export default function AllCourses() {
 
 
   return (
+    <>
+    <h1>Courses</h1>
     <div className='viewALL-container'>
       <div className="Viewcards">
         <img className="ACourses-image" src="" alt="" />
@@ -24,5 +26,6 @@ export default function AllCourses() {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p></div>
       </div>
     </div>
+    </>
   )
 }

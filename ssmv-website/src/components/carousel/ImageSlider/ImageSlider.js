@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './ImageSlider.css';
+import Delete from "../../CRUD/Delete";
 
 const slideStyles = {
   width: "100%",
@@ -78,7 +79,7 @@ const ImageSlider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground} className="image-slider"></div>
+      <div style={slideStylesWidthBackground} className="image-slider"><Delete/></div>
       <button className="btn">Learn More</button>
       {/* <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (

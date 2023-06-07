@@ -1,5 +1,5 @@
 .container_1{
-    margin: 57px 307px;
+    margin: 57px 100px;
     background-color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
@@ -73,17 +73,16 @@
    .container_1{
     margin: 0px;
     max-width: 100%;
+    background: white;
   }
   form .user-details .input-box{
       margin-bottom: 15px;
       width: 100%;
     }
-    form .category{
-      width: 100%;
-    }
     .content form .user-details{
-      max-height: 300px;
-      overflow-y: scroll;
+      color: #1B2E56;
+      /* max-height: 300px;
+      overflow-y: scroll; */
     }
     .user-details::-webkit-scrollbar{
       width: 5px;

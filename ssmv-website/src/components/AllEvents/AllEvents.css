@@ -30,3 +30,34 @@
     color: #45cb70;
     background: #1B2E56;
 }
+
+
+@media screen and (max-width: 1000px){
+    .viewALL-container-events{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 20px 5px;
+        padding: 20px 4px;
+    }
+    .AEvents-image {
+        flex: 90%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .viewALL-container-events{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 20px 5px;
+        padding: 20px 10px;
+    }
+    .AEvents-image {
+        flex: 60%;
+    }
+    .Viewcards-events {
+        display: flex;
+        flex-direction: column;
+    }
+}
