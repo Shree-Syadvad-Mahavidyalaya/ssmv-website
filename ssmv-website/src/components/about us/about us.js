@@ -2,6 +2,9 @@ import React from 'react';
 import './about us.css'
 
 const AboutUs = () => {
+  const url= window.base_url+'/ssmv/aboutus';
+
+  
   return (
     <div className='main-container'>
         <div className='container'>

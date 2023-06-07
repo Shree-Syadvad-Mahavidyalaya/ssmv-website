@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import MyContext from "../events/MyContext";
 import './Login.css'
 
 const Login = (props) => {
@@ -9,6 +10,8 @@ const Login = (props) => {
         e.preventDefault();
         console.log(email);
     }
+    const [user, setUser]=useContext(MyContext)
+    console.log(user);
 
     return (
         <div className="auth-form-container">

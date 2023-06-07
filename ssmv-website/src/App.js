@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import MyContext from './components/events/MyContext';
 import './App.css';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -26,9 +28,13 @@ import Gallery from './pages/Gallery';
 import Greviances from './pages/Greviances';
 
 
+
 function App() {
-  return (
-    <>
+
+  const [user, setUser]=useState('client');
+
+    return (
+    <MyContext.Provider value={[user,setUser]} >
      <Router>
       <Routes>
         <Route path='/ssmv-website' element={<Home/>}/>
@@ -58,7 +64,7 @@ function App() {
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>
-    </>
+    </MyContext.Provider>
   );
 };
 
