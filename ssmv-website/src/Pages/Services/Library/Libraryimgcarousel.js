@@ -1,90 +1,85 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Carousel from "react-multi-carousel";
 import '../Library/Library.css'
 
+
 const Libraryimgcarousel = () => {
+  const [libraryImages, setLibraryImages] = useState([]);
+
+  useEffect(() => {
+    // Simulating API fetch
+    fetch('https://test-moid.vercel.app/ssmv/services/library/')
+      .then(response => response.json())
+      .then(data => {
+        if (data.success && data.service_library && data.service_library.length > 0) {
+          setLibraryImages(data.service_library[0].images);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching library images:', error);
+      });
+  }, []);
+
   return (
     <div>
-         <Carousel
-    additionalTransfrom={0}
-    arrows
-    autoPlaySpeed={3000}
-    centerMode={false}
-    className=""
-    containerClass="container-with-dots"
-    dotListClass=""
-    draggable
-    focusOnSelect={false}
-    infinite
-    itemAriaLabel=""
-    keyBoardControl
-    minimumTouchDrag={80}
-    pauseOnHover
-    renderArrowsWhenDisabled={false}
-    renderButtonGroupOutside={false}
-    renderDotsOutside={false}
-    responsive={{
-        desktop:{
-            breakpoint:{
-                max:3000,
-                min:1024
+      <Carousel
+        additionalTransfrom={0}
+        arrows
+        autoPlaySpeed={3000}
+        centerMode={false}
+        className=""
+        containerClass="container-with-dots"
+        dotListClass=""
+        draggable
+        focusOnSelect={false}
+        infinite
+        itemAriaLabel=""
+        keyBoardControl
+        minimumTouchDrag={80}
+        pauseOnHover
+        renderArrowsWhenDisabled={false}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        responsive={{
+          desktop: {
+            breakpoint: {
+              max: 3000,
+              min: 1024,
             },
-            items:1,
-            
-        },
-        mobile:{
-            breakpoint:{
-                max:464,
-                min:0
-            },items:1,
-            
-        },
-        tablet:{
-            breakpoint:{
-                max:1024,
-                min:464
-            },items:2,
-            
-        }
-    }}
-    rewind={false}
-    rewindWithAnimation={false}
-    rtl={false}
-    shouldResetAutoplay
-    showDots={false}
-    sliderClass=""
-    slidesToSlide={1}
-    swipeable
-    >
-        
-        <div className='library-carousel'  width="100%" height="100%">
-       
-        <img src="https://source.unsplash.com/random/150x150/?news" className='library-img' />
-        </div>
-        <div className='library-carousel'  width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='library-img' />
-        </div>
-        <div className='library-carousel'  width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='library-img' />
-        </div>
-        <div className='library-carousel'  width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='library-img' />
-        </div>
-        <div className='library-carousel' width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='library-img' />
-        </div>
-        <div className='library-carousel'  width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='library-img' />
-        </div>
-        
-    </Carousel>
+            items: 1,
+          },
+          mobile: {
+            breakpoint: {
+              max: 464,
+              min: 0,
+            },
+            items: 1,
+          },
+          tablet: {
+            breakpoint: {
+              max: 1024,
+              min: 464,
+            },
+            items: 2,
+          },
+        }}
+        rewind={false}
+        rewindWithAnimation={false}
+        rtl={false}
+        shouldResetAutoplay
+        showDots={false}
+        sliderClass=""
+        slidesToSlide={1}
+        swipeable
+      >
+        {libraryImages.map((imageUrl, index) => (
+          <div className='library-carousel' key={index} width='100%' height='100%'>
+            <img src={imageUrl} className='library-img' alt='Library Image' />
+          </div>
+        ))}
+      </Carousel>
     </div>
-  )
-}
+  );
+};
 
-export default Libraryimgcarousel
+export default Libraryimgcarousel;

@@ -14,6 +14,8 @@ const data = [
     { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
     { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
 ]
+
+
 const Group = () => {
   return (
       <>
