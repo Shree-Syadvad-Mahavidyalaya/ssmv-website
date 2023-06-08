@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import MyContext from './components/events/MyContext';
 import './App.css';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -27,9 +29,13 @@ import Greviances from './pages/Greviances';
 import Editpage from './components/Editpage/AddNewsForm';
 
 
+
 function App() {
-  return (
-    <>
+
+  const [isAdmin, setIsAdmin]=useState(false);
+
+    return (
+    <MyContext.Provider value={[isAdmin,setIsAdmin]} >
      <Router>
       <Routes>
         <Route path='/ssmv-website' element={<Home/>}/>
@@ -60,7 +66,7 @@ function App() {
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>
-    </>
+    </MyContext.Provider>
   );
 };
 

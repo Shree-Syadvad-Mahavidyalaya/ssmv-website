@@ -30,7 +30,7 @@ const DoubleNavbar = () => {
                     <li><a href= "/Admission" onClick={handleClick}> Admission </a></li>
                     <li><a href = "/Alumni" onClick={handleClick}> Alumni </a> </li>
                     <li><a href = "/Donate" onClick={handleClick}> Donate </a></li>
-                    <li><a href = "/Greviances" onClick={handleClick}> Grievances </a></li>
+                    <li><a href = "/Greviances" onClick={handleClick}> Grievancess </a></li>
                     <li><a href = "/Login" onClick={handleClick}> Login </a></li>
                 </ul>
             </div>
