@@ -31,10 +31,10 @@ import Greviances from './pages/Greviances';
 
 function App() {
 
-  const [user, setUser]=useState('client');
+  const [isAdmin, setIsAdmin]=useState(false);
 
     return (
-    <MyContext.Provider value={[user,setUser]} >
+    <MyContext.Provider value={[isAdmin,setIsAdmin]} >
      <Router>
       <Routes>
         <Route path='/ssmv-website' element={<Home/>}/>

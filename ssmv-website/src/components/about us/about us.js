@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './about us.css'
+import MyContext from '../events/MyContext';
 
 const AboutUs = () => {
-  const url= window.base_url+'/ssmv/aboutus';
+  console.log(useContext(MyContext)[0]);
 
   
   return (
