@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
 import MyContext from './components/events/MyContext';
 import './App.css';
-import Home from '../src/Pages/Home';
+import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Alumni from './Pages/Alumni';
-import Admission from './Pages/Admission';
-import LoginPage from './Pages/LoginPage';
+import Alumni from './pages/Alumni';
+import Admission from './pages/Admission';
+import LoginPage from './pages/LoginPage';
 import AllCourses from './components/AllCourse/AllCourses';
-import AboutUs from './Pages/AboutUs/AboutUs';
-import Administration from './Pages/Administration/Administration';
-import Group from '../src/Pages/Group/Group'
-import AnnualReport from './Pages/AboutUs/AnnualReport/AnnualReport';
-import Founder from './Pages/Founder/Founder';
-import Principle from './Pages/Principle/Principle';
-import Objective from './Pages/Objective/Objective';
-import Map from './Pages/Map/Map';
-import Donate from './Pages/Founder/Donate/Donate'
-import BA from './Pages/Courses/BA/BA';
-import MA from './Pages/Courses/MA/MA';
-import Hostel from './Pages/Services/Hostel/Hostel';
-import Computer from './Pages/Services/Computer/Computer';
-import Library from './Pages/Services/Library/Library';
-import Mess from './Pages/Services/Mess/Mess';
-import Yoga from './Pages/Services/Yoga/Yoga';
-import Events from './Pages/Events';
-import Gallery from './Pages/Gallery';
-import Greviances from './Pages/Greviances';
+import AboutUs from './pages/AboutUs/AboutUs';
+import Administration from './pages/Administration/Administration';
+import Group from '../src/pages/Group/Group'
+import AnnualReport from './pages/AboutUs/AnnualReport/AnnualReport';
+import Founder from './pages/Founder/Founder';
+import Principle from './pages/Principle/Principle';
+import Objective from './pages/Objective/Objective';
+import Map from './pages/Map/Map';
+import Donate from './pages/Founder/Donate/Donate';
+import BA from './pages/Courses/BA/BA';
+import MA from './pages/Courses/MA/MA';
+import Hostel from './pages/Services/Hostel/Hostel';
+import Computer from './pages/Services/Computer/Computer';
+import Library from './pages/Services/Library/Library';
+import Mess from './pages/Services/Mess/Mess';
+import Yoga from './pages/Services/Yoga/Yoga';
+import Events from './pages/Events';
+import Gallery from './pages/Gallery';
+import Greviances from './pages/Greviances';
+import Editpage from './components/Editpage/AddNewsForm';
 
 
 
@@ -61,6 +62,7 @@ function App() {
         <Route path='/ViewAll/AllEvents' element={<Events/>}/>
         <Route path='/ViewAll/Gallery' element={<Gallery/>}/>
         <Route path='/Greviances' element={<Greviances/>}/>
+        <Route path='/add-item' element={<Editpage/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>

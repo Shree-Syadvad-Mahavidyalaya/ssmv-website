@@ -2,6 +2,9 @@ import React from 'react'
 import { FaFacebookSquare,  FaInstagramSquare, FaTwitterSquare, FaLinkedin} from "react-icons/fa";
 import { MdWifiCalling3, MdLocationOn} from "react-icons/md";
 import '../Footer/Footer.css'
+import Update from "../CRUD/Update";
+import Create from "../CRUD/Create";
+import Delete from "../CRUD/Delete";
 
 const Footer = () => {
   return (
@@ -17,8 +20,8 @@ const Footer = () => {
             <div className='Support'>
               <h3 className='footer-head'>Support</h3>
               <div className='sub-section-footer'>
-              <div>@LoremIpsum</div><hr></hr>
-              <div>@LoremIpsum</div><hr></hr>
+              <div>@LoremIp</div><hr></hr>
+              <div>@LoremI</div><hr></hr>
               </div>
             </div>
             <div className='QuickLinks'>
@@ -34,7 +37,7 @@ const Footer = () => {
             <h3 className='footer-head'>Contact Us</h3>
             <div className='sub-section-footer'>
             <div className='contact-icons'>
-            <MdWifiCalling3 className="call"/> 9784563144
+            <MdWifiCalling3 className="call"/> 9784563144 
             </div>
             <div>
             <MdLocationOn className="location"/>Lorem ipsum dolor sit amet, consectetur adip elit sit amet, conse

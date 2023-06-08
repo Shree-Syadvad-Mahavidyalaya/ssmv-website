@@ -24,7 +24,8 @@
       background-color: rgb(255, 255, 255);
       opacity: 50%;
     }
-  
+
+
     @media screen and (max-width: 769px){
       .image-slider{
         max-width: 441px;

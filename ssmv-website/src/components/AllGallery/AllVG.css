@@ -3,9 +3,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    margin: 2rem 3rem;
-    padding: 0rem 8rem;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 1rem;
+    padding: 0rem 2rem;
 }
 
 .box1-videos{

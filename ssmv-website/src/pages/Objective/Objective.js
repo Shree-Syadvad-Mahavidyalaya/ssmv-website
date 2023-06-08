@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Foot from '../../components/Footer/Footer'
 import '../Objective/Objective.css'
 import DoubleNavbar from '../../components/header/doubleNavbar'
+import Update from '../../components/CRUD/Update'
 
 const Objective = () => {
   const [data,setData]=useState([])

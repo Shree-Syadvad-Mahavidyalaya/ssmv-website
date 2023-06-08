@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 20px 150px;
+    margin: 20px 80px;
     padding: 20px 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .Viewcards {
@@ -18,10 +20,12 @@
 
 .ACourses-image {
     width: 100%;
-    height: 12em;
+    height: 14em;
+    flex: 40%;
     object-fit: cover;
     border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    /* border-top-right-radius: 14px; */
 }
 
 .Viewcards div{
@@ -29,4 +33,37 @@
     padding: 20px;
     color: #45cb70;
     background: #1B2E56;
+}
+
+@media screen and (max-width: 1000px){
+    .viewALL-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 20px 5px;
+        padding: 20px 4px;
+    }
+    .ACourses-image {
+        flex: 30%;
+        height: 15em;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    .viewALL-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 20px 5px;
+        padding: 20px 10px;
+    }
+    .ACourses-image {
+        flex: 60%;
+        border-top-right-radius: 14px;
+        border-bottom-left-radius: 0px;
+    }
+    .Viewcards {
+        display: flex;
+        flex-direction: column;
+    }
 }
