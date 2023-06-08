@@ -1,10 +1,14 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
+import React from 'react';
 import './about us.css'
-import Update from '../CRUD/Update';
+// import Update from '../CRUD/Update';
 import MyContext from '../events/MyContext';
 
 const AboutUs = () => {
   console.log(useContext(MyContext)[0]);
+  
+  // console.warn(data)
+  // const url= window.base_url+'/ssmv/aboutus';
 
   
   return (
@@ -16,7 +20,7 @@ const AboutUs = () => {
           <div className='about'>
               <h2 id='about-heading'>ABOUT US</h2>
               <div className='content'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum <Update/></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum</p>
                 <button className='cont-btn'>Learn More</button>
               </div>
           </div>
