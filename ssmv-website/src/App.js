@@ -24,6 +24,7 @@ import Yoga from './pages/Services/Yoga/Yoga';
 import Events from './pages/Events';
 import Gallery from './pages/Gallery';
 import Greviances from './pages/Greviances';
+import Editpage from './components/Editpage/AddNewsForm';
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
         <Route path='/ViewAll/AllEvents' element={<Events/>}/>
         <Route path='/ViewAll/Gallery' element={<Gallery/>}/>
         <Route path='/Greviances' element={<Greviances/>}/>
+        <Route path='/add-item' element={<Editpage/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>

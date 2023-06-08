@@ -1,8 +1,8 @@
 import React from 'react'
-import { IoCreate } from "react-icons/io5";
+import { MdAddCircleOutline } from "react-icons/md";
 
 export default function Create() {
   return (
-    <IoCreate color='red' fontSize='20px'/>
+    <a href='/add-item'><MdAddCircleOutline color='red' fontSize='20px'/></a>
   )
 }

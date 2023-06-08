@@ -79,6 +79,9 @@
 
 
 @media screen and (max-width: 769px){
+  .Courses .heading_c{
+    margin: 10px 28px;
+  }
   .Courses h2{
     text-align: center;
     color: #45cb70;
