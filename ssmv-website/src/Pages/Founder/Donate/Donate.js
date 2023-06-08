@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../../../components/Footer/Footer';
-import '../Donate/Donate.css';
+import '../Donate/Donate.css'
 import Donatecarousel from './Donatecarousel';
 import DoubleNavbar from '../../../components/header/doubleNavbar';
 

@@ -6,7 +6,7 @@ const VideoG = () => {
     <div id='container'>
       <div id='heading'>
         <div><h2>Video Gallery</h2></div>
-        <button className='view-btn'>View</button>
+        <button className='view-btn'><a href='/ViewAll/Gallery'>View</a></button>
       </div>
       <div className='gallery-boxes'>
           <div className='box1'></div>          
