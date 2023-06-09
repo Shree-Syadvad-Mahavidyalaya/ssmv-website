@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
+/* eslint-disable jsx-a11y/alt-text */
 import Carousel from "react-multi-carousel";
 import '../Library/Library.css'
+import Delete from '../../../components/CRUD/Delete/Delete';
 
 
 const Libraryimgcarousel = () => {
@@ -74,6 +76,7 @@ const Libraryimgcarousel = () => {
       >
         {libraryImages.map((imageUrl, index) => (
           <div className='library-carousel' key={index} width='100%' height='100%'>
+            <a href='/add-item/Image'><button className='add-btn'>Add</button></a><Delete/>
             <img src={imageUrl} className='library-img' alt='Library Image' />
           </div>
         ))}

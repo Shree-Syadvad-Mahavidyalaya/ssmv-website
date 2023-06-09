@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import './AddNewsForm.css'
 
-function AddNewsForm() {
+function AddImageForm() {
   const [news, setNews] = useState({
-    description: '',
     image: '',
-    date: ''
   });
 
   const handleChange = (event) => {
@@ -24,18 +22,8 @@ function AddNewsForm() {
 
   return (
     <>
-    <h1>Add News</h1>
+    <h1>Add Image</h1>
     <form onSubmit={handleSubmit} className='news-form'>
-      <div className="form-group">
-        <span>Description:</span>
-        <textarea
-          name="description"
-          value={news.description}
-          onChange={handleChange}
-          rows="6"
-          required
-        />
-      </div>
       <div className="form-group">
         <span>Image Url:</span>
         <input
@@ -46,20 +34,10 @@ function AddNewsForm() {
           required
         />
       </div>
-      <div className="form-group">
-        <span>Date:</span>
-        <input
-          type="date"
-          name="date"
-          value={news.date}
-          onChange={handleChange}
-          required
-        />
-      </div>
       <button type="submit" id='add-news-btn'>Add</button>
     </form>
     </>
   );
 }
 
-export default AddNewsForm;
+export default AddImageForm;

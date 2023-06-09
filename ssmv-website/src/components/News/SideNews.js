@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "../News/SideNews.css";
 import MainNews from "./MainNews";
-import Delete from "../CRUD/Delete";
-import Update from "../CRUD/Update";
-import Create from "../CRUD/Create";
+import Delete from "../CRUD/Delete/Delete";
+import Update from "../CRUD/Update/Update";
+import Create from "../CRUD/Create/Create";
+import '../CRUD/Create/Create.css'
 // import { Scrollbars } from "react-custom-scrollbars";
 // import Newsnav  from "./Newsnav";
 // import Card from './Card'
@@ -79,7 +80,7 @@ const SideNews = (props) => {
         index === mainNewsId ? <MainNews items={item} /> : null
       )}
       {props.NewsId === "HomeNews"?(
-      <div className="side-news"><Create/>
+      <div className="side-news"><a href='/add-item/news'><button className='add-btn'>Add</button></a>
         {news.map((item, index) =>
           index === mainNewsId ? null : (
             <div onClick={() => setMainNewsId(index)}>

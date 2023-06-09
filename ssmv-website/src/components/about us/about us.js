@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import React from 'react';
 import './about us.css'
-// import Update from '../CRUD/Update';
+import Update from '../CRUD/Update/Update';
 import MyContext from '../events/MyContext';
 
 const AboutUs = () => {
@@ -22,6 +22,7 @@ const AboutUs = () => {
               <div className='content'>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum</p>
                 <button className='cont-btn'>Learn More</button>
+                <Update/>
               </div>
           </div>
         </div>

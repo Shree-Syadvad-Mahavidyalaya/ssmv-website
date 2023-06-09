@@ -11,13 +11,12 @@ const Testimonials = () => {
     <Tsms
       // name={item.name}
       url={item.imageurl}
-      // price={item.price}
       para={item.para}
     />
   ));
   return (
     <div className='Testimonials'>
-          <h2 id='h2'>Testimonials</h2>
+          <h2 id='h2'>Testimonials<a href='/add-item/Image-Desc'><button className='add-btn'>Add</button></a></h2>
     <Carousel responsive={responsive}>
             {Td}
     </Carousel>

@@ -1,4 +1,6 @@
 import React from "react";
+import Delete from "../CRUD/Delete/Delete";
+import Update from "../CRUD/Update/Update";
 
 export default function EventsIndiv(props) {
   return (
@@ -10,6 +12,7 @@ export default function EventsIndiv(props) {
       <p>
         <button>Read More</button>
       </p>
+      <Delete className="dele"/><Update/>
     </div>
   );
 }

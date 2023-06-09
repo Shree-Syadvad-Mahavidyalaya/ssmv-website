@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import Carousel from "react-multi-carousel";
 import './Yoga.css'
+import Delete from '../../../components/CRUD/Delete/Delete';
 
 const Yogacarousel = () => {
   return (
@@ -58,7 +60,7 @@ const Yogacarousel = () => {
     >
         
         <div className='yoga-carousel'  width="100%" height="100%">
-       
+        <a href='/add-item/Image'><button className='add-btn'>Add</button></a><Delete/>
         <img src="https://source.unsplash.com/random/150x150/?news" className='yoga-img' />
         </div>
         <div className='yoga-carousel'  width="100%" height="100%">

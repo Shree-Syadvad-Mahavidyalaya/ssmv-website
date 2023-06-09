@@ -1,7 +1,7 @@
 import React from "react";
 import "../News/MainNews.css";
-import Delete from "../CRUD/Delete";
-import Update from "../CRUD/Update";
+import Delete from "../CRUD/Delete/Delete";
+import Update from "../CRUD/Update/Update";
 
 const MainNews = (props) => {
   return (

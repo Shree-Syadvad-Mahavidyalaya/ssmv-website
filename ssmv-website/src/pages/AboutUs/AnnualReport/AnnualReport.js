@@ -21,7 +21,7 @@ const AnnualReport = () => {
     <div>
       <DoubleNavbar/>
         <div className='div'>
-            <h3 className='report-head'><b className='box-head'>Annual Reports/Annual Accounts</b></h3>
+            <h3 className='report-head'><b className='box-head'>Annual Reports/Annual Accounts</b><a href='/add-item/Image'><button className='add-btn'>Add</button></a></h3>
         <div className='mainreport-box'>
         {data.anuualReport?.map((item)=>
                 <p>{item.description}</p>)

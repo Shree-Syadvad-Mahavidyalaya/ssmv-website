@@ -1,7 +1,8 @@
 import React from 'react'
 import './AllEvents.css'
 import { useState } from 'react';
-import Delete from "../CRUD/Delete";
+import Delete from "../CRUD/Delete/Delete";
+import Update from "../CRUD/Update/Update";
 
 export default function AllEvents() {
 
@@ -21,14 +22,14 @@ export default function AllEvents() {
 
   return (
     <>
-    <h1>Events</h1>
+    <h1>Events<a href='/add-item/new-course'><button className='add-btn'>Add</button></a></h1>
     <div className='viewALL-container-events'>
       {aevents.map((item) => (
         <div className="Viewcards-events" key={item.id}>
         <img className="AEvents-image" src={item.url} alt="" />
         <div><h2>{item.name}</h2>
         <p>{item.description}</p>
-        <Delete onClick={() => deleteById(item.id)}/></div>
+        <Delete onClick={() => deleteById(item.id)}/><Update/></div>
       </div>
       ))}
     </div>
