@@ -2,7 +2,8 @@
 import React from 'react'
 import './AllCourses.css'
 import { useState } from 'react';
-import Delete from "../CRUD/Delete";
+import Delete from "../CRUD/Delete/Delete";
+import Update from '../CRUD/Update/Update';
 
 export default function AllCourses() {
 
@@ -22,14 +23,14 @@ export default function AllCourses() {
 
   return (
     <>
-    <h1>Courses</h1>
+    <h1>Courses<a href='/add-item/new-course'><button className='add-btn'>Add</button></a></h1>
     <div className='viewALL-container'>
       {acourses.map((item) => (
         <div className="Viewcards" key={item.id}>
         <img className="ACourses-image" src={item.url} alt="" />
         <div><h2>{item.name}</h2>
         <p>{item.description}</p>
-        <Delete onClick={() => deleteById(item.id)}/></div>
+        <Delete onClick={() => deleteById(item.id)}/><Update/></div>
       </div>
       ))}
     </div>

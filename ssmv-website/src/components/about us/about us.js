@@ -1,45 +1,9 @@
 import React,{useEffect,useState} from 'react';
 import  { useContext } from 'react';
-
 import './about us.css'
-// import Update from '../CRUD/Update';
 import MyContext from '../events/MyContext';
 import Update from '../CRUD/Update';
 import Create from '../CRUD/Create';
-
-// const AboutUs = () => {
-  
-//   // console.warn(data)
-//   // const url= window.base_url+'/ssmv/aboutus';
-//   console.log(useContext(MyContext)[0]);
-//   console.log(useContext(MyContext)[0]);
-  
-//   // console.warn(data)
-//   // const url= window.base_url+'/ssmv/aboutus';
-
-  
-//   return (
-//     <div className='main-container'>
-//         <div className='container'>
-//           <div className='image-aboutus'>
-//             <img src="" alt='loading'/>
-//           </div>
-//           <div className='about'>
-//               <h2 id='about-heading'>ABOUT US</h2>
-//               <div className='content'>
-//                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrua <Update/></p>
-                
-//                 <button className='cont-btn'>Learn More</button>
-//               </div>
-//           </div>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default AboutUs;
-
-
 import '../Editpage/AddNewsForm.css';
 
 const AboutUs = () => {
@@ -83,6 +47,25 @@ const AboutUs = () => {
             {/* Render the description from the 'description' state */}
             <p>{about.description}<Update/></p>
             <button className='cont-btn'>Learn More</button>
+{/* import React from 'react';
+import './about us.css'
+import Update from '../CRUD/Update/Update';
+
+const AboutUs = () => {
+
+  return (
+    <div className='main-container'>
+        <div className='container'>
+          <div className='image-aboutus'>
+            <img src="" alt='loading'/>
+          </div>
+          <div className='about'>
+              <h2 id='about-heading'>ABOUT US</h2>
+              <div className='content'>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum</p>
+                <button className='cont-btn'>Learn More</button>
+                <Update/>
+              </div> */}
           </div>
         </div>
       </div>

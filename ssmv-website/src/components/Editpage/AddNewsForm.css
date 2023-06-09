@@ -1,15 +1,18 @@
 .news-form{
-    /* background: #1B2E56; */
-    margin: 20px 3px;
-    padding: 12px;
+    margin: 57px 400px;
+    padding: 25px 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    background: #45cb70;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* color: white; */
+    align-items: center;
+    /* justify-content: center; */
 }
 
 .form-group{
     margin: 12px;
+    width: 60%;
 }
 
 .form-group span{
@@ -17,8 +20,7 @@
 }
 
 #add-news-btn{
-    /* margin-bottom: 12px; */
-    width: 150px;
+    width: 60%;
     border-radius: 5px;
     border: none;
     color: #fff;
@@ -31,7 +33,7 @@
 }
 
 
-.form-group input, textarea{
+.form-group input{
     height: 45px;
     width: 100%;
     outline: none;
@@ -41,4 +43,29 @@
     border: 1px solid #ccc;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
+}
+
+textarea{
+    height: 85px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+    .news-form{
+        margin: 40px 20px;
+    }
+    .form-group{
+        margin: 12px;
+        width: 90%;
+    }
+    #add-news-btn{
+        width: 90%;
+    }
 }

@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import Carousel from "react-multi-carousel";
 import '../AboutUs/About.css'
+import Delete from '../../components/CRUD/Delete/Delete';
+import Create from '../../components/CRUD/Create/Create';
 
 const Aboutcarousel = () => {
     const [images, setImages] = useState([]);
@@ -76,6 +78,7 @@ const Aboutcarousel = () => {
       ))}
     </div>   
         <div className='about-carousel'  width="100%" height="100%">
+        <Create url={'/add-item/Image'}/> <Delete/>
        
         <img src="https://source.unsplash.com/random/150x150/?news" className='about-img' />
         </div>
@@ -106,3 +109,6 @@ const Aboutcarousel = () => {
 }
 
 export default Aboutcarousel
+
+
+{/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a> */}

@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/scope */
 import React from 'react'
 import '../Group/Group.css'
 import Footer from '../../components/Footer/Footer'
 import DoubleNavbar from '../../components/header/doubleNavbar'
+import Delete from '../../components/CRUD/Delete/Delete'
+import Update from '../../components/CRUD/Update/Update'
 
 const data = [
     { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
@@ -21,6 +24,7 @@ const Group = () => {
       <>
       <DoubleNavbar/>
     <div>
+    <a href='/add-item/row'><button className='add-btn'>Add</button></a>
         <div className="Table">
             <table>
                 
@@ -32,7 +36,7 @@ const Group = () => {
                 {data.map((val, key) => {
                     return (
                         <tr scope="row" key={key}>
-                            <td>{val.name}</td>
+                            <td>{val.name}<Delete/><Update/></td>
                             <td>{val.designation}</td>
                             <td>{val.department}</td>
                         </tr>

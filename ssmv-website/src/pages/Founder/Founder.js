@@ -1,8 +1,8 @@
 import React ,{useEffect,useState}from 'react'
 import '../Founder/Founder.css'
-import Foot from '../../components/Footer/Footer'
 import DoubleNavbar from '../../components/header/doubleNavbar'
-import Update from '../../components/CRUD/Update'
+import Update from '../../components/CRUD/Update/Update'
+import Footer from '../../components/Footer/Footer'
 
 // const Founder = () => {
   
@@ -75,7 +75,7 @@ const Founder = () => {
               <p>{founderData.description}</p>
             </div>
           </div>
-          <Foot className='Foot' />
+          <Footer className='Foot' />
         </div>
       )}
     </div>

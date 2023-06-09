@@ -1,6 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import Carousel from "react-multi-carousel";
 import '../Computer/Computer.css'
+import Delete from '../../../components/CRUD/Delete/Delete';
+import Create from '../../../components/CRUD/Create/Create';
 
 const Computercarousel = () => {
   return (
@@ -58,7 +61,7 @@ const Computercarousel = () => {
     >
         
         <div className='computer-carousel'  width="100%" height="100%">
-       
+        <Create url={'/add-item/Image'}/> <Delete/>
         <img src="https://source.unsplash.com/random/150x150/?news" className='computer-img' />
         </div>
         <div className='computer-carousel'  width="100%" height="100%">
@@ -88,3 +91,5 @@ const Computercarousel = () => {
 }
 
 export default Computercarousel;
+
+{/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a> */}

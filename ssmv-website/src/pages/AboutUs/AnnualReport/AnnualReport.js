@@ -3,6 +3,7 @@ import React ,{useEffect,useState}from 'react'
 import Footer from '../../../components/Footer/Footer'
 import '../AnnualReport/AnnualReport.css'
 import DoubleNavbar from '../../../components/header/doubleNavbar'
+import Create from '../../../components/CRUD/Create/Create'
 
 
 const AnnualReport = () => {
@@ -21,7 +22,7 @@ const AnnualReport = () => {
     <div>
       <DoubleNavbar/>
         <div className='div'>
-            <h3 className='report-head'><b className='box-head'>Annual Reports/Annual Accounts</b></h3>
+            <h3 className='report-head'><b className='box-head'>Annual Reports/Annual Accounts</b><Create url={'/add-item/Image'}/> </h3>
         <div className='mainreport-box'>
         {data.anuualReport?.map((item)=>
                 <p>{item.description}</p>)
@@ -34,3 +35,6 @@ const AnnualReport = () => {
 }
 
 export default AnnualReport
+
+
+{/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a> */}

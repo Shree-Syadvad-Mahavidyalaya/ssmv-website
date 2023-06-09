@@ -1,19 +1,19 @@
 import React from 'react';
 import './AboutAlumni.css'
-import Update from '../CRUD/Update';
+import Update from '../CRUD/Update/Update';
 
 const AboutAlumni = () => {
   return (
     <>
       <div className='main-container2'>
         <div className='container-1'>
-            <h1>Alumni Platform Vision</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas? <Update/></p>
+            <h1>Alumni Platform Vision <Update/></h1> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
         </div>
         <div className='container-2'>
-            <div className='box_no'><p>500+<Update/></p><span>Members</span></div>
-            <div className='box_no'><p>100+<Update/></p><span>Batches</span></div>
-            <div className='box_no'><p>30+<Update/></p><span>Cities</span></div>
+            <div className='box_no'><p>500+</p><span>Members</span></div>
+            <div className='box_no'><p>100+</p><span>Batches</span></div>
+            <div className='box_no'><p>30+</p><span>Cities</span></div>
         </div>
       </div>
     </>

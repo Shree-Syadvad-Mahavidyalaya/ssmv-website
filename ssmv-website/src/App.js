@@ -28,6 +28,32 @@ import Gallery from './Pages/Gallery';
 import Greviances from './Pages/Greviances';
 import Editpage from './components/Editpage/AddNewsForm';
 import Updatepage from './components/Updatepages/Updatepage'
+import AboutUs from './pages/AboutUs/AboutUs';
+import Administration from './pages/Administration/Administration';
+import Group from '../src/pages/Group/Group'
+import AnnualReport from './pages/AboutUs/AnnualReport/AnnualReport';
+import Founder from './pages/Founder/Founder';
+import Principle from './pages/Principle/Principle';
+import Objective from './pages/Objective/Objective';
+import Map from './pages/Map/Map';
+// import Donate from './pages/Founder/Donate/Donate';
+import BA from './pages/Courses/BA/BA';
+import MA from './pages/Courses/MA/MA';
+import Hostel from './pages/Services/Hostel/Hostel';
+import Computer from './pages/Services/Computer/Computer';
+import Library from './pages/Services/Library/Library';
+import Mess from './pages/Services/Mess/Mess';
+import Yoga from './pages/Services/Yoga/Yoga';
+import Events from './pages/Events';
+import Gallery from './pages/Gallery';
+import Greviances from './pages/Greviances';
+import AddNewsForm from './components/Editpage/AddNewsForm';
+import AddImageForm from './components/Editpage/AddImageForm';
+import AddNewRow from './components/Editpage/AddNewRow';
+import AddNewCourseRow from './components/Editpage/AddNewCourseRow';
+import AddImgDesc from './components/Editpage/AddImgDesc';
+import AddNewCourse from './components/Editpage/AddNewCourse';
+
 
 
 
@@ -52,7 +78,7 @@ function App() {
         <Route path='/About Us/Principle' element={<Principle/>}/>
         <Route path='/About Us/Objectives' element={<Objective/>}/>
         <Route path='/About Us/Map' element={<Map/>}/>
-        <Route path='/Donate' element={<Donate/>}/>
+        {/* <Route path='/Donate' element={<Donate/>}/> */}
         <Route path='/Courses/BA' element={<BA/>}/>
         <Route path='/Courses/MA' element={<MA/>}/>
         <Route path='/Services/Hostel' element={<Hostel/>}/>
@@ -65,6 +91,12 @@ function App() {
         <Route path='/Greviances' element={<Greviances/>}/>
         <Route path='/add-item' element={<Editpage/>}/>
         <Route path='/update-item' element={<Updatepage/>}/>
+        <Route path='/add-item/news' element={<AddNewsForm/>}/>
+        <Route path='/add-item/image' element={<AddImageForm/>}/>
+        <Route path='/add-item/row' element={<AddNewRow/>}/>
+        <Route path='/add-item/course-row' element={<AddNewCourseRow/>}/>
+        <Route path='/add-item/Image-Desc' element={<AddImgDesc/>}/>
+        <Route path='/add-item/new-course' element={<AddNewCourse/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>

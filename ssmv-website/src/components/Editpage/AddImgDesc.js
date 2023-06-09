@@ -5,7 +5,6 @@ function AddNewsForm() {
   const [news, setNews] = useState({
     description: '',
     image: '',
-    date: ''
   });
 
   const handleChange = (event) => {
@@ -42,16 +41,6 @@ function AddNewsForm() {
           type="text"
           name="image"
           value={news.image}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <span>Date:</span>
-        <input
-          type="date"
-          name="date"
-          value={news.date}
           onChange={handleChange}
           required
         />

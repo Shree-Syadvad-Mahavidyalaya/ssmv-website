@@ -3,9 +3,9 @@ import './AddNewsForm.css'
 
 function AddNewsForm() {
   const [news, setNews] = useState({
-    description: '',
-    image: '',
-    date: ''
+    course: '',
+    designation: '',
+    dept: ''
   });
 
   const handleChange = (event) => {
@@ -24,38 +24,40 @@ function AddNewsForm() {
 
   return (
     <>
-    <h1>Add News</h1>
+    <h1>Add New Row</h1>
     <form onSubmit={handleSubmit} className='news-form'>
       <div className="form-group">
-        <span>Description:</span>
-        <textarea
-          name="description"
-          value={news.description}
-          onChange={handleChange}
-          rows="6"
-          required
-        />
-      </div>
-      <div className="form-group">
-        <span>Image Url:</span>
+        <span>Course:</span>
         <input
           type="text"
-          name="image"
-          value={news.image}
+          name="course"
+          value={news.course}
           onChange={handleChange}
           required
         />
       </div>
       <div className="form-group">
-        <span>Date:</span>
+        <span>Designation:</span>
         <input
-          type="date"
-          name="date"
-          value={news.date}
+          type="text"
+          name="designation"
+          value={news.designation}
           onChange={handleChange}
           required
         />
       </div>
+      <div className="form-group">
+        <span>Department:</span>
+        <input
+          type="text"
+          name="dept"
+          value={news.dept}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      
+      
       <button type="submit" id='add-news-btn'>Add</button>
     </form>
     </>

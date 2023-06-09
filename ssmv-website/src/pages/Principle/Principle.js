@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Footer from '../../components/Footer/Footer'
 import '../Principle/principle.css'
 import DoubleNavbar from '../../components/header/doubleNavbar'
-import Update from '../../components/CRUD/Update'
+import Update from '../../components/CRUD/Update/Update'
 
 // const Principle = () => {
 //   return (
