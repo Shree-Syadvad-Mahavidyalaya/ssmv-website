@@ -10,7 +10,7 @@ const AnnualReport = () => {
     <div>
       <DoubleNavbar/>
         <div className='div'>
-            <h3 className='report-head'><b className='box-head'>Annual Reports/Annual Accounts</b></h3>
+            <h3 className='report-head'><b className='box-head'>Annual Reports/Annual Accounts</b><a href='/add-item/Image'><button className='add-btn'>Add</button></a></h3>
         <div className='mainreport-box'>
             <a className='report-box'>Account and Audit Report 2021-22 for Hindi click here and for English click here</a>
             <a className='report-box'>Annual Report 2020-21 English and Hindi Version</a>

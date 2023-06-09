@@ -26,7 +26,13 @@ import Yoga from './pages/Services/Yoga/Yoga';
 import Events from './pages/Events';
 import Gallery from './pages/Gallery';
 import Greviances from './pages/Greviances';
-import Editpage from './components/Editpage/AddNewsForm';
+import AddNewsForm from './components/Editpage/AddNewsForm';
+import AddImageForm from './components/Editpage/AddImageForm';
+import AddNewRow from './components/Editpage/AddNewRow';
+import AddNewCourseRow from './components/Editpage/AddNewCourseRow';
+import AddImgDesc from './components/Editpage/AddImgDesc';
+import AddNewCourse from './components/Editpage/AddNewCourse';
+
 
 
 
@@ -62,7 +68,12 @@ function App() {
         <Route path='/ViewAll/AllEvents' element={<Events/>}/>
         <Route path='/ViewAll/Gallery' element={<Gallery/>}/>
         <Route path='/Greviances' element={<Greviances/>}/>
-        <Route path='/add-item' element={<Editpage/>}/>
+        <Route path='/add-item/news' element={<AddNewsForm/>}/>
+        <Route path='/add-item/image' element={<AddImageForm/>}/>
+        <Route path='/add-item/row' element={<AddNewRow/>}/>
+        <Route path='/add-item/course-row' element={<AddNewCourseRow/>}/>
+        <Route path='/add-item/Image-Desc' element={<AddImgDesc/>}/>
+        <Route path='/add-item/new-course' element={<AddNewCourse/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>

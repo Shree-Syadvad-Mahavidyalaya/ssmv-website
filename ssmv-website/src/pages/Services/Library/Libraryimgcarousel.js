@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import Carousel from "react-multi-carousel";
 import '../Library/Library.css'
+import Delete from '../../../components/CRUD/Delete/Delete';
 
 const Libraryimgcarousel = () => {
   return (
@@ -58,7 +60,7 @@ const Libraryimgcarousel = () => {
     >
         
         <div className='library-carousel'  width="100%" height="100%">
-       
+        <a href='/add-item/Image'><button className='add-btn'>Add</button></a><Delete/>
         <img src="https://source.unsplash.com/random/150x150/?news" className='library-img' />
         </div>
         <div className='library-carousel'  width="100%" height="100%">

@@ -19,7 +19,7 @@ export const Courses = () => {
   return (
     <div className='Courses'>
       <div className='heading_c'>
-        <h2>ONLINE COURSES</h2>
+        <h2>ONLINE COURSES<a href='/add-item/new-course'><button className='add-btn'>Add</button></a></h2>
         <button id='view-course'><a href='/ViewAll/AllCourses'>View All</a></button>
       </div>
       <Carousel responsive = {responsive} width ="100%">

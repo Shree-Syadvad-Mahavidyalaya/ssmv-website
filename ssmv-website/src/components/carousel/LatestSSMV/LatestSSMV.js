@@ -17,7 +17,7 @@ const LatestSSMV = () => {
 
   return (
     <>
-    <h2 id='Latest'>Latest @SSMV</h2>
+    <h2 id='Latest'>Latest @SSMV<a href='/add-item/Image-Desc'><button className='add-btn'>Add</button></a></h2>
     <div className='Latest-container'>
       {/* <div className='latest-sub-container'>
         <div className='body-cont'>

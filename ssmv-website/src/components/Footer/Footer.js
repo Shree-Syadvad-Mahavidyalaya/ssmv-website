@@ -2,9 +2,9 @@ import React from 'react'
 import { FaFacebookSquare,  FaInstagramSquare, FaTwitterSquare, FaLinkedin} from "react-icons/fa";
 import { MdWifiCalling3, MdLocationOn} from "react-icons/md";
 import '../Footer/Footer.css'
-import Update from "../CRUD/Update";
-import Create from "../CRUD/Create";
-import Delete from "../CRUD/Delete";
+import Update from "../CRUD/Update/Update";
+import Create from "../CRUD/Create/Create";
+import Delete from "../CRUD/Delete/Delete";
 
 const Footer = () => {
   return (

@@ -3,7 +3,7 @@ import Aboutcarousel from './Aboutcarousel'
 import '../AboutUs/About.css'
 import Footer from '../../components/Footer/Footer'
 import DoubleNavbar from '../../components/header/doubleNavbar'
-import Update from '../../components/CRUD/Update'
+import Update from '../../components/CRUD/Update/Update'
 
 const AboutUs = () => {
   return (
