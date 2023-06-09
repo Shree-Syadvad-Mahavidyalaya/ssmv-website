@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Testimonialsdata, responsive } from "./Testimonialsdata";
 import Tsms from "./Tsms";
+import Create from '../../CRUD/Create/Create';
 
 const Testimonials = () => {
 
@@ -16,7 +17,7 @@ const Testimonials = () => {
   ));
   return (
     <div className='Testimonials'>
-          <h2 id='h2'>Testimonials<a href='/add-item/Image-Desc'><button className='add-btn'>Add</button></a></h2>
+          <h2 id='h2'>Testimonials <Create url={'/add-item/Image-Desc'}/> </h2>
     <Carousel responsive={responsive}>
             {Td}
     </Carousel>
@@ -25,3 +26,7 @@ const Testimonials = () => {
 }
 
 export default Testimonials
+
+
+
+{/* <a href='/add-item/Image-Desc'><button className='add-btn'>Add</button></a> */}

@@ -1,16 +1,9 @@
-import { useContext } from 'react';
 import React from 'react';
 import './about us.css'
 import Update from '../CRUD/Update/Update';
-import MyContext from '../events/MyContext';
 
 const AboutUs = () => {
-  console.log(useContext(MyContext)[0]);
-  
-  // console.warn(data)
-  // const url= window.base_url+'/ssmv/aboutus';
 
-  
   return (
     <div className='main-container'>
         <div className='container'>

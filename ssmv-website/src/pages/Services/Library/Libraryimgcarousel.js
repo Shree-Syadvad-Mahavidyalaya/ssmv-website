@@ -3,6 +3,7 @@ import React,{useState,useEffect} from 'react'
 import Carousel from "react-multi-carousel";
 import '../Library/Library.css'
 import Delete from '../../../components/CRUD/Delete/Delete';
+import Create from '../../../components/CRUD/Create/Create';
 
 
 const Libraryimgcarousel = () => {
@@ -76,7 +77,7 @@ const Libraryimgcarousel = () => {
       >
         {libraryImages.map((imageUrl, index) => (
           <div className='library-carousel' key={index} width='100%' height='100%'>
-            <a href='/add-item/Image'><button className='add-btn'>Add</button></a><Delete/>
+            <Create url={'/add-item/Image'}/> <Delete/>
             <img src={imageUrl} className='library-img' alt='Library Image' />
           </div>
         ))}
@@ -86,3 +87,5 @@ const Libraryimgcarousel = () => {
 };
 
 export default Libraryimgcarousel;
+
+{/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a> */}

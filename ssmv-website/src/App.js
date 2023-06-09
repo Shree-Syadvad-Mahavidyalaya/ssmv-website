@@ -15,7 +15,7 @@ import Founder from './pages/Founder/Founder';
 import Principle from './pages/Principle/Principle';
 import Objective from './pages/Objective/Objective';
 import Map from './pages/Map/Map';
-import Donate from './pages/Founder/Donate/Donate';
+// import Donate from './pages/Founder/Donate/Donate';
 import BA from './pages/Courses/BA/BA';
 import MA from './pages/Courses/MA/MA';
 import Hostel from './pages/Services/Hostel/Hostel';
@@ -57,7 +57,7 @@ function App() {
         <Route path='/About Us/Principle' element={<Principle/>}/>
         <Route path='/About Us/Objectives' element={<Objective/>}/>
         <Route path='/About Us/Map' element={<Map/>}/>
-        <Route path='/Donate' element={<Donate/>}/>
+        {/* <Route path='/Donate' element={<Donate/>}/> */}
         <Route path='/Courses/BA' element={<BA/>}/>
         <Route path='/Courses/MA' element={<MA/>}/>
         <Route path='/Services/Hostel' element={<Hostel/>}/>
