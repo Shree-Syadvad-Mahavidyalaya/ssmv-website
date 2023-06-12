@@ -1,53 +1,83 @@
 /* eslint-disable jsx-a11y/scope */
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import '../BA/BA.css'
 import Foot from '../../../components/Footer/Footer'
 import DoubleNavbar from '../../../components/header/doubleNavbar'
 import Delete from '../../../components/CRUD/Delete/Delete'
 import Update from '../../../components/CRUD/Update/Update'
+import AddsubMA from '../../../components/Editpage/AddsubMA'
 
-const MAcourses = [
-    { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-]
 
 const MA = () => {
+  const [MAcourses, setMAcourses] = useState([]);
+  const [editingCourseId, setEditingCourseId] = useState(null);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://test-moid.vercel.app/ssmv/courses/ma/');
+      const data = await response.json();
+      if (data.success) {
+        setMAcourses(data.course_ma);
+        console.log(data.course_ma);
+      } else {
+        console.log('Error:', data.error);
+      }
+    } catch (error) {
+      console.log('Error:', error);
+    }
+  };
+  const handleEdit = (courseId) => {
+    setEditingCourseId(courseId);
+  };
+
+  const handleCancelEdit = () => {
+    setEditingCourseId(null);
+  };
+  function handleDelete(id){
+    const newList = MAcourses.filter(li => li.id != id)
+    setMAcourses(newList)
+  }
   return (
     <>
-    <DoubleNavbar/>
-    <div>
-    <a href='/add-item/course-row'><button className='add-btn'>Add</button></a>
+      <DoubleNavbar />
+      <div>
+        <a href="/add-item/course-row">
+        </a>
         <div className="Table">
-            <table>
-                
-                <tr>
-                    <th scope="col">Course</th>
-                    <th scope="col">Designation</th>
-                    <th scope="col">Department</th>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+              </tr>
+            </thead>
+            <tbody>
+            {MAcourses.map((val, key) => (
+                <tr key={key}>
+                  <td>
+                    {editingCourseId === val._id ? (
+                      <AddsubMA courseId={val._id} initialSubject={val.subject} onCancelEdit={handleCancelEdit} />
+                    ) : (
+                      <>
+                        {val.subject}
+                        <Delete handleDelete={() => handleDelete(val._id)} />
+                        {/* <button onClick={() => handleEdit(val._id)}>EDIT</button> */}
+                        <Update url={'/add-item/course-MA'} id={val._id}/>
+                      </>
+                    )}
+                  </td>
                 </tr>
-                {MAcourses.map((val, key) => {
-                    return (
-                        <tr scope="row" key={key}>
-                            <td>{val.name}<Delete/> <Update/></td>
-                            <td>{val.designation}</td>
-                            <td>{val.department}</td>
-                        </tr>
-                    )
-                })}
-            </table>
+              ))}
+            </tbody>
+          </table>
         </div>
-
-    </div>
-    <Foot/>
+      </div>
+      <Foot />
     </>
-  )
-}
+  );
+};
 
-export default MA
+export default MA;

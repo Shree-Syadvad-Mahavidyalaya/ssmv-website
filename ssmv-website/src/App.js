@@ -28,32 +28,15 @@ import Gallery from './Pages/Gallery';
 import Greviances from './Pages/Greviances';
 import Editpage from './components/Editpage/AddNewsForm';
 import Updatepage from './components/Updatepages/Updatepage'
-import AboutUs from './pages/AboutUs/AboutUs';
-import Administration from './pages/Administration/Administration';
-import Group from '../src/pages/Group/Group'
-import AnnualReport from './pages/AboutUs/AnnualReport/AnnualReport';
-import Founder from './pages/Founder/Founder';
-import Principle from './pages/Principle/Principle';
-import Objective from './pages/Objective/Objective';
-import Map from './pages/Map/Map';
-// import Donate from './pages/Founder/Donate/Donate';
-import BA from './pages/Courses/BA/BA';
-import MA from './pages/Courses/MA/MA';
-import Hostel from './pages/Services/Hostel/Hostel';
-import Computer from './pages/Services/Computer/Computer';
-import Library from './pages/Services/Library/Library';
-import Mess from './pages/Services/Mess/Mess';
-import Yoga from './pages/Services/Yoga/Yoga';
-import Events from './pages/Events';
-import Gallery from './pages/Gallery';
-import Greviances from './pages/Greviances';
 import AddNewsForm from './components/Editpage/AddNewsForm';
 import AddImageForm from './components/Editpage/AddImageForm';
 import AddNewRow from './components/Editpage/AddNewRow';
-import AddNewCourseRow from './components/Editpage/AddNewCourseRow';
+import AddsubBA from './components/Editpage/AddsubBA';
 import AddImgDesc from './components/Editpage/AddImgDesc';
 import AddNewCourse from './components/Editpage/AddNewCourse';
-
+import Managingcommitee from './Pages/Administration/Managingcommitee';
+import AddsubMA from './components/Editpage/AddsubBA';
+import EditAdministration from './components/Editpage/EditAdministration';
 
 
 
@@ -72,6 +55,7 @@ function App() {
         <Route path='/ViewAll/AllCourses' element={<AllCourses/>}/>
         <Route path='/About Us/SSMV' element={<AboutUs/>} />
         <Route path='/Admininstration/College Administration' element={<Administration/>}/>
+        <Route path='/Administration/Managing Commitee' element={<Managingcommitee/>}/>
         <Route path='/Administration/Group' element={<Group/>}/>
         <Route path='/About Us/Annual Report' element={<AnnualReport/>}/>
         <Route path='/About Us/Founder' element={<Founder/>}/>
@@ -94,9 +78,11 @@ function App() {
         <Route path='/add-item/news' element={<AddNewsForm/>}/>
         <Route path='/add-item/image' element={<AddImageForm/>}/>
         <Route path='/add-item/row' element={<AddNewRow/>}/>
-        <Route path='/add-item/course-row' element={<AddNewCourseRow/>}/>
+        <Route path='/add-item/course-BA' element={<AddsubBA/>}/>
+        <Route path='/add-item/course-MA' element={<AddsubMA/>}/>
         <Route path='/add-item/Image-Desc' element={<AddImgDesc/>}/>
         <Route path='/add-item/new-course' element={<AddNewCourse/>}/>
+        <Route path='/add-item/EditAdmin' element={<EditAdministration/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>
