@@ -3,7 +3,7 @@ import MyContext from './components/events/MyContext';
 import './App.css';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Alumni from './pages/Alumni';
+import Alumni from './pages/Alumni'
 import Admission from './pages/Admission';
 import LoginPage from './pages/LoginPage';
 import AllCourses from './components/AllCourse/AllCourses';

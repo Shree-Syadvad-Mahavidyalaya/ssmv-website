@@ -39,16 +39,16 @@ const sliderStyles = {
   height: "100%",
 };
 
-// const dotsContainerStyles = {
-//   display: "flex",
-//   justifyContent: "center",
-// };
+const dotsContainerStyles = {
+  display: "flex",
+  justifyContent: "center",
+};
 
-// const dotStyle = {
-//   margin: "0 3px",
-//   cursor: "pointer",
-//   fontSize: "20px",
-// };
+const dotStyle = {
+  margin: "0 3px",
+  cursor: "pointer",
+  fontSize: "20px",
+};
 
 
 const ImageSlider = ({ slides }) => {
@@ -100,3 +100,5 @@ const ImageSlider = ({ slides }) => {
 };
 
 export default ImageSlider;
+
+
