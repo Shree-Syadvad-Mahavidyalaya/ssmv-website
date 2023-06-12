@@ -124,7 +124,7 @@ const SideNews = (props) => {
 
   return (
     <>
-      <div className="side-news" items={news}></div>
+      {/* <div className="side-news" items={news}></div> */}
       {news.map((item, index) =>
         index === mainNewsId ? <MainNews items={item} /> : null
       )}

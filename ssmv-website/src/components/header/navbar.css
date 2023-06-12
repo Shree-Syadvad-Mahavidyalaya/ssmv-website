@@ -195,7 +195,7 @@ li{
         top: 106px;
         right: 0px;
         width: 180px;
-        height: 43vh;
+        height: 35vh;
         background: #1B2E56;
         padding: 11px 6px;
         gap: 1.5rem;
@@ -207,7 +207,7 @@ li{
         text-decoration: none;
         font-size: 14px;
         /* font-family: 'Nunito Sans', sans-serif; */
-        font-weight: 600;
+        font-weight: 500;
         padding: 5px;
         /* border-bottom: 2px solid white; */
     }

@@ -15,7 +15,7 @@ import Founder from './pages/Founder/Founder';
 import Principle from './pages/Principle/Principle';
 import Objective from './pages/Objective/Objective';
 import Map from './pages/Map/Map';
-import Donate from './pages/Founder/Donate/Donate';
+import Donate from './pages/Donate/Donate';
 import BA from './pages/Courses/BA/BA';
 import MA from './pages/Courses/MA/MA';
 import Hostel from './pages/Services/Hostel/Hostel';
@@ -33,6 +33,7 @@ import AddNewCourseRow from './components/Editpage/AddNewCourseRow';
 import AddImgDesc from './components/Editpage/AddImgDesc';
 import AddNewCourse from './components/Editpage/AddNewCourse';
 import AddAlumniDetails from './components/Editpage/AddAlumniDetails';
+import AddDonatorsName from './components/Editpage/AddDonatorsName';
 
 
 
@@ -76,6 +77,7 @@ function App() {
         <Route path='/add-item/Image-Desc' element={<AddImgDesc/>}/>
         <Route path='/add-item/new-course' element={<AddNewCourse/>}/>
         <Route path='/add-item/alumni-details' element={<AddAlumniDetails/>}/>
+        <Route path='/add-item/donators-name' element={<AddDonatorsName/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>

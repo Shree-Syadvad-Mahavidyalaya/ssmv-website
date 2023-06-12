@@ -29,7 +29,8 @@
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: #1B2E56
+    background: #1B2E56;
+    padding: 5px;
 }
 
 

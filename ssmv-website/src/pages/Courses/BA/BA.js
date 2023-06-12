@@ -18,7 +18,7 @@ const BAcourses = [
     { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
     { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
 ]
-{/* <a href='/add-item/course-row'><button className='add-btn'>Add</button></a> */}
+
 const BA = () => {
   return (
     <>

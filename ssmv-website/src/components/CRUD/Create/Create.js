@@ -12,6 +12,6 @@ export default function Create(props) {
     navigate(props.url)
   }
   return ( isAdmin &&
-    <a href='/add-item/Image' onClick={handleClick}><button className='add-btn'>Add</button></a>
+    <button className='add-btn' onClick={handleClick}>Add</button>
   )
 }

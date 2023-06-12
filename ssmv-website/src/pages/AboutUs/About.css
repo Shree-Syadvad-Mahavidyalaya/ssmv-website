@@ -1,12 +1,14 @@
 .box2 {
     box-sizing: border-box;
     border: 5px solid red;
-    border-color: #174873;
-    background-color: #f2f7e5;
+    border-color: #1B2E56;
+    background-color: #f6fcf4;
     width: 90%;
     text-align: center;
     align-items: center;
-    margin-left: 120px;
+    margin: 0px auto;
+    font-family: 'Nunito sans';
+    padding: 10px;
 }
 
 .about-img {
@@ -20,11 +22,13 @@
 }
 
 .head {
-    background-color: #174873;
+    background-color: #1B2E56;
     color: white;
     margin: 0px;
     width: 90%;
-    margin-left: 120px;
+    margin: 0px auto;
+    font-family: 'Lato';
+    font-weight: 500;
 }
 
 .div {
