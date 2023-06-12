@@ -1,7 +1,9 @@
 import React,{useEffect,useState} from 'react';
-import  { useContext } from 'react';
+// import  { useContext } from 'react';
 import './about us.css'
+// import MyContext from '../events/MyContext';
 import Update from '../CRUD/Update/Update';
+import '../Editpage/AddNewsForm.css';
 
 const AboutUs = () => {
   const [about, setAbout] = useState({

@@ -3,6 +3,7 @@ import './ImageSlider.css';
 import Delete from "../../CRUD/Delete/Delete";
 import "../../CRUD/Create/Create.css"
 import Create from "../../CRUD/Create/Create";
+// import Aboutcarousel from ".../Pages/AboutUs/Aboutcarousel"
 
 const slideStyles = {
   width: "100%",
@@ -39,16 +40,16 @@ const sliderStyles = {
   height: "100%",
 };
 
-const dotsContainerStyles = {
-  display: "flex",
-  justifyContent: "center",
-};
+// const dotsContainerStyles = {
+//   display: "flex",
+//   justifyContent: "center",
+// };
 
-const dotStyle = {
-  margin: "0 3px",
-  cursor: "pointer",
-  fontSize: "20px",
-};
+// const dotStyle = {
+//   margin: "0 3px",
+//   cursor: "pointer",
+//   fontSize: "20px",
+// };
 
 
 const ImageSlider = ({ slides }) => {
@@ -84,21 +85,10 @@ const ImageSlider = ({ slides }) => {
       <div style={slideStylesWidthBackground} className="image-slider"><Delete/></div>
       <button className="btn">Learn More</button>
        <Create url={'/add-item/Image'}/>
-      {/* <div style={dotsContainerStyles}>
-        {slides.map((slide, slideIndex) => (
-          <div
-            style={dotStyle}
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-          >
-            ●
-          </div>
-        ))}
-      </div> */}
+      
     </div>
   );
 };
 
 export default ImageSlider;
-
 

@@ -2,9 +2,9 @@ import React from 'react'
 import DoubleNavbar from '../components/header/doubleNavbar';
 import ImageSlider from "../components/carousel/ImageSlider/ImageSlider";
 import AboutUs from '../components/about us/about us';
-import Courses from '../components/Courses/Courses'
-import Footer from '../components/Footer/Footer'
-import Newsnav from '../components/News/Newsnav'
+import Courses from '../components/Courses/Courses';
+import Footer from '../components/Footer/Footer';
+import Newsnav from '../components/News/Newsnav';
 
 function Home () {
     const slides = [
@@ -22,6 +22,7 @@ function Home () {
     <>
       <DoubleNavbar />
       <div style={containerStyles}><ImageSlider slides={slides} /></div>
+      {/* <div><Aboutcarousel/></div> */}
       <div><AboutUs/></div>
       <div><Newsnav/></div>
       <div><Courses/></div>

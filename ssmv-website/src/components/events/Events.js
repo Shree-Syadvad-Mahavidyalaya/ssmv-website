@@ -4,8 +4,9 @@ import { responsive } from "./Data";
 import './Events.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Create from '../CRUD/Create/Create';
 import axios from 'axios';
+import Create from '../CRUD/Create/Create';
+
 
 const Events = () => {
   const [eventsData, setEventsData] = useState([]);

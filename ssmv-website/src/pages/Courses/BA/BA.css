@@ -1,9 +1,9 @@
 .Table {
-  width: 100%;
+  width: 90%;
   height: 900px;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .grp-box {

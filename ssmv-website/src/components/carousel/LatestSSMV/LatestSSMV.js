@@ -4,10 +4,10 @@ import { responsive } from "./LatestData";
 // import LatestItem from "./LatestItem";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Create from '../../CRUD/Create/Create';
-import Update from '../../CRUD/Update/Update';
-import Delete from '../../CRUD/Delete/Delete';
 import axios from 'axios';
+import Create from '../../CRUD/Create/Create';
+import Delete from '../../CRUD/Delete/Delete';
+import Update from '../../CRUD/Update/Update';
 
 const LatestSSMV = () => {
   const [latestData, setLatestData] = useState([]);

@@ -66,7 +66,7 @@ const Principle = () => {
               </div>
             </h3>
             <div className='principle-box'>
-              <p>{principleData.description}</p>
+              <p>{principleData.description}</p><Update/>
             </div>
           </div>
           <Footer />

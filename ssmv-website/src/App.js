@@ -16,8 +16,8 @@ import Principle from './pages/Principle/Principle';
 import Objective from './pages/Objective/Objective';
 import Map from './pages/Map/Map';
 import Donate from './pages/Donate/Donate';
-import BA from './pages/Courses/BA/BA';
 import MA from './pages/Courses/MA/MA';
+import BA from './pages/Courses/BA/BA';
 import Hostel from './pages/Services/Hostel/Hostel';
 import Computer from './pages/Services/Computer/Computer';
 import Library from './pages/Services/Library/Library';
@@ -29,13 +29,14 @@ import Greviances from './pages/Greviances';
 import AddNewsForm from './components/Editpage/AddNewsForm';
 import AddImageForm from './components/Editpage/AddImageForm';
 import AddNewRow from './components/Editpage/AddNewRow';
-import AddNewCourseRow from './components/Editpage/AddNewCourseRow';
 import AddImgDesc from './components/Editpage/AddImgDesc';
 import AddNewCourse from './components/Editpage/AddNewCourse';
 import AddAlumniDetails from './components/Editpage/AddAlumniDetails';
 import AddDonatorsName from './components/Editpage/AddDonatorsName';
-
-
+import AddsubBA from './components/Editpage/AddsubBA';
+import AddsubMA from './components/Editpage/AddsubBA';
+import EditAdministration from './components/Editpage/EditAdministration';
+import Managingcommitee from './pages/Administration/Managingcommitee'
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
         <Route path='/ViewAll/AllCourses' element={<AllCourses/>}/>
         <Route path='/About Us/SSMV' element={<AboutUs/>} />
         <Route path='/Admininstration/College Administration' element={<Administration/>}/>
+        <Route path='/Administration/Managing Commitee' element={<Managingcommitee/>}/>
         <Route path='/Administration/Group' element={<Group/>}/>
         <Route path='/About Us/Annual Report' element={<AnnualReport/>}/>
         <Route path='/About Us/Founder' element={<Founder/>}/>
@@ -70,14 +72,18 @@ function App() {
         <Route path='/ViewAll/AllEvents' element={<Events/>}/>
         <Route path='/ViewAll/Gallery' element={<Gallery/>}/>
         <Route path='/Greviances' element={<Greviances/>}/>
+        {/* <Route path='/add-item' element={<Editpage/>}/> */}
+        {/* <Route path='/update-item' element={<Updatepage/>}/> */}
         <Route path='/add-item/news' element={<AddNewsForm/>}/>
         <Route path='/add-item/image' element={<AddImageForm/>}/>
         <Route path='/add-item/row' element={<AddNewRow/>}/>
-        <Route path='/add-item/course-row' element={<AddNewCourseRow/>}/>
+        <Route path='/add-item/course-BA' element={<AddsubBA/>}/>
+        <Route path='/add-item/course-MA' element={<AddsubMA/>}/>
         <Route path='/add-item/Image-Desc' element={<AddImgDesc/>}/>
         <Route path='/add-item/new-course' element={<AddNewCourse/>}/>
         <Route path='/add-item/alumni-details' element={<AddAlumniDetails/>}/>
         <Route path='/add-item/donators-name' element={<AddDonatorsName/>}/>
+        <Route path='/add-item/EditAdmin' element={<EditAdministration/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>
