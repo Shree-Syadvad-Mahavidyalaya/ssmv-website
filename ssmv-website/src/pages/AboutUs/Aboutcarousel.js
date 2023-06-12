@@ -1,9 +1,22 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Carousel from "react-multi-carousel";
 import '../AboutUs/About.css'
 import Delete from '../../components/CRUD/Delete/Delete';
+import Create from '../../components/CRUD/Create/Create';
 
 const Aboutcarousel = () => {
+    const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    fetch('your-backend-api-url')
+      .then(response => response.json())
+      .then(data => {
+        setImages(data.images); // Assuming the response contains an array of image URLs
+      })
+      .catch(error => {
+        console.error('Error fetching images:', error);
+      });
+  }, []);
   return (
     <div>
          <Carousel
@@ -57,9 +70,15 @@ const Aboutcarousel = () => {
     slidesToSlide={1}
     swipeable
     >
-        
+     <div>
+      {images.map((image, index) => (
+        <div className='about-carousel' key={index} style={{ width: '100%', height: '100%' }}>
+          <img src={image} className='about-img' alt={`Image ${index + 1}`} />
+        </div>
+      ))}
+    </div>   
         <div className='about-carousel'  width="100%" height="100%">
-        <a href='/add-item/Image'><button className='add-btn'>Add</button></a><Delete/>
+        <Create url={'/add-item/Image'}/> <Delete/>
        
         <img src="https://source.unsplash.com/random/150x150/?news" className='about-img' />
         </div>
@@ -90,3 +109,6 @@ const Aboutcarousel = () => {
 }
 
 export default Aboutcarousel
+
+
+{/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a> */}

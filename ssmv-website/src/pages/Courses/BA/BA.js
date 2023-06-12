@@ -5,6 +5,7 @@ import Foot from '../../../components/Footer/Footer'
 import DoubleNavbar from '../../../components/header/doubleNavbar'
 import Delete from '../../../components/CRUD/Delete/Delete'
 import Update from '../../../components/CRUD/Update/Update'
+import Create from '../../../components/CRUD/Create/Create'
 
 const BAcourses = [
     { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
@@ -17,13 +18,13 @@ const BAcourses = [
     { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
     { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
 ]
-
+{/* <a href='/add-item/course-row'><button className='add-btn'>Add</button></a> */}
 const BA = () => {
   return (
     <>
     <DoubleNavbar/>
     <div>
-    <a href='/add-item/course-row'><button className='add-btn'>Add</button></a>
+        <Create url={'/add-item/course-row'}/>
         <div className="Table">
             <table>
                 

@@ -1,24 +1,45 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Foot from '../../../components/Footer/Footer'
 import Hostelcarousel from './Hostelcarousel'
 import DoubleNavbar from '../../../components/header/doubleNavbar'
+import Update from '../../../components/CRUD/Update/Update'
+
 
 const Hostel = () => {
+  const [hostelData, setHostelData] = useState(null);
+
+  useEffect(() => {
+    fetch('https://test-moid.vercel.app/ssmv/services/hostel/')
+      .then(response => response.json())
+      .then(data => {
+        if (data.success && data.service_hostel.length > 0) {
+          setHostelData(data.service_hostel[0]);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching hostel data:', error);
+      });
+  }, []);
+
   return (
     <div>
-        <DoubleNavbar/>
+      <DoubleNavbar />
       <div className='hostel-carousel'>
-        <Hostelcarousel/>
-        </div>
+        <Hostelcarousel />
+      </div>
+      {hostelData && (
         <div className='hostel-div'>
-            <h3 className='hostel-head'><b>HOSTEL</b></h3>
-        <div className='hostel-box'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h3 className='hostel-head'>
+            <b>HOSTEL <Update/></b>
+          </h3>
+          <div className='hostel-box'>
+            <p>{hostelData.description}</p>
+          </div>
         </div>
-        </div>
-        <Foot className="Foot"/>
+      )}
+      <Foot className='Foot' />
     </div>
-  )
-}
+  );
+};
 
 export default Hostel;

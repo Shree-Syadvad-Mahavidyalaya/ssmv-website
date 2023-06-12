@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import './navbar.css';
   
 const DoubleNavbar = () => {
+    
   const navigate = useNavigate();
   const [isNavExpanded, setIsNavExpanded] = useState(window.innerWidth>768);
 
@@ -33,6 +34,7 @@ const DoubleNavbar = () => {
                     <li><a href = "/Donate" onClick={handleClick}> Donate </a></li>
                     <li><a href = "/Greviances" onClick={handleClick}> Grievancess </a></li>
                     <li><a href = "/Login" onClick={handleClick}> Login </a></li>
+                    <li><a href = "/Login" onClick={handleClick}> Logout </a></li>
                 </ul>
             </div>
             {/* social media links */}

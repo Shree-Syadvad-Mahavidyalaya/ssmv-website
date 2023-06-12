@@ -1,12 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './about us.css'
 import Update from '../CRUD/Update/Update';
-import MyContext from '../events/MyContext';
 
 const AboutUs = () => {
-  console.log(useContext(MyContext)[0]);
 
-  
   return (
     <div className='main-container'>
         <div className='container'>

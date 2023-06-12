@@ -4,6 +4,7 @@ import { LatestData, responsive } from "./LatestData";
 import LatestItem from "./LatestItem";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Create from '../../CRUD/Create/Create';
 
 const LatestSSMV = () => {
 
@@ -17,7 +18,7 @@ const LatestSSMV = () => {
 
   return (
     <>
-    <h2 id='Latest'>Latest @SSMV<a href='/add-item/Image-Desc'><button className='add-btn'>Add</button></a></h2>
+    <h2 id='Latest'>Latest @SSMV <Create url={'/add-item/Image-Desc'}/></h2>
     <div className='Latest-container'>
       {/* <div className='latest-sub-container'>
         <div className='body-cont'>
@@ -35,5 +36,8 @@ const LatestSSMV = () => {
 }
 
 export default LatestSSMV;
+
+
+{/* <a href='/add-item/Image-Desc'><button className='add-btn'>Add</button></a> */}
 
 

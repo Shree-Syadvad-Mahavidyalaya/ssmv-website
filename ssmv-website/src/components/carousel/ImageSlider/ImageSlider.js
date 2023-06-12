@@ -2,6 +2,7 @@ import { useState } from "react";
 import './ImageSlider.css';
 import Delete from "../../CRUD/Delete/Delete";
 import "../../CRUD/Create/Create.css"
+import Create from "../../CRUD/Create/Create";
 
 const slideStyles = {
   width: "100%",
@@ -81,8 +82,8 @@ const ImageSlider = ({ slides }) => {
         </div>
       </div>
       <div style={slideStylesWidthBackground} className="image-slider"><Delete/></div>
-      <a href="/About Us/SSMV"><button className="btn">Learn More</button></a>
-      <a href='/add-item/Image'><button className='add-btn'>Add</button></a>
+      <button className="btn">Learn More</button>
+       <Create url={'/add-item/Image'}/>
       {/* <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
           <div

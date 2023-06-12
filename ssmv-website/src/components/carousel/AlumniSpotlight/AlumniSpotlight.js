@@ -2,10 +2,8 @@ import React from 'react';
 import './AlumniSpotlight.css';
 import ASTIndiv from './ASTIndiv';
 import Carousel from 'react-material-ui-carousel'
-// import { Paper, Button } from '@mui/material'
 import { AlumData} from "./DataAlum";
-// import { productData} from "../../events/Data";
-// import EventsIndiv from "../../events/EventsIndiv";
+import Create from '../../CRUD/Create/Create';
 
 const AlumniSpotlight = () => {
   
@@ -14,26 +12,16 @@ const AlumniSpotlight = () => {
       name={item.name}
       url={item.imageurl}
       designation={item.designation}
+      description={item.description}
     />
   ));
-  // console.log(data_alum);
-  // const product = productData.map((item) => (
-  //   <EventsIndiv
-  //     name={item.name}
-  //     url={item.imageurl}
-  //     price={item.price}
-  //     description={item.description}
-  //   />
-  // ));
-
   return (
-    <div className="Alumni-container">
-      <h1 id='alum'>Alumni Spotlight</h1>
-      <Carousel sx = {{ width : " 200px" }}>
+    <>
+      <h2 id='alum'>Alumni Spotlight <Create url={'/add-item/alumni-details'}/></h2>
+      <Carousel>
       {data}
       </Carousel>
-      <div className='alumni-about'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asp</p></div>
-    </div>
+    </>
   );
 }
 

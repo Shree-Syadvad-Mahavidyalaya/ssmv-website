@@ -16,12 +16,12 @@ export const Courses = () => {
       desc={item.description}
     />
   ));
-
+  
   return (
     <div className='Courses'>
       <div className='heading_c'>
-        <h2>ONLINE COURSES<Create url = {'/add-item/new-course'}/></h2>
-        <button id='view-course'><a href='/ViewAll/AllCourses'>View All</a></button>
+        <h2>ONLINE COURSES</h2>
+        <button id='view-course'><Create url={'/add-item/new-course'}/><a href='/ViewAll/AllCourses'>View All</a></button>
       </div>
       <Carousel responsive = {responsive} width ="100%">
       {Courses_data}

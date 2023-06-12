@@ -4,6 +4,7 @@ import EventsIndiv from "./EventsIndiv";
 import './Events.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Create from '../CRUD/Create/Create';
 
 
 const Events = () => {
@@ -21,7 +22,7 @@ const Events = () => {
     return (
         <div className="events-container">
         <div id='heading1'>
-          <h2>Events<a href='/add-item/Image'><button className='add-btn'>Add</button></a></h2>
+          <h2>Events <Create url={'/add-item/Image'}/> </h2>
           <button className='view-btn'><a href='/ViewAll/AllEvents'>View All</a></button>
         </div>
             <Carousel responsive={responsive}>
@@ -32,3 +33,5 @@ const Events = () => {
 }
 
 export default Events;
+
+<a href='/add-item/Image'><button className='add-btn'>Add</button></a>

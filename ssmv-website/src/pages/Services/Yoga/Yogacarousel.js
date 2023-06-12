@@ -3,6 +3,7 @@ import React from 'react'
 import Carousel from "react-multi-carousel";
 import './Yoga.css'
 import Delete from '../../../components/CRUD/Delete/Delete';
+import Create from '../../../components/CRUD/Create/Create';
 
 const Yogacarousel = () => {
   return (
@@ -58,9 +59,9 @@ const Yogacarousel = () => {
     slidesToSlide={1}
     swipeable
     >
-        
+       {/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a>  */}
         <div className='yoga-carousel'  width="100%" height="100%">
-        <a href='/add-item/Image'><button className='add-btn'>Add</button></a><Delete/>
+        <Create url={'//add-item/Image'}/> <Delete/>
         <img src="https://source.unsplash.com/random/150x150/?news" className='yoga-img' />
         </div>
         <div className='yoga-carousel'  width="100%" height="100%">
