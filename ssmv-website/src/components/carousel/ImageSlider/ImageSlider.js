@@ -81,7 +81,7 @@ const ImageSlider = ({ slides }) => {
         </div>
       </div>
       <div style={slideStylesWidthBackground} className="image-slider"><Delete/></div>
-      <button className="btn">Learn More</button>
+      <a href="/About Us/SSMV"><button className="btn">Learn More</button></a>
       <a href='/add-item/Image'><button className='add-btn'>Add</button></a>
       {/* <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (

@@ -4,6 +4,7 @@ import { CourseData, responsive } from "./CoursesData";
 import { CoursesItem } from './CoursesItem'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Create from '../CRUD/Create/Create';
 
 
 export const Courses = () => {
@@ -19,7 +20,7 @@ export const Courses = () => {
   return (
     <div className='Courses'>
       <div className='heading_c'>
-        <h2>ONLINE COURSES<a href='/add-item/new-course'><button className='add-btn'>Add</button></a></h2>
+        <h2>ONLINE COURSES<Create url = {'/add-item/new-course'}/></h2>
         <button id='view-course'><a href='/ViewAll/AllCourses'>View All</a></button>
       </div>
       <Carousel responsive = {responsive} width ="100%">
@@ -28,5 +29,4 @@ export const Courses = () => {
     </div>
   )
 }
-
 export default Courses;

@@ -27,6 +27,7 @@ const DoubleNavbar = () => {
         <nav className="navbar-top">
             <div className="top-section-links">
                 <ul className = "section-links-indiv">
+                    <li><a href= "/ssmv-website" onClick={handleClick}> Home </a></li>
                     <li><a href= "/Admission" onClick={handleClick}> Admission </a></li>
                     <li><a href = "/Alumni" onClick={handleClick}> Alumni </a> </li>
                     <li><a href = "/Donate" onClick={handleClick}> Donate </a></li>

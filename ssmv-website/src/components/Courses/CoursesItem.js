@@ -1,8 +1,6 @@
 import React from 'react'
 import Delete from '../CRUD/Delete/Delete'
 import Update from '../CRUD/Update/Update'
-// import Delete from '../CRUD/Delete/Delete'
-// import Update from '../CRUD/Update/Update'
 
 export function CoursesItem (props) {
   return (

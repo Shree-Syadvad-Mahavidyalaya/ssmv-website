@@ -4,8 +4,8 @@
   }
   
   body {
-    font-family: system-ui, sans-serif;
-    background: rgb(255, 255, 255);
+    font-family: 'Nunito Sans';
+    background: white;
     min-height: 100vh;
   }
   .newscomponent{
@@ -45,8 +45,7 @@
     display: block;
     /* float: left; */
     overflow-y: auto;
-   
-    
+    background: #ffffff;
   }
   .text{
     margin-top: 0px;
@@ -69,6 +68,11 @@
   }
   .desc{
     width: 675px;
+  }
+  .side-bold{
+    font-family: 'Nunito Sans';
+    font-weight: 500;
+    font-size: 15px;
   }
   
   @media (max-width: 760px){
