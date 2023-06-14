@@ -1,19 +1,25 @@
 import React ,{useEffect,useState}from 'react'
-import Foot from '../../../components/Footer/Footer'
 import Computercarousel from './Computercarousel'
 import DoubleNavbar from '../../../components/header/doubleNavbar'
 import Update from '../../../components/CRUD/Update/Update'
+import Footer from '../../../components/Footer/Footer'
 
 const Computer = () => {
-  const [data,setData]=useState([])
-  useEffect(()=>{
-    fetch("https://test-moid.vercel.app/ssmv/services/computerLab/").then((result)=>{
-      result.json().then((resp)=>{
-        // console.warn("result",resp)
-        setData(resp)
+  const [Data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://test-moid.vercel.app/ssmv/services/computerLab/')
+      .then(response => response.json())
+      .then(data => {
+        if (data.success && data.service_computerlab.length > 0) {
+          setData(data.service_computerlab[0]);
+        }
       })
-    })
-  },[])
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
   return (
     <div>
       <DoubleNavbar/>
@@ -21,14 +27,12 @@ const Computer = () => {
         <Computercarousel/>
         </div>
         <div className='computer-div'>
-            <h3 className='computer-head'><b>COMPUTER  <Update/></b></h3>
+          <h3 className='computer-head'><b>COMPUTER</b><Update url ={'/edit-item/services-info-computer'} id={Data._id}/></h3>
         <div className='computer-box'>
-            {data.service_computerlab?.map((item)=>
-                <p>{item.description}</p>)
- }
+            <p>{Data.description}</p>
         </div>
         </div>
-        <Foot className="Foot"/>
+        <Footer/>
     </div>
   )
 }

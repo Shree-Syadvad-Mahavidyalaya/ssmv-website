@@ -1,25 +1,60 @@
-import React from 'react';
 import './AlumniSpotlight.css';
-import ASTIndiv from './ASTIndiv';
+import React,{useState,useEffect} from 'react';
 import Carousel from 'react-material-ui-carousel'
-import { AlumData} from "./DataAlum";
 import Create from '../../CRUD/Create/Create';
+import axios from 'axios';
+import Delete from '../../CRUD/Delete/Delete';
+import Update from '../../CRUD/Update/Update';
 
 const AlumniSpotlight = () => {
   
-  const data = AlumData.map((item) => (
-    <ASTIndiv
-      name={item.name}
-      url={item.imageurl}
-      designation={item.designation}
-      description={item.description}
-    />
-  ));
+  const [SpotlightData, setSpotlightData] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://test-moid.vercel.app/ssmv/alumni/spotlight/')
+      .then(response => {
+        const { alumni_spotlight } = response.data;
+        setSpotlightData(alumni_spotlight);
+      })
+      .catch(error => {
+        console.error('Error fetching latest data:', error);
+      });
+  }, []);
+
+  // const handleDelete = async (id) => {
+  //   try {
+  //     const response = await fetch(`https://test-moid.vercel.app/ssmv/alumni/latest/${id}`, {
+  //       method: 'DELETE',
+  //     });
+
+  //     if (response.ok) {
+  //       // Remove the deleted element from the component's state
+  //       setSpotlightData((prevData) => prevData.filter((item) => item.id !== id));
+  //       console.log('Deleted successfully');
+  //     } else {
+  //       console.error('Failed to delete');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error deleting:', error);
+  //   }
+  // };
   return (
     <>
-      <h2 id='alum'>Alumni Spotlight <Create url={'/add-item/alumni-details'}/></h2>
+      <h2 id='alum'>Alumni Spotlight <Create url={'/add-item/alumni-details'} /></h2>
       <Carousel>
-      {data}
+      {SpotlightData.map(SpotlightItem => (
+        <div className='card1' key={SpotlightItem._id}>
+        <div className='alumni-card'>
+        <img className='alumni-img' src={SpotlightItem.imagesurl} alt=''/>
+          <p>{SpotlightItem.name}</p>
+          <hr></hr>
+          <p>{SpotlightItem.profile}</p>
+        </div>
+        <div className='alumni-about'><p>{SpotlightItem.description}</p>
+        <Delete/><Update url={'/edit-item/spotlight'} id={SpotlightItem._id}/>
+        </div>
+      </div>
+      ))}
       </Carousel>
     </>
   );

@@ -34,6 +34,19 @@ import AddImgDesc from './components/Editpage/AddImgDesc';
 import AddNewCourse from './components/Editpage/AddNewCourse';
 import AddAlumniDetails from './components/Editpage/AddAlumniDetails';
 import AddDonatorsName from './components/Editpage/AddDonatorsName';
+import EditSHostelinfo from './components/Editpage/EditSHostelinfo';
+import EditLatest from './components/Editpage/EditLatest';
+import EditSptlght from './components/Editpage/EditSptlght';
+import EditSComputer from './components/Editpage/EditSComputer';
+import Editevents from './components/Editpage/Editevents';
+import EditTestimonials from './components/Editpage/EditTestimonials';
+import EditSlibraryinfo from './components/Editpage/EditSlibraryinfo';
+import EditSMessinfo from './components/Editpage/EditSMessinfo';
+import EditSYogainfo from './components/Editpage/EditSYogainfo';
+import AddTestimonials from './components/Editpage/AddTestimonials';
+import AddAlumniEvents from './components/Editpage/AddAlumniEvents';
+import AddLatest from './components/Editpage/AddLatest';
+import AddAlumniVGallery from './components/Editpage/AddAlumniVGallery';
 
 
 
@@ -77,7 +90,20 @@ function App() {
         <Route path='/add-item/Image-Desc' element={<AddImgDesc/>}/>
         <Route path='/add-item/new-course' element={<AddNewCourse/>}/>
         <Route path='/add-item/alumni-details' element={<AddAlumniDetails/>}/>
+        <Route path='/add-item/alumni-testimonials' element={<AddTestimonials/>}/>
+        <Route path='/add-item/alumni-events' element={<AddAlumniEvents/>}/>
+        <Route path='/add-item/alumni-latest' element={<AddLatest/>}/>
+        <Route path='/add-item/alumni-video-gallery' element={<AddAlumniVGallery/>}/>
         <Route path='/add-item/donators-name' element={<AddDonatorsName/>}/>
+        <Route path='/edit-item/services-info-hostel' element={<EditSHostelinfo/>}/>
+        <Route path='/edit-item/alumni-latest' element={<EditLatest/>}/>
+        <Route path='/edit-item/spotlight' element={<EditSptlght/>}/>
+        <Route path='/edit-item/services-info-computer' element={<EditSComputer/>}/>
+        <Route path='/edit-item/alumni-events' element={<Editevents/>}/>
+        <Route path='/edit-item/alumni-testimonials' element={<EditTestimonials/>}/>
+        <Route path='/edit-item/services-info-library' element={<EditSlibraryinfo/>}/>
+        <Route path='/edit-item/services-info-mess' element={<EditSMessinfo/>}/>
+        <Route path='/edit-item/services-info-yoga' element={<EditSYogainfo/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>

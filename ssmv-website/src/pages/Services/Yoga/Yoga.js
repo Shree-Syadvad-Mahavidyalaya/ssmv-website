@@ -5,15 +5,21 @@ import DoubleNavbar from '../../../components/header/doubleNavbar'
 import Update from '../../../components/CRUD/Update/Update'
 
 const Yoga = () => {
-  const [data,setData]=useState([])
-  useEffect(()=>{
-    fetch("https://test-moid.vercel.app/ssmv/services/yoga/").then((result)=>{
-      result.json().then((resp)=>{
-        // console.warn("result",resp)
-        setData(resp)
+  const [Data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://test-moid.vercel.app/ssmv/services/yoga/')
+      .then(response => response.json())
+      .then(data => {
+        if (data.success && data.service_yoga.length > 0) {
+          setData(data.service_yoga[0]);
+        }
       })
-    })
-  },[])
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
   return (
     <div>
       <DoubleNavbar/>
@@ -21,12 +27,9 @@ const Yoga = () => {
         <Yogacarousel/>
         </div>
         <div className='yoga-div'>
-            <h3 className='yoga-head'><b>YOGA AND KARMAKANDA  <Update/></b></h3>
+            <h3 className='yoga-head'><b>YOGA AND KARMAKANDA  <Update url={'/edit-item/services-info-yoga'} id={Data._id}/></b></h3>
         <div className='yoga-box'>
-        {data.service_yoga?.map((item)=>
-                <p>{item.description}</p>)
- }
-            {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> */}
+          <p>{Data.description}</p>
         </div>
         </div>
         <Foot className="Foot"/>

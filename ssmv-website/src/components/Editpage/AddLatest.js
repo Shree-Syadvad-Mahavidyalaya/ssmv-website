@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import './AddNewsForm.css'
 import {useNavigate} from 'react-router-dom';
 
-function AddAlumniDetails() {
+function AddLatest() {
   const navigate=useNavigate();
   const [subject, setSubject] = useState({ 
     description: '', 
     imagesurl: '' , 
-    name:'', 
-    profile:'' });
+    date:'',
+    name:''
+    });
   
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -29,37 +30,37 @@ function AddAlumniDetails() {
       const handleSubmit = (event) => {
         event.preventDefault();
       
-        // Create a new alumni object using the form data
-        const alumni = {
+        // Create a new object using the form data
+        const addedData = {
           description: subject.description,
           imagesurl: subject.imagesurl,
-          name: subject.name,
-          profile: subject.profile
+          date: subject.date,
+          name:subject.name
         };
-        console.log(alumni);
+        console.log(addedData);
       
         // Send the alumni data to the server
-        fetch('https://test-moid.vercel.app/ssmv/alumni/spotlight/new', {
+        fetch('https://test-moid.vercel.app/ssmv/alumni/latest/new', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(alumni)
+          body: JSON.stringify(addedData)
         })
           .then(response => {
             if (response.ok) {
               // Handle the successful response here
-              console.log('Alumni details added successfully!');
+              console.log('Details added successfully!');
               // Reset the form fields
               setSubject({
-                description: '',
-                imagesurl: '',
-                name: '',
-                profile: ''
+                description: '', 
+                imagesurl: '' , 
+                date:'',
+                name:''
               });
             } else {
               // Handle any error responses from the server
-              console.log('Error adding alumni details');
+              console.log('Error adding details');
             }
           })
           .catch(error => {
@@ -76,29 +77,9 @@ function AddAlumniDetails() {
     <div className="form-group">
         <span>Name:</span>
         <input
-          type="name"
+          type="text"
           name="name"
           value={subject.name}
-          onChange={handleInputChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <span>Profile:</span>
-        <input
-          type="name"
-          name="profile"
-          value={subject.profile}
-          onChange={handleInputChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <span>Image Url:</span>
-        <input
-          type="text"
-          name="image"
-          value={subject.imagesurl}
           onChange={handleInputChange}
           required
         />
@@ -113,10 +94,30 @@ function AddAlumniDetails() {
           required
         />
       </div>
+      <div className="form-group">
+        <span>Image Url:</span>
+        <input
+          type="text"
+          name="image"
+          value={subject.imagesurl}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <span>Date:</span>
+        <input
+          type="date"
+          name="date"
+          value={subject.date}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
       <button type="submit" id='add-news-btn'>Submit</button>
     </form>
     </>
   );
 }
 
-export default AddAlumniDetails;
+export default AddLatest;
