@@ -20,7 +20,7 @@
 
 .gallery-boxes{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: column; */
     padding-top: 30px;
     justify-content: space-between;
     align-items:center;
@@ -45,6 +45,13 @@
     border-top: 7px solid #45cb70;
 }
 
+.box1 iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    overflow: 'hidden';
+    border:none;
+}
 @media screen and (max-width: 769px) {
     #container{
         margin: 50px 50px;

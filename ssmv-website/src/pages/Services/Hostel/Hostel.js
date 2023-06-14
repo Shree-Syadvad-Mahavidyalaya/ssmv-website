@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react'
-import Foot from '../../../components/Footer/Footer'
 import Hostelcarousel from './Hostelcarousel'
 import DoubleNavbar from '../../../components/header/doubleNavbar'
 import Update from '../../../components/CRUD/Update/Update'
+import Footer from '../../../components/Footer/Footer'
 
 
 const Hostel = () => {
@@ -30,14 +30,14 @@ const Hostel = () => {
       {hostelData && (
         <div className='hostel-div'>
           <h3 className='hostel-head'>
-            <b>HOSTEL <Update/></b>
+            <b>HOSTEL <Update url ={'/edit-item/services-info-hostel'} id={hostelData._id}/></b>
           </h3>
           <div className='hostel-box'>
             <p>{hostelData.description}</p>
           </div>
         </div>
       )}
-      <Foot className='Foot' />
+      <Footer/>
     </div>
   );
 };

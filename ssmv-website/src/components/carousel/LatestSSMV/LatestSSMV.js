@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import './LatestSSMV.css';
-import { responsive } from "./LatestData";
+import {responsive } from "./LatestData";
 // import LatestItem from "./LatestItem";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -24,19 +24,20 @@ const LatestSSMV = () => {
   }, []);
 
   return (
-    <>
-      <h2 id='Latest'>Latest @SSMV <Create url={'/add-item/Image-Desc'}/></h2>
+     <>
+      <h2 id='Latest'>Latest @SSMV <Create url={'/add-item/alumni-latest'}/></h2>
       <div className='Latest-container'>
         <Carousel responsive={responsive}>
           {latestData.map(latestItem => (
             <div className="card2" key={latestItem._id}>
-            <div className="body-section">
-              <h3>{latestItem.title}</h3>
-              <p>{latestItem.body}</p>
-              <Delete/><Update/>
+              <div className="body-section">
+                <h3>{latestItem.name}</h3>
+                <p>{latestItem.description}</p>
+                <Delete url={`https://test-moid.vercel.app/ssmv/alumni/latest/${latestItem._id}`} baseurl={'/Alumni'} />
+                <Update url = {'/edit-item/alumni-latest'} id={latestItem._id}/>
+              </div>
+              <img className="img-section" src={latestItem.imagesurl} alt="" />
             </div>
-            <img className="img-section" src={latestItem.url} alt=""/>
-          </div>
           ))}
         </Carousel>
       </div>

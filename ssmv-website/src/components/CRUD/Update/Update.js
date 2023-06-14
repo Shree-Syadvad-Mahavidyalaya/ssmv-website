@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
-import './Update.css';
-import MyContext from '../../events/MyContext';
+import './Update.css'
+import MyContext from '../../events/MyContext'
 
 export default function Update(props) {
   const navigate=useNavigate();
@@ -16,4 +16,4 @@ export default function Update(props) {
   return ( isAdmin &&
     <button className='edit-btn' onClick={(e)=>handleClick(e,props)}>Edit</button>
   )
-};
+}

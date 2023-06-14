@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import './AddNewsForm.css'
 import {useNavigate} from 'react-router-dom';
 
-function AddAlumniDetails() {
+function AddTestimonials() {
   const navigate=useNavigate();
   const [subject, setSubject] = useState({ 
     description: '', 
-    imagesurl: '' , 
-    name:'', 
-    profile:'' });
+    imagesurl: '' ,
+    title: ''
+});
   
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -33,13 +33,12 @@ function AddAlumniDetails() {
         const alumni = {
           description: subject.description,
           imagesurl: subject.imagesurl,
-          name: subject.name,
-          profile: subject.profile
+          title: subject.title,
         };
         console.log(alumni);
       
         // Send the alumni data to the server
-        fetch('https://test-moid.vercel.app/ssmv/alumni/spotlight/new', {
+        fetch('https://test-moid.vercel.app/ssmv/alumni/testinomials/new', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -54,8 +53,7 @@ function AddAlumniDetails() {
               setSubject({
                 description: '',
                 imagesurl: '',
-                name: '',
-                profile: ''
+                title: '',
               });
             } else {
               // Handle any error responses from the server
@@ -73,32 +71,22 @@ function AddAlumniDetails() {
     <>
     <h1>Add Details</h1>
     <form onSubmit={handleSubmit} className='news-form'>
-    <div className="form-group">
-        <span>Name:</span>
-        <input
-          type="name"
-          name="name"
-          value={subject.name}
-          onChange={handleInputChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <span>Profile:</span>
-        <input
-          type="name"
-          name="profile"
-          value={subject.profile}
-          onChange={handleInputChange}
-          required
-        />
-      </div>
       <div className="form-group">
         <span>Image Url:</span>
         <input
           type="text"
           name="image"
           value={subject.imagesurl}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <span>Title:</span>
+        <input
+          type="text"
+          name="title"
+          value={subject.title}
           onChange={handleInputChange}
           required
         />
@@ -119,4 +107,4 @@ function AddAlumniDetails() {
   );
 }
 
-export default AddAlumniDetails;
+export default AddTestimonials;

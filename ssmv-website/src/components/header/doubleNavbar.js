@@ -5,13 +5,20 @@ import { useNavigate } from 'react-router-dom';
 import './navbar.css';
   
 const DoubleNavbar = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     
+      const handleLogout = () => {
+        setIsLoggedIn(false);
+      };
+
   const navigate = useNavigate();
   const [isNavExpanded, setIsNavExpanded] = useState(window.innerWidth>768);
 
-  useEffect(()=>{
-    window.addEventListener("resize", ()=>{setIsNavExpanded(window.innerWidth>768)})
-  });
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setIsNavExpanded(window.innerWidth > 768);
+    });
+  }, []);
 
   const handleclicked=()=>{
     setIsNavExpanded(!isNavExpanded);
@@ -33,8 +40,19 @@ const DoubleNavbar = () => {
                     <li><a href = "/Alumni" onClick={handleClick}> Alumni </a> </li>
                     <li><a href = "/Donate" onClick={handleClick}> Donate </a></li>
                     <li><a href = "/Greviances" onClick={handleClick}> Grievancess </a></li>
-                    <li><a href = "/Login" onClick={handleClick}> Login </a></li>
-                    <li><a href = "/Login" onClick={handleClick}> Logout </a></li>
+                    {isLoggedIn ? (
+                    <li>
+                        <a href="/ssmv-website" onClick={handleLogout}>
+                        Logout
+                        </a>
+                    </li>
+                    ) : (
+                    <li>
+                        <a href="/Login" onClick={handleClick}>
+                        Login
+                        </a>
+                    </li>
+                    )}
                 </ul>
             </div>
             {/* social media links */}
