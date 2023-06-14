@@ -41,8 +41,9 @@ import EditManage from './components/Editpage/EditManage';
 import AddReport from './components/Editpage/AddReport';
 import EditFounder from './components/Editpage/EditFounder';
 import EditPrinciple from './components/Editpage/EditPrinciple'
-import EditObjective from './components/Editpage/EditObjectives'
-
+import EditObjective from './components/Editpage/EditObjectives';
+import EditSSMVAbout from './components/Editpage/EditSSMVAbout';
+import AddBACourse from './components/Editpage/AddBACourse';
 
 
 function App() {
@@ -93,6 +94,8 @@ function App() {
         <Route path='/add-item/EditFounder' element={<EditFounder/>}/>
         <Route path='/add-item/EditPrinciple' element={<EditPrinciple/>}/>
         <Route path='add-item/EditObjective' element={<EditObjective/>}/>
+        <Route path='/add-item/ssmv-about' element={<EditSSMVAbout/>}/>
+        <Route path='/add-item/AddBACourse' element={<AddBACourse/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>

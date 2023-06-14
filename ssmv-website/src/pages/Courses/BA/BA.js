@@ -17,6 +17,7 @@ const BA = () => {
 
   useEffect(() => {
     // Fetch data from the backend API
+    console.log('hello!!');
     fetchData();
   }, []);
 
@@ -48,22 +49,18 @@ const BA = () => {
   //     <a href='/add-item/Image' onClick={handleClick} ><button className='edit-btn'>Edit</button></a>
   //   )
   // }
-  
-  function handleDelete(id){
-    const newList = BAcourses.filter(li => li.id != id)
-    setBAcourses(newList)
-  }
+ 
 
   return (
     <>
       <DoubleNavbar />
       <div>
-        <Create url={'/add-item/course-row'} />
+      
         <div className="Table">
           <table>
             <thead>
               <tr>
-                <th scope="col">Course</th>
+                <th scope="col"><b>Course</b><Create url={'/add-item/AddBACourse'} setBAcourses={setBAcourses}/></th>
               </tr>
             </thead>
             <tbody>
@@ -75,9 +72,9 @@ const BA = () => {
                     ) : (
                       <>
                         {val.subject}
-                        <Delete handleDelete={() => handleDelete(val._id)} />
+                        <Delete url={`https://test-moid.vercel.app/ssmv/courses/ba/${val._id}`} baseurl={'/Courses/BA'} />
                         {/* <button onClick={() => handleEdit(val._id)}>EDIT</button> */}
-                        <Update url={'/add-item/course-BA'} id={val._id}/>
+                        <Update url={'/add-item/course-BA'} id={val._id} />
                       </>
                     )}
                   </td>
