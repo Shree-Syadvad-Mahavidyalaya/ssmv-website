@@ -35,7 +35,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-quote-left fa-3x"></i>
                 <p>{Testimonialsitem.description}</p>
                 <Update url={'/edit-item/alumni-testimonials'} id={Testimonialsitem._id}/>
-                <Delete/>
+                <Delete url={`https://test-moid.vercel.app/ssmv/alumni/testinomials/${Testimonialsitem._id}`} baseurl={'/Alumni'} />
               </div>
             </div>
             <div className='boxes2'></div>

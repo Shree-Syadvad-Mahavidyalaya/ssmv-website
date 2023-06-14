@@ -51,7 +51,8 @@ const AlumniSpotlight = () => {
           <p>{SpotlightItem.profile}</p>
         </div>
         <div className='alumni-about'><p>{SpotlightItem.description}</p>
-        <Delete/><Update url={'/edit-item/spotlight'} id={SpotlightItem._id}/>
+        <Delete url={`https://test-moid.vercel.app/ssmv/alumni/spotlight/${SpotlightItem._id}`} baseurl={'/Alumni'} />
+        <Update url={'/edit-item/spotlight'} id={SpotlightItem._id}/>
         </div>
       </div>
       ))}

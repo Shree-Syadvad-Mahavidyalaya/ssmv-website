@@ -41,7 +41,7 @@ const Events = () => {
             <p>
               <button>Read More</button>
               <Update url={'/edit-item/alumni-events'} id={event._id}/>
-              <Delete/>
+              <Delete url={`https://test-moid.vercel.app/ssmv/alumni/event/${event._id}`} baseurl={'/Alumni'} />
             </p>
           </div>
         ))}

@@ -24,24 +24,6 @@ const LatestSSMV = () => {
       });
   }, []);
 
-  const handleDelete = async (id) => {
-    try {
-      const response = await fetch(`https://test-moid.vercel.app/ssmv/alumni/latest/${id}`, {
-        method: 'DELETE',
-      });
-
-      if (response.ok) {
-        // Remove the deleted element from the component's state
-        setLatestData((prevData) => prevData.filter((item) => item.id !== id));
-        console.log('Deleted successfully');
-      } else {
-        console.error('Failed to delete');
-      }
-    } catch (error) {
-      console.error('Error deleting:', error);
-    }
-  };
-
   return (
      <>
       <h2 id='Latest'>Latest @SSMV <Create url={'/add-item/alumni-latest'}/></h2>
@@ -51,7 +33,8 @@ const LatestSSMV = () => {
             <div className="card2" key={latestItem._id}>
               <div className="body-section">
                 <h3>{latestItem.name}</h3>
-                <p>{latestItem.description}</p><Delete onClick={() => handleDelete(latestItem._id)}/>
+                <p>{latestItem.description}</p>
+                <Delete url={`https://test-moid.vercel.app/ssmv/alumni/latest/${latestItem._id}`} baseurl={'/Alumni'} />
                 <Update url = {'/edit-item/alumni-latest'} id={latestItem._id}/>
               </div>
               <img className="img-section" src={latestItem.imagesurl} alt="" />
