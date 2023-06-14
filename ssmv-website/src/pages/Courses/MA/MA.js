@@ -38,10 +38,7 @@ const MA = () => {
   const handleCancelEdit = () => {
     setEditingCourseId(null);
   };
-  function handleDelete(id){
-    const newList = MAcourses.filter(li => li.id != id)
-    setMAcourses(newList)
-  }
+  
   return (
     <>
       <DoubleNavbar />
@@ -64,7 +61,7 @@ const MA = () => {
                     ) : (
                       <>
                         {val.subject}
-                        <Delete handleDelete={() => handleDelete(val._id)} />
+                        <Delete url={`https://test-moid.vercel.app/ssmv/courses/ma/${val._id}`} baseurl={'/Courses/MA'} />
                         {/* <button onClick={() => handleEdit(val._id)}>EDIT</button> */}
                         <Update url={'/add-item/course-MA'} id={val._id}/>
                       </>

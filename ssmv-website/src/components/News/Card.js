@@ -1,14 +1,14 @@
 import React from 'react'
 import './SideNews.css'
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className='news'>
           <div className='Side-news'>
-            <img src='./1.jpg' alt=''/>
+            <div className='news-img-box'><img src={props.items.imagesurl} alt=''/></div>
             <div className='text'>
-              <p className='date'>24th July 2020</p>
-              <p className='desc'><b>'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'</b></p>
+              <p className='date'>{props.items.date}</p>
+              <p className='desc'><b>{props.items.desc}</b></p>
             </div>
           </div>
 

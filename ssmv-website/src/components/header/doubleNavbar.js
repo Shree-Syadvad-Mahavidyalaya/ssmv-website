@@ -91,8 +91,8 @@ const DoubleNavbar = () => {
                     </li>
                     <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Administration</a>
                     <ul id="admn">
-                                <li><a href= "/Admininstration/College Administration" onClick={handleClick}>College Administration</a></li>
-                                <li><a href= "/Administration/Managing Commitee" onClick={handleClick}>Managing Committee</a></li>
+                                <li><a href= "/Admininstration/CollegeAdministration" onClick={handleClick}>College Administration</a></li>
+                                <li><a href= "/Administration/ManagingCommitee" onClick={handleClick}>Managing Committee</a></li>
                                 <li><a href= "/Administration/Group" onClick={handleClick}>Group 3/4</a></li>
                         </ul>
                     </li>

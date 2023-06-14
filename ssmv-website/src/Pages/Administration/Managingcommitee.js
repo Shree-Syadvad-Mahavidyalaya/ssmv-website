@@ -3,55 +3,68 @@ import './Administration.css'
 import Foot from '../../components/Footer/Footer'
 import DoubleNavbar from '../../components/header/doubleNavbar'
 import Update from '../../components/CRUD/Update/Update'
-
+import Delete from '../../components/CRUD/Delete/Delete'
+import EditManage from '../../components/Editpage/EditManage'
 
 const Managingcommitee = () => {
-  const [committeeData, setCommitteeData] = useState([]);
+  const [manage, setManage] = useState([]);
+  const [editManage, setEditManage] = useState(null);
+
 
   useEffect(() => {
-    fetchData();
+    // Fetch data from the backend API
+    fetch('https://test-moid.vercel.app/ssmv/management/managingCommittee/')
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          setManage(data.managingcommittee);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching administration data:', error);
+      });
   }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch('https://test-moid.vercel.app/ssmv/management/managingCommittee/');
-      const data = await response.json();
-      if (data.success) {
-        setCommitteeData(data.managingcommittee);
-      } else {
-        console.log('Error:', data.error);
-      }
-    } catch (error) {
-      console.log('Error:', error);
-    }
+  const handleEdit = (ManageId) => {
+    setEditManage(ManageId);
   };
 
-  return (
-    <>
-      <DoubleNavbar />
+  const handleCancelEdit = () => {
+    setEditManage(null);
+  };
 
-      {committeeData.map((member, index) => (
-        <div className="Admin-card2" key={index}>
-          <div className="Admin2" width="100%" height="300px">
+  
+return (
+  <>
+    <DoubleNavbar />
+    {manage.map((manage) => (
+      <div className="Admin-card2" key={manage._id}>
+        {editManage === manage._id ? (
+          <EditManage ManageId={manage._id} onCancelEdit={handleCancelEdit} />
+        ) : (
+          <>
+            <Update url={'/add-item/EditManage'} id={manage._id} />
+            <Delete />
+            <div className="Admin2" width="100%" height="300px">
             <div className="admin-head2">
               <div className="border">
-                <img src={member.image} className="admin-img2" alt="" />
+                <img src={manage.image} className="admin-img2" alt="" />
               </div>
               <div className="admin-text2">
                 <p className="admin-Head2">
-                  <b>{member.name}</b>
+                  <b>{manage.name}</b>
                 </p>
-                <p className="admin-desig2">{member.designation}</p>
+                <p className="admin-desig2">{manage.designation}</p>
               </div>
             </div>
-            <p className="admin-desc2">{member.description} <Update/></p>
+            <p className="admin-desc2">{manage.description}</p>
+            
           </div>
-        </div>
-      ))}
-
-      <Foot />
-    </>
-  );
+          </>
+        )}
+      </div>
+    ))}
+    <Foot />
+  </>
+);
 };
-
 export default Managingcommitee;

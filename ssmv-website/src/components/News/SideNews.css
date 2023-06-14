@@ -75,6 +75,10 @@
     font-weight: 500;
     font-size: 15px;
   }
+  .news-img-box img{
+    padding: 10px;
+    margin: 10px;
+  }
   
   @media (max-width: 760px){
     .nav{

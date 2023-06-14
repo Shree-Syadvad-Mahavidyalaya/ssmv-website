@@ -3,6 +3,7 @@ import Aboutcarousel from './Aboutcarousel'
 import '../AboutUs/About.css'
 import Footer from '../../components/Footer/Footer'
 import DoubleNavbar from '../../components/header/doubleNavbar'
+import Update from '../../components/CRUD/Update/Update'
 
 const AboutUs = () => {
   const [data,setData]=useState([])
@@ -23,8 +24,12 @@ const AboutUs = () => {
         <div className='div'>
             <h3 className='head'><b>ABOUT US</b></h3>
         <div className='box2'>
+        <Update url={'/add-item/ssmv-about'} AboutId={data._id}/>
         {data.ssmv?.map((item)=>
-                <p>{item.description}</p>)
+        <>
+          <p>{item.description}</p>
+          
+        </>)
  }
         </div>
         </div>

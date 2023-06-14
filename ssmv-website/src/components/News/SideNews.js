@@ -171,7 +171,8 @@ const SideNews = (props) => {
             if (index === mainNewsId) return null;
             return (
               <div onClick={() => setMainNewsId(index)} key={index}>
-                <Card value={item} /> <Delete/><Update/>
+                <Card items={item} key={index} />
+                <Delete/> <Update/>
               </div>
             );
           })}

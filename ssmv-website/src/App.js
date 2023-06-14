@@ -50,8 +50,13 @@ import AddTestimonials from './components/Editpage/AddTestimonials';
 import AddAlumniEvents from './components/Editpage/AddAlumniEvents';
 import AddLatest from './components/Editpage/AddLatest';
 import AddAlumniVGallery from './components/Editpage/AddAlumniVGallery';
-
-
+import EditManage from './components/Editpage/EditManage';
+import AddReport from './components/Editpage/AddReport';
+import EditFounder from './components/Editpage/EditFounder';
+import EditPrinciple from './components/Editpage/EditPrinciple'
+import EditObjective from './components/Editpage/EditObjectives';
+import EditSSMVAbout from './components/Editpage/EditSSMVAbout';
+import AddBACourse from './components/Editpage/AddBACourse';
 
 
 function App() {
@@ -68,8 +73,8 @@ function App() {
         <Route path='/Login' element={<LoginPage/>}/>
         <Route path='/ViewAll/AllCourses' element={<AllCourses/>}/>
         <Route path='/About Us/SSMV' element={<AboutUs/>} />
-        <Route path='/Admininstration/College Administration' element={<Administration/>}/>
-        <Route path='/Administration/Managing Commitee' element={<Managingcommitee/>}/>
+        <Route path='/Admininstration/CollegeAdministration' element={<Administration/>}/>
+        <Route path='/Administration/ManagingCommitee' element={<Managingcommitee/>}/>
         <Route path='/Administration/Group' element={<Group/>}/>
         <Route path='/About Us/Annual Report' element={<AnnualReport/>}/>
         <Route path='/About Us/Founder' element={<Founder/>}/>
@@ -87,8 +92,6 @@ function App() {
         <Route path='/ViewAll/AllEvents' element={<Events/>}/>
         <Route path='/ViewAll/Gallery' element={<Gallery/>}/>
         <Route path='/Greviances' element={<Greviances/>}/>
-        {/* <Route path='/add-item' element={<Editpage/>}/> */}
-        {/* <Route path='/update-item' element={<Updatepage/>}/> */}
         <Route path='/add-item/news' element={<AddNewsForm/>}/>
         <Route path='/add-item/image' element={<AddImageForm/>}/>
         <Route path='/add-item/row' element={<AddNewRow/>}/>
@@ -112,6 +115,13 @@ function App() {
         <Route path='/edit-item/services-info-library' element={<EditSlibraryinfo/>}/>
         <Route path='/edit-item/services-info-mess' element={<EditSMessinfo/>}/>
         <Route path='/edit-item/services-info-yoga' element={<EditSYogainfo/>}/>
+        <Route path='/add-item/EditManage' element={<EditManage/>}/>
+        <Route path='/add-item/AddReport' element={<AddReport/>}/>
+        <Route path='/add-item/EditFounder' element={<EditFounder/>}/>
+        <Route path='/add-item/EditPrinciple' element={<EditPrinciple/>}/>
+        <Route path='add-item/EditObjective' element={<EditObjective/>}/>
+        <Route path='/add-item/ssmv-about' element={<EditSSMVAbout/>}/>
+        <Route path='/add-item/AddBACourse' element={<AddBACourse/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>
