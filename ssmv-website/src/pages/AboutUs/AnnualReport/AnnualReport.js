@@ -4,6 +4,7 @@ import Footer from '../../../components/Footer/Footer'
 import '../AnnualReport/AnnualReport.css'
 import DoubleNavbar from '../../../components/header/doubleNavbar'
 import Create from '../../../components/CRUD/Create/Create'
+import Delete from '../../../components/CRUD/Delete/Delete'
 
 
 const AnnualReport = () => {
@@ -22,11 +23,14 @@ const AnnualReport = () => {
     <div>
       <DoubleNavbar/>
         <div className='div'>
-            <h3 className='report-head'><b className='box-head'>Annual Reports/Annual Accounts</b><Create url={'/add-item/Image'}/> </h3>
+            <h3 className='report-head'><b className='box-head'>Annual Reports/Annual Accounts</b><Create url={'/add-item/AddReport'}/> </h3>
         <div className='mainreport-box'>
-        {data.anuualReport?.map((item)=>
-                <p>{item.description}</p>)
- }
+        {data.anuualReport?.map((item)=>(
+            <div className='report-map'>
+            <p>{item.description}</p>
+            <Delete url={`https://test-moid.vercel.app/ssmv/aboutus/annualReport/${item._id}`} baseurl={'/About Us/Annual Report'}/>
+            </div>
+            ))}
         </div>
         </div>
         <Footer/>

@@ -3,11 +3,11 @@ import './AddNewsForm.css'
 import course_id from '../../Pages/Courses/BA/BA'
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function EditAdministration({ AdminId }) {
+function EditManage({ AdminId }) {
   const navigate = useNavigate();
   const location = useLocation();
   // const AdminId = location.state.props;
-  const [administration, setAdministration] = useState({
+  const [Management, setManagement] = useState({
     name: '',
     designation: '',
     description: ''
@@ -20,16 +20,16 @@ function EditAdministration({ AdminId }) {
   const fetchAdministration = async () => {
     try {
       const response = await fetch(
-        `https://test-moid.vercel.app/ssmv/management/collegeAdministration/${AdminId}`
+        `https://test-moid.vercel.app/ssmv/management/managingCommittee/${AdminId}`
       );
       const data = await response.json();
 
       if (response.ok) {
-        const administrationData = data.collegeadministration[0];
-        setAdministration({
-          name: administrationData.name,
-          designation: administrationData.designation,
-          description: administrationData.description
+        const managementData = data.managingcommitee[0];
+        setManagement({
+          name: managementData.name,
+          designation: managementData.designation,
+          description: managementData.description
         });
       } else {
         console.error('Failed to fetch administration data');
@@ -42,26 +42,26 @@ function EditAdministration({ AdminId }) {
   };
 
   const handleInputChange = (event) => {
-    setAdministration(event.target.value);
+    setManagement(event.target.value);
   };
 
   const onCancelEdit=()=>{
-    navigate('/Admininstration/CollegeAdministration');
+    navigate('/Administration/ManagingCommitee');
   }
-  
+
   const handleEdit = async (event) => {
     event.preventDefault();
-    const updatedData = { administration };
+    const updatedData = {Management };
 
     try {
       const response = await fetch(
-        `https://test-moid.vercel.app/ssmv/management/collegeAdministration/${AdminId}`,
+        `https://test-moid.vercel.app/ssmv/management/managingCommittee/${AdminId}`,
         {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ collegeadministration: [administration] })
+          body: JSON.stringify({ managingcommitee: [Management] })
         }
       );
 
@@ -76,19 +76,19 @@ function EditAdministration({ AdminId }) {
       console.error('Error updating administration:', error);
       // Handle errors or display error messages
     }
-    navigate('/Administration');
+    navigate('Administration/ManagingCommitee');
   };
 
   return (
     <>
-      <h1>Edit Administration</h1>
-      <form className="administration-form" onSubmit={handleEdit}>
+      <h1>Edit Managing Commitee</h1>
+      <form className="news-form" onSubmit={handleEdit}>
         <div className="form-group">
           <span>Name:</span>
           <input
             type="text"
             name="name"
-            value={administration.name}
+            value={Management.name}
             onChange={handleInputChange}
             required
           />
@@ -98,7 +98,7 @@ function EditAdministration({ AdminId }) {
           <input
             type="text"
             name="designation"
-            value={administration.designation}
+            value={Management.designation}
             onChange={handleInputChange}
             required
           />
@@ -107,12 +107,12 @@ function EditAdministration({ AdminId }) {
           <span>Description:</span>
           <textarea
             name="description"
-            value={administration.description}
+            value={Management.description}
             onChange={handleInputChange}
             required
           />
         </div>
-        <button type="submit" id="edit-administration-btn" onClick={onCancelEdit}>
+        <button type="submit" id="add-news-btn" onClick={onCancelEdit}>
           Edit
         </button>
       </form>
@@ -120,6 +120,4 @@ function EditAdministration({ AdminId }) {
   );
 }
 
-export default EditAdministration;
-
-
+export default EditManage;

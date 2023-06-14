@@ -20,3 +20,7 @@
     background-color: #174873;
     color: white;
 }
+.report-map{
+    display: flex;
+    margin: auto;
+}

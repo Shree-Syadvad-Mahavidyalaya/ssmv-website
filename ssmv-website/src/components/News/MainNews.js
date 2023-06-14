@@ -8,7 +8,7 @@ const MainNews = (props) => {
     <div className="newscomponent">
       {/* <div className="news"> */}
         <div className="main-news" >
-          <img src={props.items.img} alt=""  height="400px" className="main-img" />
+          <img src={props.items.imagesurl} alt=""  height="400px" className="main-img" />
           <div className="main-text" >
             <p className="main-date">{props.items.date}</p>
             <p className="main-desc">

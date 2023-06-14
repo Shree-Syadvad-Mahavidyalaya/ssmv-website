@@ -37,6 +37,11 @@ import AddNewCourse from './components/Editpage/AddNewCourse';
 import Managingcommitee from './Pages/Administration/Managingcommitee';
 import AddsubMA from './components/Editpage/AddsubBA';
 import EditAdministration from './components/Editpage/EditAdministration';
+import EditManage from './components/Editpage/EditManage';
+import AddReport from './components/Editpage/AddReport';
+import EditFounder from './components/Editpage/EditFounder';
+import EditPrinciple from './components/Editpage/EditPrinciple'
+import EditObjective from './components/Editpage/EditObjectives'
 
 
 
@@ -54,8 +59,8 @@ function App() {
         <Route path='/Login' element={<LoginPage/>}/>
         <Route path='/ViewAll/AllCourses' element={<AllCourses/>}/>
         <Route path='/About Us/SSMV' element={<AboutUs/>} />
-        <Route path='/Admininstration/College Administration' element={<Administration/>}/>
-        <Route path='/Administration/Managing Commitee' element={<Managingcommitee/>}/>
+        <Route path='/Admininstration/CollegeAdministration' element={<Administration/>}/>
+        <Route path='/Administration/ManagingCommitee' element={<Managingcommitee/>}/>
         <Route path='/Administration/Group' element={<Group/>}/>
         <Route path='/About Us/Annual Report' element={<AnnualReport/>}/>
         <Route path='/About Us/Founder' element={<Founder/>}/>
@@ -83,6 +88,11 @@ function App() {
         <Route path='/add-item/Image-Desc' element={<AddImgDesc/>}/>
         <Route path='/add-item/new-course' element={<AddNewCourse/>}/>
         <Route path='/add-item/EditAdmin' element={<EditAdministration/>}/>
+        <Route path='/add-item/EditManage' element={<EditManage/>}/>
+        <Route path='/add-item/AddReport' element={<AddReport/>}/>
+        <Route path='/add-item/EditFounder' element={<EditFounder/>}/>
+        <Route path='/add-item/EditPrinciple' element={<EditPrinciple/>}/>
+        <Route path='add-item/EditObjective' element={<EditObjective/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>
