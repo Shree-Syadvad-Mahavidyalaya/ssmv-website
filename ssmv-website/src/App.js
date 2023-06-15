@@ -62,9 +62,13 @@ import Logout from './components/Logout/Logout';
 import IndivCoursesPage from './pages/IndivCoursesPage';
 import EditDonators from './components/Editpage/EditDonators';
 import MediaPage from './pages/MediaPage';
-import Gallery from './pages/VGallery';
+import Gallery from './pages/Gallery';
 import EditGroup from './components/Editpage/EditGroup';
 import AddGroup from './components/Editpage/Addgroup'
+import AddAllEvents from './components/Editpage/AddAllEvents';
+import EditAllEvents from './components/Editpage/EditAllEvents';
+import AddVideos from './components/Editpage/AddVideos';
+import AddImages from './components/Editpage/AddImages';
 
 
 function App() {
@@ -137,6 +141,10 @@ function App() {
         <Route path='/edit-item/Donate' element={<EditDonators/>}/>
         <Route path='/add-item/EditGroup' element={<EditGroup/>}/>
         <Route path='/add-item/AddGroup' element={<AddGroup/>}/>
+        <Route path='/add-item/AllEvents' element={<AddAllEvents/>}/>
+        <Route path='/edit-item/AllEvents' element={<EditAllEvents/>}/>
+        <Route path='/add-item/Videos' element={<AddVideos/>}/>
+        <Route path='/add-item/Images-Gallery' element={<AddImages/>}/>
         <Route path='*' element={<Home/>}></Route>
         <Route path='/loading' element={<LoadingPage/>}></Route>
     </Routes>

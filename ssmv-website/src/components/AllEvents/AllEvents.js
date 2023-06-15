@@ -1,35 +1,37 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react';
 import './AllEvents.css'
-import { useState } from 'react';
 import Delete from "../CRUD/Delete/Delete";
 import Update from "../CRUD/Update/Update";
+import axios from 'axios';
+import Create from '../CRUD/Create/Create';
 
 export default function AllEvents() {
 
-  const events_cards = [
-    { id: "1", name: "horizontal", url:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,"},
-    { id: "2",name: "horizontal", url:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,"},
-    { id: "3",name: "horizontal", url:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,"},
-  ];
+  const [aevents, setaevents] = useState([]);
 
-  const deleteById = id => {
-    setaevents(oldValues => {
-      return oldValues.filter(item => item.id !== id)
-    })
-  }
-
-  const [aevents, setaevents] = useState(events_cards);
+  useEffect(() => {
+    axios.get('https://test-moid.vercel.app/ssmv/events/')
+      .then(response => {
+        const { event } = response.data;
+        setaevents(event);
+      })
+      .catch(error => {
+        console.error('Error fetching latest data:', error);
+      });
+  }, []);
 
   return (
     <>
-    <h1>Events<a href='/add-item/new-course'><button className='add-btn'>Add</button></a></h1>
+    <h1>Events<Create url={'/add-item/AllEvents'}/><hr></hr></h1>
     <div className='viewALL-container-events'>
       {aevents.map((item) => (
         <div className="Viewcards-events" key={item.id}>
-        <img className="AEvents-image" src={item.url} alt="" />
-        <div><h2>{item.name}</h2>
+        <img className="AEvents-image" src={item.imagesurl} alt="" />
+        <div id='event-about'><h2>{item.name}</h2>
         <p>{item.description}</p>
-        <Delete onClick={() => deleteById(item.id)}/><Update/></div>
+        <p>{item.venue}</p>
+        <Delete url={`https://test-moid.vercel.app/ssmv/events/${item._id}`} baseurl={'/ViewAll/AllEvents'} />
+        <Update url={'/edit-item/AllEvents'} id ={item._id}/></div>
       </div>
       ))}
     </div>

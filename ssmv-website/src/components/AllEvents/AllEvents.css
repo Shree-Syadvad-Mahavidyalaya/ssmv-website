@@ -19,19 +19,32 @@
 }
 
 .AEvents-image {
-    width: 100%;
-    height: 12em;
+    max-width: 300px;
+    height: 250px;
     flex: 40%;
     object-fit: cover;
     border-top-left-radius: 14px;
     border-bottom-left-radius: 14px;
 }
 
+#event-about{
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    font-family: 'Karla';
+}
+
+#event-about h2{
+    font-family: 'Lato';
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
 .Viewcards-events div{
     text-align: left;
     padding: 20px;
-    color:  #1B2E56;
-    background: #45cb70;
+    color:  #45cb70;
+    background: #1B2E56;
 }
 
 
@@ -47,6 +60,7 @@
         flex: 30%;
         height: 15em;
     }
+
 }
 
 @media screen and (max-width: 595px) {
@@ -65,5 +79,10 @@
     .Viewcards-events {
         display: flex;
         flex-direction: column;
+    }
+    #event-about{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
     }
 }
