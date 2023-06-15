@@ -39,9 +39,6 @@ return (
     <DoubleNavbar />
     {admins.map((admin) => (
       <div className="Admin-card2" key={admin._id}>
-        {editAdmin === admin._id ? (
-          <EditAdministration AdminId={admin._id} onCancelEdit={handleCancelEdit} />
-        ) : (
           <>
             <Update url={'/add-item/EditAdmin'} id={admin._id} />
             <Delete />
@@ -61,7 +58,7 @@ return (
             
           </div>
           </>
-        )}
+       
       </div>
     ))}
     <Foot />

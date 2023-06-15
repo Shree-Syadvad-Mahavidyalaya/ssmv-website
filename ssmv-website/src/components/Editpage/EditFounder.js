@@ -3,17 +3,18 @@ import React, { useState,useEffect } from 'react';
 import './AddNewsForm.css'
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function EditFounder({ FounderId }) {
+function EditFounder() {
   const navigate = useNavigate();
-  // const location = useLocation();
+  const location = useLocation();
   // const AdminId = location.state.props;
+  const FounderId = location.state.props;
   const [founder, setFounder] = useState({
     name: '',
     designation: '',
     description: '',
     image:''
   });
-
+console.log(useLocation());
   useEffect(() => {
     fetchFounder();
   }, []);
@@ -52,10 +53,7 @@ function EditFounder({ FounderId }) {
     }));
   };
 
-  const onCancelEdit=()=>{
-    navigate('/About Us/Founder');
-  }
-  
+ 
   const handleEdit = async (event) => {
     event.preventDefault();
     const updatedData = founder; // No need to wrap `administration` in an object
@@ -68,12 +66,12 @@ function EditFounder({ FounderId }) {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ founder: [updatedData] }) // Use 'founder' instead of 'collegeadministration'
+          body: JSON.stringify(updatedData) // Use 'founder' instead of 'collegeadministration'
         }
       );
   
       if (response.ok) {
-        console.log('Administration updated successfully');
+        console.log('Founder updated successfully');
         // Handle any further actions or notifications after successful update
       } else {
         console.error('Failed to update administration');
@@ -130,7 +128,7 @@ function EditFounder({ FounderId }) {
             required
           />
         </div>
-        <button type="submit" id="add-news-btn" onClick={onCancelEdit}>
+        <button type="submit" id="add-news-btn" >
           Edit
         </button>
       </form>

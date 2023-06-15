@@ -7,6 +7,7 @@ import Create from '../../../components/CRUD/Create/Create'
 import Delete from '../../../components/CRUD/Delete/Delete'
 
 
+
 const AnnualReport = () => {
   const [data,setData]=useState([])
   useEffect(()=>{
@@ -41,4 +42,4 @@ const AnnualReport = () => {
 export default AnnualReport
 
 
-{/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a> */}
+

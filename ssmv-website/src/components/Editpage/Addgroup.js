@@ -1,38 +1,38 @@
 import React, { useState,useEffect } from 'react';
 import './AddNewsForm.css'
+// import course_id from '../../Pages/Courses/BA/BA'
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function EditManage() {
+function EditGroup() {
   const navigate = useNavigate();
   const location = useLocation();
   // const AdminId = location.state.props;
-  const ManageId = location.state.props;
-  console.log(ManageId);
-  const [Manage, setManage] = useState({
+  
+  const [Group, setGroup] = useState({
     name: '',
     designation: '',
-    description: '',
-    image:''
+    department: '',
+    
   });
 console.log(useLocation());
   useEffect(() => {
-    fetchManage();
+    fetchGroup();
   }, []);
 
-  const fetchManage = async () => {
+  const fetchGroup = async () => {
     try {
       const response = await fetch(
-        `https://test-moid.vercel.app/ssmv/management/managingCommittee/${ManageId}/`
+        `https://test-moid.vercel.app/ssmv/management/group/new`
       );
       const data = await response.json();
   
       if (response.ok) {
-        const ManageData = data.Manage; // Access the first object in the `founder` array
-        setManage({
-          name: ManageData.name,
-          designation: ManageData.designation,
-          description: ManageData.description,
-          image: ManageData.image
+        const GroupData = data.Group; // Access the first object in the `founder` array
+        setGroup({
+          name: GroupData.name,
+          designation: GroupData.designation,
+          description: GroupData.description,
+          image: GroupData.image
         });
       } else {
         console.error('Failed to fetch administration data');
@@ -47,22 +47,21 @@ console.log(useLocation());
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setManage((prevState) => ({
+    setGroup((prevState) => ({
       ...prevState,
       [name]: value
     }));
   };
-  console.log(ManageId);
  
   const handleEdit = async (event) => {
     event.preventDefault();
-    const updatedData = Manage; // No need to wrap `administration` in an object
+    const updatedData = Group; // No need to wrap `administration` in an object
   
     try {
       const response = await fetch(
-        `https://test-moid.vercel.app/ssmv/management/managingCommittee/${ManageId}/`,
+        `https://test-moid.vercel.app/ssmv/management/group/new`,
         {
-          method: 'PUT',
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
@@ -81,20 +80,20 @@ console.log(useLocation());
       console.error('Error updating administration:', error);
       // Handle errors or display error messages
     }
-    navigate('/Administration/ManagingCommitee');
+    navigate('/Administration/Group');
   };
   
 
   return (
     <>
-      <h1>Edit Managing Commitee</h1>
+      <h1>Add Group</h1>
       <form className="news-form" onSubmit={handleEdit}>
         <div className="form-group">
           <span>Name:</span>
           <input
             type="text"
             name="name"
-            value={Manage.name}
+            value={Group.name}
             onChange={handleInputChange}
             required
           />
@@ -104,30 +103,22 @@ console.log(useLocation());
           <input
             type="text"
             name="designation"
-            value={Manage.designation}
+            value={Group.designation}
             onChange={handleInputChange}
             required
           />
         </div>
         <div className="form-group">
-          <span>Image url:</span>
+          <span>Department:</span>
           <input
             type="text"
-            name="image"
-            value={Manage.image}
+            name="department"
+            value={Group.image}
             onChange={handleInputChange}
             required
           />
         </div>
-        <div className="form-group">
-          <span>Description:</span>
-          <textarea
-            name="description"
-            value={Manage.description}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
+        
         <button type="submit" id="add-news-btn" >
           Edit
         </button>
@@ -136,6 +127,6 @@ console.log(useLocation());
   );
 }
 
-export default EditManage;
+export default EditGroup;
 
 

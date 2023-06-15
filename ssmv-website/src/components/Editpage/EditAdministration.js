@@ -3,33 +3,37 @@ import './AddNewsForm.css'
 // import course_id from '../../Pages/Courses/BA/BA'
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function EditAdministration({ AdminId }) {
+function EditAdmin() {
   const navigate = useNavigate();
   const location = useLocation();
   // const AdminId = location.state.props;
-  const [administration, setAdministration] = useState({
+  const AdminId = location.state.props;
+  console.log(AdminId);
+  const [Admin, setAdmin] = useState({
     name: '',
     designation: '',
-    description: ''
+    description: '',
+    image:''
   });
-
+console.log(useLocation());
   useEffect(() => {
-    fetchAdministration();
+    fetchAdmin();
   }, []);
 
-  const fetchAdministration = async () => {
+  const fetchAdmin = async () => {
     try {
       const response = await fetch(
-        `https://test-moid.vercel.app/ssmv/management/collegeAdministration/${AdminId}`
+        `https://test-moid.vercel.app/ssmv/management/collegeAdministration/${AdminId}/`
       );
       const data = await response.json();
-
+  
       if (response.ok) {
-        const administrationData = data.collegeadministration[0];
-        setAdministration({
-          name: administrationData.name,
-          designation: administrationData.designation,
-          description: administrationData.description
+        const AdminData = data.Admin; // Access the first object in the `founder` array
+        setAdmin({
+          name: AdminData.name,
+          designation: AdminData.designation,
+          description: AdminData.description,
+          image: AdminData.image
         });
       } else {
         console.error('Failed to fetch administration data');
@@ -40,33 +44,35 @@ function EditAdministration({ AdminId }) {
       // Handle errors or display error messages
     }
   };
+  
 
   const handleInputChange = (event) => {
-    setAdministration(event.target.value);
+    const { name, value } = event.target;
+    setAdmin((prevState) => ({
+      ...prevState,
+      [name]: value
+    }));
   };
-
-  const onCancelEdit=()=>{
-    navigate('/Admininstration/CollegeAdministration');
-  }
-  
+  console.log(AdminId);
+ 
   const handleEdit = async (event) => {
     event.preventDefault();
-    const updatedData = { administration };
-
+    const updatedData = Admin; // No need to wrap `administration` in an object
+  
     try {
       const response = await fetch(
-        `https://test-moid.vercel.app/ssmv/management/collegeAdministration/${AdminId}`,
+        `https://test-moid.vercel.app/ssmv/management/collegeAdministration/${AdminId}/`,
         {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ collegeadministration: [administration] })
+          body: JSON.stringify(updatedData) // Use 'founder' instead of 'collegeadministration'
         }
       );
-
+  
       if (response.ok) {
-        console.log('Administration updated successfully');
+        console.log('Adminupdated successfully');
         // Handle any further actions or notifications after successful update
       } else {
         console.error('Failed to update administration');
@@ -76,19 +82,20 @@ function EditAdministration({ AdminId }) {
       console.error('Error updating administration:', error);
       // Handle errors or display error messages
     }
-    navigate('/Administration');
+    navigate('/Admininstration/CollegeAdministration');
   };
+  
 
   return (
     <>
       <h1>Edit Administration</h1>
-      <form className="administration-form" onSubmit={handleEdit}>
+      <form className="news-form" onSubmit={handleEdit}>
         <div className="form-group">
           <span>Name:</span>
           <input
             type="text"
             name="name"
-            value={administration.name}
+            value={Admin.name}
             onChange={handleInputChange}
             required
           />
@@ -98,7 +105,17 @@ function EditAdministration({ AdminId }) {
           <input
             type="text"
             name="designation"
-            value={administration.designation}
+            value={Admin.designation}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <span>Image url:</span>
+          <input
+            type="text"
+            name="image"
+            value={Admin.image}
             onChange={handleInputChange}
             required
           />
@@ -107,12 +124,12 @@ function EditAdministration({ AdminId }) {
           <span>Description:</span>
           <textarea
             name="description"
-            value={administration.description}
+            value={Admin.description}
             onChange={handleInputChange}
             required
           />
         </div>
-        <button type="submit" id="edit-administration-btn" onClick={onCancelEdit}>
+        <button type="submit" id="add-news-btn" >
           Edit
         </button>
       </form>
@@ -120,6 +137,6 @@ function EditAdministration({ AdminId }) {
   );
 }
 
-export default EditAdministration;
+export default EditAdmin;
 
 

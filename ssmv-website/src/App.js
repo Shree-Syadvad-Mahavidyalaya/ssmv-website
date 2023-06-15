@@ -63,6 +63,8 @@ import IndivCoursesPage from './pages/IndivCoursesPage';
 import EditDonators from './components/Editpage/EditDonators';
 import MediaPage from './pages/MediaPage';
 import Gallery from './pages/VGallery';
+import EditGroup from './components/Editpage/EditGroup';
+import AddGroup from './components/Editpage/Addgroup'
 
 
 function App() {
@@ -133,6 +135,8 @@ function App() {
         <Route path='/add-item/ssmv-about' element={<EditSSMVAbout/>}/>
         <Route path='/add-item/AddBACourse' element={<AddBACourse/>}/>
         <Route path='/edit-item/Donate' element={<EditDonators/>}/>
+        <Route path='/add-item/EditGroup' element={<EditGroup/>}/>
+        <Route path='/add-item/AddGroup' element={<AddGroup/>}/>
         <Route path='*' element={<Home/>}></Route>
         <Route path='/loading' element={<LoadingPage/>}></Route>
     </Routes>
