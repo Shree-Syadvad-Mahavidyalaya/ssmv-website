@@ -9,3 +9,10 @@
     border: none;
     cursor: pointer;
 }
+
+@media screen and (max-width: 769px){
+    .delete-btn{
+        width: 60px;
+        margin: 3px;
+    }
+}

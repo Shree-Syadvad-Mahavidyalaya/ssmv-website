@@ -54,11 +54,12 @@ h1{
         padding: 12px 12px;
         color: #1B2E56;
         font-size: 25px;
+        margin-top: 15px;
     }
 
     .container-1 p {
         text-align: center;
-        padding: 0px 50px;
+        padding: 0px;
     }
 
     .container-2 {

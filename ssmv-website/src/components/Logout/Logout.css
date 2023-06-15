@@ -1,0 +1,27 @@
+.logout-container{
+    margin: 45px;
+    text-align: center;
+}
+
+.logout-container h1{
+    color: #1B2E56;
+}
+
+.logout-container p{
+    text-align: center;
+}
+
+#logout-page-btn{
+    margin: 53px;
+    padding: 20px;
+    background-color: #45cb70;
+    text-align: center;
+    border: none;
+}
+
+
+#logout-page-btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}

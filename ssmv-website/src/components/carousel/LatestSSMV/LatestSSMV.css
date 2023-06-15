@@ -21,7 +21,6 @@
     display: flex;
     flex-direction: row;
     background: #1B2E56;
-    gap: 1rem;
 }
 
 .img-section{
@@ -39,12 +38,12 @@
 
 @media screen and (max-width: 769px) {
     .Latest-container {
-        margin: 20px 7px;
-        padding: 15px 23px;
+        margin: 10px 0px;
+        padding: 15px 0px;
     }
 
     .card2 {
-        max-width: 300px;
+        width: 400px;
         height: 250px;
         display: flex;
         flex-direction: row;
@@ -52,7 +51,7 @@
     }
 
     .body-section{
-        padding: 45px;
+        padding: 15px;
         flex: 50%;
         background: #1B2E56;
         color: white;

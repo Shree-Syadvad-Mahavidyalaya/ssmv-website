@@ -58,6 +58,8 @@ import EditObjective from './components/Editpage/EditObjectives';
 import EditSSMVAbout from './components/Editpage/EditSSMVAbout';
 import AddBACourse from './components/Editpage/AddBACourse';
 import LoadingPage from './pages/loading/loading';
+import Logout from './components/Logout/Logout';
+import IndivCoursesPage from './pages/IndivCoursesPage';
 
 
 function App() {
@@ -72,6 +74,7 @@ function App() {
         <Route path='/Alumni' element={<Alumni/>} />
         <Route path='/Admission' element={<Admission/>}/>
         <Route path='/Login' element={<LoginPage/>}/>
+        <Route path='/Logout' element={<Logout/>}/>
         <Route path='/ViewAll/AllCourses' element={<AllCourses/>}/>
         <Route path='/About Us/SSMV' element={<AboutUs/>} />
         <Route path='/Admininstration/CollegeAdministration' element={<Administration/>}/>
@@ -93,6 +96,7 @@ function App() {
         <Route path='/ViewAll/AllEvents' element={<Events/>}/>
         <Route path='/ViewAll/Gallery' element={<Gallery/>}/>
         <Route path='/Greviances' element={<Greviances/>}/>
+        <Route path='/learn-more/course' element={<IndivCoursesPage/>}/>
         <Route path='/add-item/news' element={<AddNewsForm/>}/>
         <Route path='/add-item/image' element={<AddImageForm/>}/>
         <Route path='/add-item/row' element={<AddNewRow/>}/>

@@ -76,4 +76,14 @@ hr{
         background: #1B2E56;
         /* box-shadow: 20px 20px 50px 15px rgb(179, 171, 171); */
     }
+    .card1{
+        margin: 0px auto;
+        width: 100%;
+        background-color: #1B2E56;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 45px;
+        gap: 1.2rem;
+    }
 }

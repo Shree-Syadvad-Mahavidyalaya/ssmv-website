@@ -54,7 +54,7 @@
 }
 @media screen and (max-width: 769px) {
     #container{
-        margin: 50px 50px;
+        margin: 40px 11px;
         display: flex;
         flex-direction: column;
     }
@@ -73,7 +73,7 @@
         padding-top: 30px;
         justify-content: space-between;
         align-items:center;
-        gap: 1rem;
+        gap: 2.8rem;
     }
 
     .box1{
