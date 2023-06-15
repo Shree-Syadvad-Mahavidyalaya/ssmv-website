@@ -16,7 +16,7 @@ export default function Update(props) {
   
   const handleClick=(e,p)=>{
     // e.preventDefault();
-    navigate(p.url,{state:{props:p.ObjectiveId}})
+    navigate(p.url,{state:{props:p.Id}})
   }
   return ( isAdmin &&
     <button className='edit-btn' onClick={(e)=>handleClick(e,props)}>Edit</button>
