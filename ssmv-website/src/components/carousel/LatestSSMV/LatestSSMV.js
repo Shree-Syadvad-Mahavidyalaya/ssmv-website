@@ -25,7 +25,7 @@ const LatestSSMV = () => {
 
   return (
      <>
-      <h2 id='Latest'>Latest @SSMV <Create url={'/add-item/alumni-latest'}/></h2>
+      <h1 id='Latest'>LATEST @SSMV <Create url={'/add-item/alumni-latest'}/><hr></hr></h1>
       <div className='Latest-container'>
         <Carousel responsive={responsive}>
           {latestData.map(latestItem => (

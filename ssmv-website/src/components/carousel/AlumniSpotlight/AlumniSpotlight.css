@@ -2,13 +2,21 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
 }
 
 #alum{
-    margin: 20px 20px;
+    margin: 5px 20px;
     color: #1B2E56;
     text-align: center;
+    font-family: 'Lato';
+    font-size: 28px;
+    font-weight: 600;
+}
+
+ hr{
+    margin: 5px auto;
+    width: 55px;
+    border: 2px solid #45cb70;
 }
 
 .card1{
@@ -20,6 +28,7 @@
     align-items: center;
     padding: 45px;
     gap: 1.2rem;
+    font-family: 'Karla', sans-serif;
 }
 
 .alumni-card{
@@ -32,7 +41,7 @@
 }
 
 .alumni-img{
-    padding: 25px;
+    padding: 20px;
     width: 96%;
     height: 188px;
     object-fit: cover;
@@ -43,11 +52,13 @@
     padding-top: 10px;
     padding-bottom: 10px;
     color: #06122c;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-hr{
+.alumni-card hr{
     width: 120px;
-    border: 1px solid white;
+    border: 2px solid white;
 }
 
 .alumni-about{
@@ -55,6 +66,8 @@ hr{
     font-weight: 300;
     text-align: center;
     padding: 0px 70px;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 769px) {

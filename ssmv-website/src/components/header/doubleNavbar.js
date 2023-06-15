@@ -89,7 +89,7 @@ const DoubleNavbar = () => {
                                 <li><a href= "/Services/Yoga" onClick={handleClick}>Yoga and Kamakanda</a></li>
                         </ul>
                     </li>
-                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Media</a></li>
+                    <li><a href="/Media">Media</a></li>
                 </ul>
             </div> }   
             <div id='mobile'>

@@ -2,13 +2,15 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Nunito Sans';
 }
 
 h1{
     text-align: center;
     padding: 12px 12px;
     color: #1B2E56;
+    font-family: 'Lato';
+    font-size: 28px;
+    font-weight: 600;
 }
 
 .main-container2{
@@ -18,11 +20,15 @@ h1{
     align-items: center;
     background: #ffffff;
     padding: 20px 20px;
+    margin-bottom: 10px;
 }
 
 .container-1 p{
     text-align: center;
     padding: 5px 255px;
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    color: #1B2E56;
 }
 
 .container-2{
@@ -35,15 +41,17 @@ h1{
 }
 
 .box_no p{
+    font-family: 'Karla', sans-serif;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.1rem;
     color: #45cb70;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .box_no span{
     color: #1B2E56;
-    font-weight: 400;
+    font-weight: 500;
+    font-family: 'Karla', sans-serif;
 }
 
 

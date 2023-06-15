@@ -24,7 +24,7 @@ import Library from './pages/Services/Library/Library';
 import Mess from './pages/Services/Mess/Mess';
 import Yoga from './pages/Services/Yoga/Yoga';
 import Events from './pages/Events';
-import Gallery from './pages/Gallery';
+import VGallery from './pages/VGallery';
 import Greviances from './pages/Greviances';
 import AddNewsForm from './components/Editpage/AddNewsForm';
 import AddImageForm from './components/Editpage/AddImageForm';
@@ -60,6 +60,9 @@ import AddBACourse from './components/Editpage/AddBACourse';
 import LoadingPage from './pages/loading/loading';
 import Logout from './components/Logout/Logout';
 import IndivCoursesPage from './pages/IndivCoursesPage';
+import EditDonators from './components/Editpage/EditDonators';
+import MediaPage from './pages/MediaPage';
+import Gallery from './pages/VGallery';
 
 
 function App() {
@@ -94,7 +97,9 @@ function App() {
         <Route path='/Services/Mess' element={<Mess/>}/>
         <Route path='/Services/Yoga' element={<Yoga/>}/>
         <Route path='/ViewAll/AllEvents' element={<Events/>}/>
+        <Route path='/ViewAll/VGallery' element={<VGallery/>}/>
         <Route path='/ViewAll/Gallery' element={<Gallery/>}/>
+        <Route path='/Media' element={<MediaPage/>}/>
         <Route path='/Greviances' element={<Greviances/>}/>
         <Route path='/learn-more/course' element={<IndivCoursesPage/>}/>
         <Route path='/add-item/news' element={<AddNewsForm/>}/>
@@ -127,6 +132,7 @@ function App() {
         <Route path='add-item/EditObjective' element={<EditObjective/>}/>
         <Route path='/add-item/ssmv-about' element={<EditSSMVAbout/>}/>
         <Route path='/add-item/AddBACourse' element={<AddBACourse/>}/>
+        <Route path='/edit-item/Donate' element={<EditDonators/>}/>
         <Route path='*' element={<Home/>}></Route>
         <Route path='/loading' element={<LoadingPage/>}></Route>
     </Routes>

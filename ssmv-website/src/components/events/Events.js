@@ -28,7 +28,7 @@ const Events = () => {
   return (
     <div className="events-container">
       <div id='heading1'>
-        <h2>Events<Create url={'/add-item/alumni-events'}/></h2>
+        <h1>EVENTS <Create url={'/add-item/alumni-events'}/> <hr id='line2'></hr></h1>
         <button className='view-btn'><a href='/ViewAll/AllEvents'>View All</a></button>
       </div>
       <Carousel responsive={responsive}>

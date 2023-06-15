@@ -56,14 +56,10 @@
 @media (max-width: 480px) {
     .box2 {
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
     }
 
     .head {
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
     }
 
     .div {

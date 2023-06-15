@@ -23,7 +23,8 @@ const AlumniSpotlight = () => {
 
   return (
     <>
-      <h2 id='alum'>Alumni Spotlight <Create url={'/add-item/alumni-details'} /></h2>
+      <h1 id='alum'>ALUMNI SPOTLIGHT <Create url={'/add-item/alumni-details'} />
+      <hr></hr></h1>
       <Carousel>
       {SpotlightData.map(SpotlightItem => (
         <div className='card1' key={SpotlightItem._id}>

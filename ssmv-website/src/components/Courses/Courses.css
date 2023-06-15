@@ -15,12 +15,21 @@
   justify-content: space-between;
   padding-top: 20px;
   margin: 10px 250px;
+  font-family: 'Lato';
+}
+
+.Courses h2{
+  text-align: center;
+  color: #45cb70;
+  padding-top: 20px;
+  font-weight: 500;
 }
 
 #view-course{
-  padding: 10px;
+  padding: 6px;
   background: #45cb70;
   border: none;
+  font-family: 'Lato';
 }
 
 #view-course a{
@@ -73,9 +82,19 @@
   border: none;
 }
 
+#course-name{
+  font-family: 'Karla';
+  font-weight: 500;
+  font-size: 20px;
+}
+
 #course-desc{
   padding-right: 50px;
+  font-family: 'Karla';
+  font-weight: 300;
+  font-size: 15px;
 }
+
 
 
 @media screen and (max-width: 769px){

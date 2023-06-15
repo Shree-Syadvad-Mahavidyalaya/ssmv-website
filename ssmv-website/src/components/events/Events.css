@@ -9,9 +9,23 @@
 #heading1 {
     display: flex;
     flex-direction: row;
-    gap: 59.5rem;
-    padding: 20px 12px;
-    margin: 0px 7px;
+    /* gap: 59.5rem; */
+    padding: 20px 6px;
+    font-family: 'Lato';
+    font-size: 28px;
+    font-weight: 600;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+#line2{
+    margin: 5px 0px;
+}
+
+.view-btn{
+    width: 90px;
+    height: 50px;
+    border: none;
 }
 
 .product--image {
@@ -28,18 +42,30 @@
     text-align: center;
     font-family: arial;
     border-radius: 14px;
-    box-shadow: 1.5px 1.5px 12px 0px lightslategray
+    box-shadow: 1.5px 1.5px 12px 0px lightslategray;
+    font-family: 'Karla';
+}
+
+.card_eve h2{
+    color: #101f3f;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .price {
-    color: grey;
-    font-size: 22px;
+    color: rgb(140, 141, 143);
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.description-event{
+    padding-bottom: 5px;
 }
 
 .card_eve button {
     border: none;
     outline: 0;
-    padding: 12px;
+    padding: 10px;
     color: white;
     background-color: #45cb70;
     text-align: center;

@@ -24,7 +24,7 @@ const Testimonials = () => {
 
   return (
     <div className='Testimonials'>
-      <h2 id='h2'>Testimonials <Create url={'/add-item/alumni-testimonials'}/> </h2>
+      <h1 id='h2'>TESTIMONIALS <Create url={'/add-item/alumni-testimonials'}/> <hr></hr></h1>
       <Carousel responsive={responsive}>
         {TestimonialsData.map(Testimonialsitem => (
           <div id='body-containers' key={Testimonialsitem._id}>

@@ -7,7 +7,7 @@ export function CoursesItem (props) {
     <>
     <div className='Courses-Cards'>
       <div className='Courses-body'>
-        <div id='course-name'>{props.name}<Delete/><Update/></div>
+        <div id='course-name'>{props.name} <Delete/><Update/></div>
         <div id='course-desc'>{props.desc}</div>
         <button id='course-btn'><a href='/learn-more/course'>Learn More</a></button>
       </div>

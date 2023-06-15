@@ -3,16 +3,12 @@
     padding: 0;
     margin: 0;
 }
-
-.Latest-container {
-    margin: 20px 347px;
-    padding: 20px 20px;
-}
-
 #Latest{
-    color:#1B2E56;
-    text-align: center;
-    margin-top: 59px;
+    margin-top: 40px;
+}
+.Latest-container {
+    margin: 10px 347px;
+    padding: 20px 20px;
 }
 
 .card2 {
@@ -34,6 +30,17 @@
     flex: 50%;
     background: #1B2E56;
     color: white;
+    font-family: 'Karla';
+}
+
+.body-section h3{
+    font-weight: 400;
+    font-size: 23px;
+}
+
+.body-section p{
+    font-weight: 400;
+    font-size: 18px;
 }
 
 @media screen and (max-width: 769px) {
