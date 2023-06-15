@@ -3,33 +3,37 @@ import './AddNewsForm.css'
 import course_id from '../../Pages/Courses/BA/BA'
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function EditManage({ AdminId }) {
+function EditManage() {
   const navigate = useNavigate();
   const location = useLocation();
   // const AdminId = location.state.props;
-  const [Management, setManagement] = useState({
+  const ManageId = location.state.props;
+  console.log(ManageId);
+  const [Manage, setManage] = useState({
     name: '',
     designation: '',
-    description: ''
+    description: '',
+    image:''
   });
-
+console.log(useLocation());
   useEffect(() => {
-    fetchAdministration();
+    fetchManage();
   }, []);
 
-  const fetchAdministration = async () => {
+  const fetchManage = async () => {
     try {
       const response = await fetch(
-        `https://test-moid.vercel.app/ssmv/management/managingCommittee/${AdminId}`
+        `https://test-moid.vercel.app/ssmv/management/managingCommittee/${ManageId}/`
       );
       const data = await response.json();
-
+  
       if (response.ok) {
-        const managementData = data.managingcommitee[0];
-        setManagement({
-          name: managementData.name,
-          designation: managementData.designation,
-          description: managementData.description
+        const ManageData = data.Manage; // Access the first object in the `founder` array
+        setManage({
+          name: ManageData.name,
+          designation: ManageData.designation,
+          description: ManageData.description,
+          image: ManageData.image
         });
       } else {
         console.error('Failed to fetch administration data');
@@ -40,33 +44,35 @@ function EditManage({ AdminId }) {
       // Handle errors or display error messages
     }
   };
+  
 
   const handleInputChange = (event) => {
-    setManagement(event.target.value);
+    const { name, value } = event.target;
+    setManage((prevState) => ({
+      ...prevState,
+      [name]: value
+    }));
   };
-
-  const onCancelEdit=()=>{
-    navigate('/Administration/ManagingCommitee');
-  }
-
+  console.log(ManageId);
+ 
   const handleEdit = async (event) => {
     event.preventDefault();
-    const updatedData = {Management };
-
+    const updatedData = Manage; // No need to wrap `administration` in an object
+  
     try {
       const response = await fetch(
-        `https://test-moid.vercel.app/ssmv/management/managingCommittee/${AdminId}`,
+        `https://test-moid.vercel.app/ssmv/management/managingCommittee/${ManageId}/`,
         {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ managingcommitee: [Management] })
+          body: JSON.stringify(updatedData) // Use 'founder' instead of 'collegeadministration'
         }
       );
-
+  
       if (response.ok) {
-        console.log('Administration updated successfully');
+        console.log('MANAGE updated successfully');
         // Handle any further actions or notifications after successful update
       } else {
         console.error('Failed to update administration');
@@ -76,8 +82,9 @@ function EditManage({ AdminId }) {
       console.error('Error updating administration:', error);
       // Handle errors or display error messages
     }
-    navigate('Administration/ManagingCommitee');
+    navigate('/Administration/ManagingCommitee');
   };
+  
 
   return (
     <>
@@ -88,7 +95,7 @@ function EditManage({ AdminId }) {
           <input
             type="text"
             name="name"
-            value={Management.name}
+            value={Manage.name}
             onChange={handleInputChange}
             required
           />
@@ -98,7 +105,17 @@ function EditManage({ AdminId }) {
           <input
             type="text"
             name="designation"
-            value={Management.designation}
+            value={Manage.designation}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <span>Image url:</span>
+          <input
+            type="text"
+            name="image"
+            value={Manage.image}
             onChange={handleInputChange}
             required
           />
@@ -107,12 +124,12 @@ function EditManage({ AdminId }) {
           <span>Description:</span>
           <textarea
             name="description"
-            value={Management.description}
+            value={Manage.description}
             onChange={handleInputChange}
             required
           />
         </div>
-        <button type="submit" id="add-news-btn" onClick={onCancelEdit}>
+        <button type="submit" id="add-news-btn" >
           Edit
         </button>
       </form>
@@ -121,3 +138,5 @@ function EditManage({ AdminId }) {
 }
 
 export default EditManage;
+
+

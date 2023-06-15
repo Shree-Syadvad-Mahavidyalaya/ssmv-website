@@ -44,6 +44,8 @@ import EditPrinciple from './components/Editpage/EditPrinciple'
 import EditObjective from './components/Editpage/EditObjectives';
 import EditSSMVAbout from './components/Editpage/EditSSMVAbout';
 import AddBACourse from './components/Editpage/AddBACourse';
+import EditGroup from './components/Editpage/EditGroup';
+import AddGroup from './components/Editpage/Addgroup'
 
 
 function App() {
@@ -96,6 +98,8 @@ function App() {
         <Route path='add-item/EditObjective' element={<EditObjective/>}/>
         <Route path='/add-item/ssmv-about' element={<EditSSMVAbout/>}/>
         <Route path='/add-item/AddBACourse' element={<AddBACourse/>}/>
+        <Route path='/add-item/EditGroup' element={<EditGroup/>}/>
+        <Route path='/add-item/AddGroup' element={<AddGroup/>}/>
         <Route path='*' element={<Home/>}></Route>
     </Routes>
     </Router>

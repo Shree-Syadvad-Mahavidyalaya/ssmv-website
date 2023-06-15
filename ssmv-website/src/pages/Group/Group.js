@@ -5,53 +5,7 @@ import Footer from '../../components/Footer/Footer'
 import DoubleNavbar from '../../components/header/doubleNavbar'
 import Delete from '../../components/CRUD/Delete/Delete'
 import Update from '../../components/CRUD/Update/Update'
-
-const data = [
-    { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Anom", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Megha", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-    { name: "Subham", designation: "Lorem ipsum dolor sit amet,", department: "Lorem ipsum dolor sit amet," },
-]
-
-
-// const Group = () => {
-//   return (
-//       <>
-//       <DoubleNavbar/>
-//     <div>
-//     <a href='/add-item/row'><button className='add-btn'>Add</button></a>
-//         <div className="Table">
-//             <table>
-                
-//                 <tr>
-//                     <th scope="col">Name</th>
-//                     <th scope="col">Designation</th>
-//                     <th scope="col">Department</th>
-//                 </tr>
-//                 {data.map((val, key) => {
-//                     return (
-//                         <tr scope="row" key={key}>
-//                             <td>{val.name}<Delete/><Update/></td>
-//                             <td>{val.designation}</td>
-//                             <td>{val.department}</td>
-//                         </tr>
-//                     )
-//                 })}
-//             </table>
-//         </div>
-
-//     </div>
-//     <Footer/>
-//     </>
-//   )
-// }
-
-// export default Group
+import Create from '../../components/CRUD/Create/Create'
 
 
 const Group = () => {
@@ -80,7 +34,7 @@ const Group = () => {
       <DoubleNavbar />
       <div>
         <a href="/add-item/row">
-          <button className="add-btn">Add</button>
+          <Create url={'/add-item/AddGroup'}/>
         </a>
         <div className="Table">
           <table>
@@ -96,8 +50,8 @@ const Group = () => {
                 <tr scope="row" key={key}>
                   <td>
                     {val.name}
-                    <Delete />
-                    <Update />
+                    <Delete url={`https://test-moid.vercel.app/ssmv/management/group/${val._id}`} baseurl={'/Administration/Group'}/>
+                    <Update url={'/add-item/EditGroup'} Id={val._id}/>
                   </td>
                   <td>{val.designation}</td>
                   <td>{val.department}</td>

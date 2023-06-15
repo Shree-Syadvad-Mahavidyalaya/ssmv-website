@@ -3,7 +3,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import './AddNewsForm.css'
 
 
-function AddNewsForm() {
+function AddReport() {
   const navigate=useNavigate();
   const [report, setReport] = useState({
     description: '',
@@ -59,47 +59,4 @@ function AddNewsForm() {
   );
 }
 
-export default AddNewsForm;
-
-// function AddNewsForm() {
-//   const [news, setNews] = useState({
-//     description: '',
-//     image: '',
-//   });
-
-//   const handleChange = (event) => {
-//     const { name, value } = event.target;
-//     setNews((prevState) => ({
-//       ...prevState,
-//       [name]: value
-//     }));
-//   };
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     // Perform any additional actions, such as sending the data to the server
-//     console.log(news);
-//   };
-
-//   return (
-//     <>
-//     <h1>Add Report</h1>
-//     <form onSubmit={handleSubmit} className='news-form'>
-//       <div className="form-group">
-//         <span>Report:</span>
-//         <textarea
-//           name="description"
-//           value={news.description}
-//           onChange={handleChange}
-//           rows="6"
-//           required
-//         />
-//       </div>
-      
-//       <button type="submit" id='add-news-btn'>Add</button>
-//     </form>
-//     </>
-//   );
-// }
-
-// export default AddNewsForm;
+export default AddReport;

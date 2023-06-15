@@ -28,7 +28,7 @@ const Principle = () => {
         <div>
           
           <div className='principle-div'>
-          <Update url={'/add-item/EditPrinciple'} PrincipleId={principleData._id}/>
+          <Update url={'/add-item/EditPrinciple'} Id={principleData._id}/>
             <h3 className='principle-head'>
               <div className='principle-border'>
                 <img src={principleData.image} className='principle-img' alt='' />

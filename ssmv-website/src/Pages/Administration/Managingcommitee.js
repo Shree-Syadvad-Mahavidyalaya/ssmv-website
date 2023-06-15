@@ -74,13 +74,7 @@ const Managingcommitee = () => {
         console.error('Error fetching administration data:', error);
       });
   }, []);
-  const handleEdit = (ManageId) => {
-    setEditManage(ManageId);
-  };
-
-  const handleCancelEdit = () => {
-    setEditManage(null);
-  };
+  
 
   
 return (
@@ -88,11 +82,9 @@ return (
     <DoubleNavbar />
     {manage.map((manage) => (
       <div className="Admin-card2" key={manage._id}>
-        {editManage === manage._id ? (
-          <EditManage ManageId={manage._id} onCancelEdit={handleCancelEdit} />
-        ) : (
+        
           <>
-            <Update url={'/add-item/EditManage'} id={manage._id} />
+            <Update url={'/add-item/EditManage'} Id={manage._id} />
             <Delete />
             <div className="Admin2" width="100%" height="300px">
             <div className="admin-head2">
@@ -110,7 +102,6 @@ return (
             
           </div>
           </>
-        )}
       </div>
     ))}
     <Foot />
