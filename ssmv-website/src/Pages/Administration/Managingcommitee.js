@@ -84,7 +84,7 @@ return (
       <div className="Admin-card2" key={manage._id}>
         
           <>
-            <Update url={'/add-item/EditManage'} Id={manage._id} />
+            <Update url={'/add-item/EditManage'} id={manage._id} />
             <Delete />
             <div className="Admin2" width="100%" height="300px">
             <div className="admin-head2">

@@ -23,7 +23,7 @@ const Objective = () => {
     <div>
       <DoubleNavbar/>
         <div className='objective-div'>
-          <Update url={'/add-item/EditObjective'} Id={data._id}/>
+          <Update url={'/add-item/EditObjective'} id={data._id}/>
             <h3 className='objective-head'><b>OBJECTIVES OF THE UNIVERSITY</b></h3>
         <div className='objective-box'>
                 <p>{data.description}</p>)

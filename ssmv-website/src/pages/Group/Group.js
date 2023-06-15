@@ -51,7 +51,7 @@ const Group = () => {
                   <td>
                     {val.name}
                     <Delete url={`https://test-moid.vercel.app/ssmv/management/group/${val._id}`} baseurl={'/Administration/Group'}/>
-                    <Update url={'/add-item/EditGroup'} Id={val._id}/>
+                    <Update url={'/add-item/EditGroup'} id={val._id}/>
                   </td>
                   <td>{val.designation}</td>
                   <td>{val.department}</td>

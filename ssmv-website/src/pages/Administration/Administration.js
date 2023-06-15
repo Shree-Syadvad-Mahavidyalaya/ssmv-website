@@ -40,7 +40,7 @@ return (
     {admins.map((admin) => (
       <div className="Admin-card2" key={admin._id}>
           <>
-            <Update url={'/add-item/EditAdmin'} Id={admin._id} />
+            <Update url={'/add-item/EditAdmin'} id={admin._id} />
             <Delete />
             <div className="Admin2" width="100%" height="300px">
             <div className="admin-head2">

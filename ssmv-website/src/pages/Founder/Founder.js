@@ -25,7 +25,7 @@ const Founder = () => {
       <DoubleNavbar />
       {founderData && (
         <div>
-          <Update url={'/add-item/EditFounder'} Id={founderData._id}/>
+          <Update url={'/add-item/EditFounder'} id={founderData._id}/>
           <div className='founder-div'>
             <h3 className='founder-head'>
               <div className='founder-border'>
