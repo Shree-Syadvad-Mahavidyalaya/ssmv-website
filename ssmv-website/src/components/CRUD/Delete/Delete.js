@@ -23,8 +23,11 @@ export default function Delete({url,baseurl}) {
         })
         .catch((error) => {
           console.error('An error occurred while deleting the item:', error);
-        });
-    navigate(baseurl);
+        })
+        .finally(()=>{
+          navigate(baseurl);
+        })
+    navigate("/loading");
   };
   return isAdmin && <button className='delete-btn' onClick={handleDelete}>Delete</button>;
 }

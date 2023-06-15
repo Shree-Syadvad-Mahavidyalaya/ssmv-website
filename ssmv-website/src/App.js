@@ -57,11 +57,12 @@ import EditPrinciple from './components/Editpage/EditPrinciple'
 import EditObjective from './components/Editpage/EditObjectives';
 import EditSSMVAbout from './components/Editpage/EditSSMVAbout';
 import AddBACourse from './components/Editpage/AddBACourse';
+import LoadingPage from './pages/loading/loading';
 
 
 function App() {
 
-  const [isAdmin, setIsAdmin]=useState(false);
+  const [isAdmin, setIsAdmin]=useState(true);
 
     return (
     <MyContext.Provider value={[isAdmin,setIsAdmin]} >
@@ -123,6 +124,7 @@ function App() {
         <Route path='/add-item/ssmv-about' element={<EditSSMVAbout/>}/>
         <Route path='/add-item/AddBACourse' element={<AddBACourse/>}/>
         <Route path='*' element={<Home/>}></Route>
+        <Route path='/loading' element={<LoadingPage/>}></Route>
     </Routes>
     </Router>
     </MyContext.Provider>
