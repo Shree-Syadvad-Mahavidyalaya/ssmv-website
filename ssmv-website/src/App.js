@@ -73,7 +73,7 @@ import AddImages from './components/Editpage/AddImages';
 
 function App() {
 
-  const [isAdmin, setIsAdmin]=useState(true);
+  const [isAdmin, setIsAdmin]=useState(false);
 
     return (
     <MyContext.Provider value={[isAdmin,setIsAdmin]} >

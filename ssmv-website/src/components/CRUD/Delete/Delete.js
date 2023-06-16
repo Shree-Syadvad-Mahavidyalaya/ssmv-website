@@ -29,6 +29,7 @@ export default function Delete({url,baseurl}) {
         })
     navigate("/loading");
   };
+  console.log(isAdmin)
   return isAdmin && <button className='delete-btn' onClick={handleDelete}>Delete</button>;
 }
 

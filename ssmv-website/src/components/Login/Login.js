@@ -19,11 +19,16 @@ const Login = (props) => {
     const handleClick=()=>{
         axios.post("https://test-moid.vercel.app/ssmv/login", {"name": name, "password": pass}, { withCredentials: true })
         .then((res) => {
-          document.cookie = `token=${res.data.token}`;
           console.log(res.data.user.role);
           setIsAdmin(res.data.user.role === 'admin')
-          navigate("/ssmv");
-        });
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+        .finally(()=>{
+            navigate("/ssmv");
+        })
+        navigate("/loading")
     }
 
     return (

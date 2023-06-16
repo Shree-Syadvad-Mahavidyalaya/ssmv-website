@@ -1,42 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useState } from "react"
 import { FaFacebookSquare , FaTwitterSquare, FaYoutubeSquare} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import './navbar.css';
+import MyContext from '../events/MyContext';
   
 const DoubleNavbar = () => {
 
   const navigate = useNavigate();
   const [isNavExpanded, setIsNavExpanded] = useState(window.innerWidth>768);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const isAdmin=useContext(MyContext)[0];
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
-
-  const renderLoginOption = () => {
-    if (isLoggedIn) {
-      return (
-        <li>
-          <a href="/Logout" onClick={handleLogout}>
-            Logout
-          </a>
-        </li>
-      );
-    } else {
-      return (
-        <li>
-          <a href="/Login" onClick={handleClick}>
-            Login
-          </a>
-        </li>
-      );
-    }
-  };
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -54,6 +28,7 @@ const DoubleNavbar = () => {
     
   };
 
+
   return (
     <>
         <nav className="navbar-top">
@@ -64,9 +39,8 @@ const DoubleNavbar = () => {
                     <li><a href = "/Alumni" onClick={handleClick}> Alumni </a> </li>
                     <li><a href = "/Donate" onClick={handleClick}> Donate </a></li>
                     <li><a href = "/Greviances" onClick={handleClick}> Grievancess </a></li>
-                    {/* <li><a href="/Login" onClick={handleClick}>Login</a></li>
-                    <li><a href="/Logout" onClick={handleClick}>Logout</a></li> */}
-                     {renderLoginOption()}
+                    <li><a href={isAdmin ? "/Logout" : "/Login"} onClick={handleClick}>{isAdmin ? "Logout" : "Login"}</a>
+    </li>
                 </ul>
             </div>
             {/* social media links */}
