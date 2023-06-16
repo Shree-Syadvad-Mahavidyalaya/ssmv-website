@@ -52,13 +52,14 @@
 }
 @media (max-width:760px) {
     .admin-desc2{
-        font-size: x-small;
+        font-size: 13px;
     }
     .admin-desig2{
-        font-size: x-small;
+        font-size: 13px;
+        text-align: center;
     }
     .admin-Head2{
-        font-size: x-small;
+        font-size: 13px;
     }
     .Admin2{
         display: block;
@@ -68,7 +69,7 @@
     }
     .border{
         width: 300px;
-        margin-left:20px ;
+        margin-left:43px ;
         margin-top: 20px;
     }
 }

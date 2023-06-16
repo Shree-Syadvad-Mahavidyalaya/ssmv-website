@@ -10,23 +10,15 @@ import Testimonials from '../components/carousel/Testimonials/Testimonials';
 // import SocialMedia from '../components/SocialMedia/SocialMedia';
 import Footer from '../components/Footer/Footer'
 import Glry from '../components/VideoG/Glry';
-import axios from 'axios';
+// import axios from 'axios';
 
 
 const Alumni = () => {
-    
-  const [eventsData, setEventsData] = useState([]);
-
-  useEffect(() => {
-    axios.get('https://test-moid.vercel.app/ssmv/alumni/about/')
-      .then(response => {
-        const { alumni_about } = response.data;
-        setEventsData(alumni_about);
-      })
-      .catch(error => {
-        console.error('Error fetching  data:', error);
-      });
-  }, []);
+  const slides = [
+    { url: "https://i.ibb.co/mGYVThg/1.jpg", title: "img1" },
+    { url: "https://i.ibb.co/GVmQMJV/2.jpg", title: "img2" },
+    { url: "https://i.ibb.co/TYsbCBt/3.jpg", title: "img3" },
+  ];
 
   const containerStyles = {
     width: "100%",
@@ -37,10 +29,7 @@ const Alumni = () => {
   return (
     <>
     <div><DoubleNavbar /></div>
-    <div style={containerStyles}>
-    {eventsData.map(event => (
-      <ImageSlider key={event._id} slides={event.imagesurl} />
-    ))}</div>
+    <div style={containerStyles}><ImageSlider slides={slides} /></div>
     <div><AboutAlumni/></div>
     <div><AlumniSpotlight/></div>
     <div><Events/></div>

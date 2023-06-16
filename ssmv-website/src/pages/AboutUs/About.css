@@ -1,7 +1,7 @@
 .box2 {
     box-sizing: border-box;
     border: 5px solid red;
-    border-color: #1B2E56;
+    border-color:  #1B2E56;
     background-color: #f6fcf4;
     width: 90%;
     text-align: center;
@@ -48,22 +48,14 @@
     .head {
         margin-left: 20px;
     }
-
-    .div {
-        margin: 20px;
+    .div{
+        margin: 5px;
     }
 }
 
 @media (max-width: 480px) {
-    .box2 {
-        width: 100%;
-    }
 
-    .head {
-        width: 100%;
-    }
-
-    .div {
-        margin: 10px;
+    .div{
+        margin: 5px;
     }
 }

@@ -27,13 +27,13 @@
     font-family: 'Lato';
     font-weight: 500;
     padding-top: 10px;
-
 }
 .computer-div{
     align-items: center;
     text-align: center;
     margin: 50px;
 }
+
 @media (max-width:760px) {
     .computer-div{
         margin: 5px;

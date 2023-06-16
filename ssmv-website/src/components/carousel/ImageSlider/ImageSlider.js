@@ -2,7 +2,6 @@ import { useState } from "react";
 import './ImageSlider.css';
 import "../../CRUD/Create/Create.css"
 
-
 const slideStyles = {
   width: "100%",
   height: "100%",
@@ -38,36 +37,24 @@ const sliderStyles = {
   height: "100%",
 };
 
-// const dotsContainerStyles = {
-//   display: "flex",
-//   justifyContent: "center",
-// };
-
-// const dotStyle = {
-//   margin: "0 3px",
-//   cursor: "pointer",
-//   fontSize: "20px",
-// };
-
-
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+
   const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-  // const goToSlide = (slideIndex) => {
-  //   setCurrentIndex(slideIndex);
-  // };
-  const slideStylesWidthBackground = {
+
+  const slideStylesWithBackground = {
     ...slideStyles,
-    backgroundImage: `url(${slides[currentIndex].url})`,
+    backgroundImage: `url(${slides[currentIndex]})`,
   };
 
   return (
@@ -80,11 +67,10 @@ const ImageSlider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground} className="image-slider"></div>
+      <div style={slideStylesWithBackground} className="image-slider"></div>
       <button className="btn">Learn More</button>
     </div>
   );
 };
 
 export default ImageSlider;
-
