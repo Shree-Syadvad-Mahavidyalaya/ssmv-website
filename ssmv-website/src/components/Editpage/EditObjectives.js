@@ -47,10 +47,6 @@ console.log(useLocation());
     }));
   };
 
-  const onCancelEdit=()=>{
-    navigate('/About Us/Objectives');
-  }
-  
   const handleEdit = async (event) => {
     event.preventDefault();
     const updatedData = objective; // No need to wrap `administration` in an object
