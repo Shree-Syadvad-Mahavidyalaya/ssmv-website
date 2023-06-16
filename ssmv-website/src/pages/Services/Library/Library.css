@@ -7,7 +7,7 @@
     text-align: center;
     align-items: center;
     margin: 0px auto;
-    font-family: 'Nunito sans';
+    font-family: 'karla';
     padding: 10px;
 }
 .library-img{
@@ -26,6 +26,8 @@
     margin: 0px auto;
     font-family: 'Lato';
     font-weight: 500;
+    padding-top: 10px;
+
 }
 .library-div{
     align-items: center;

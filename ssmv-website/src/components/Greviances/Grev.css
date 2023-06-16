@@ -11,7 +11,9 @@
    font-size: 25px;
    font-weight: 500;
    position: relative;
+   font-family: 'Lato';
  }
+
 
 .container_grev .content .user-details{
    display: flex;
@@ -22,14 +24,16 @@
 
 .input-box2 span.details{
 display: block;
-font-weight: 500;
+font-weight: 400;
 margin-bottom: 5px;
+font-size: 18px;
 }
 
 .input-box3 span.details{
 display: block;
-font-weight: 500;
+font-weight: 400;
 margin-bottom: 5px;
+font-size: 18px;
 }
 
 .input-box2{

@@ -3,7 +3,7 @@
     border: 10px;
 }
 .admin-Head2{
-    font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif ;
+    font-family: 'Lato';
     font-variant: small-caps;
     font-size: large;
     margin-bottom: 0px;
@@ -22,10 +22,10 @@
 }
 .admin-head2{
     width: 150%;
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Lato';
 }
 .admin-desig2{
-    font-family: poppins;
+    padding-bottom: 10px;
 }
 .admin-img2{
     width: 100%;
@@ -43,7 +43,7 @@
     margin: auto;
     width: auto;
     padding: 20px;
-    font-family: poppins;
+    font-family: 'Karla';
 }
 .border{
     margin-top: 40px;

@@ -7,7 +7,7 @@
     text-align: center;
     align-items: center;
     margin: 0px auto;
-    font-family: 'Nunito sans';
+    font-family: 'Karla';
     padding: 10px;
 }
 .computer-img{
@@ -26,6 +26,8 @@
     margin: 0px auto;
     font-family: 'Lato';
     font-weight: 500;
+    padding-top: 10px;
+
 }
 .computer-div{
     align-items: center;

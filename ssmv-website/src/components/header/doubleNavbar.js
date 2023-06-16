@@ -8,6 +8,35 @@ const DoubleNavbar = () => {
 
   const navigate = useNavigate();
   const [isNavExpanded, setIsNavExpanded] = useState(window.innerWidth>768);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
+  const renderLoginOption = () => {
+    if (isLoggedIn) {
+      return (
+        <li>
+          <a href="/Logout" onClick={handleLogout}>
+            Logout
+          </a>
+        </li>
+      );
+    } else {
+      return (
+        <li>
+          <a href="/Login" onClick={handleClick}>
+            Login
+          </a>
+        </li>
+      );
+    }
+  };
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -35,8 +64,9 @@ const DoubleNavbar = () => {
                     <li><a href = "/Alumni" onClick={handleClick}> Alumni </a> </li>
                     <li><a href = "/Donate" onClick={handleClick}> Donate </a></li>
                     <li><a href = "/Greviances" onClick={handleClick}> Grievancess </a></li>
-                    <li><a href="/Login" onClick={handleClick}>Login</a></li>
-                    <li><a href="/Logout" onClick={handleClick}>Logout</a></li>
+                    {/* <li><a href="/Login" onClick={handleClick}>Login</a></li>
+                    <li><a href="/Logout" onClick={handleClick}>Logout</a></li> */}
+                     {renderLoginOption()}
                 </ul>
             </div>
             {/* social media links */}

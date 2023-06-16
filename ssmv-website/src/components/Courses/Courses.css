@@ -78,8 +78,13 @@
   width: 102px;
   height: 36px;
   background: #45cb70;
-  color: white;
   border: none;
+}
+
+#course-btn a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Karla';
 }
 
 #course-name{

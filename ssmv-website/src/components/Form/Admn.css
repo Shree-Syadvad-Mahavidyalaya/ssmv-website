@@ -11,6 +11,7 @@
     font-size: 25px;
     font-weight: 500;
     position: relative;
+    font-family: 'Lato';
   }
   .container_1 .title::before{
     content: "";
@@ -34,8 +35,10 @@
   }
   form .input-box span.details{
     display: block;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 5px;
+    font-family: 'Karla';
+    font-size: 18px;
   }
   .user-details .input-box input{
     height: 45px;

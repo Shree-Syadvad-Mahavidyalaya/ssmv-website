@@ -1,9 +1,7 @@
 import { useState } from "react";
 import './ImageSlider.css';
-import Delete from "../../CRUD/Delete/Delete";
 import "../../CRUD/Create/Create.css"
-import Create from "../../CRUD/Create/Create";
-// import Aboutcarousel from ".../Pages/AboutUs/Aboutcarousel"
+
 
 const slideStyles = {
   width: "100%",
@@ -82,10 +80,8 @@ const ImageSlider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground} className="image-slider"><Delete/></div>
+      <div style={slideStylesWidthBackground} className="image-slider"></div>
       <button className="btn">Learn More</button>
-       <Create url={'/add-item/Image'}/>
-      
     </div>
   );
 };
