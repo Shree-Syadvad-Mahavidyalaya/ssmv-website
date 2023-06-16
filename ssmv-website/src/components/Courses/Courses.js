@@ -16,7 +16,7 @@ export const Courses = () => {
       desc={item.description}
     />
   ));
-{/* <a href='/add-item/new-course'><button className='add-btn'>Add</button></a> */}
+  
   return (
     <div className='Courses'>
       <div className='heading_c'>
@@ -29,5 +29,4 @@ export const Courses = () => {
     </div>
   )
 }
-
 export default Courses;

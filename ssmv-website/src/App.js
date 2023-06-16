@@ -1,42 +1,55 @@
 import React, { useState } from 'react';
 import MyContext from './components/events/MyContext';
 import './App.css';
-import Home from './Pages/Home';
+import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Alumni from './Pages/Alumni'
-import Admission from './Pages/Admission';
-import LoginPage from './Pages/LoginPage';
+import Alumni from './pages/Alumni'
+import Admission from './pages/Admission';
+import LoginPage from './pages/LoginPage';
 import AllCourses from './components/AllCourse/AllCourses';
-import AboutUs from './Pages/AboutUs/AboutUs';
-import Administration from './Pages/Administration/Administration';
-import Group from '../src/Pages/Group/Group'
-import AnnualReport from './Pages/AboutUs/AnnualReport/AnnualReport';
-import Founder from './Pages/Founder/Founder';
-import Principle from './Pages/Principle/Principle';
-import Objective from './Pages/Objective/Objective';
-import Map from './Pages/Map/Map';
-import Donate from './Pages/Founder/Donate/Donate';
-import BA from './Pages/Courses/BA/BA';
-import MA from './Pages/Courses/MA/MA';
-import Hostel from './Pages/Services/Hostel/Hostel';
-import Computer from './Pages/Services/Computer/Computer';
-import Library from './Pages/Services/Library/Library';
-import Mess from './Pages/Services/Mess/Mess';
-import Yoga from './Pages/Services/Yoga/Yoga';
-import Events from './Pages/Events';
-import Gallery from './Pages/Gallery';
-import Greviances from './Pages/Greviances';
-import Editpage from './components/Editpage/AddNewsForm';
-import Updatepage from './components/Updatepages/Updatepage'
+import AboutUs from './pages/AboutUs/AboutUs';
+import Administration from './pages/Administration/Administration';
+import Group from '../src/pages/Group/Group'
+import AnnualReport from './pages/AboutUs/AnnualReport/AnnualReport';
+import Founder from './pages/Founder/Founder';
+import Principle from './pages/Principle/Principle';
+import Objective from './pages/Objective/Objective';
+import Map from './pages/Map/Map';
+import Donate from './pages/Donate/Donate';
+import MA from './pages/Courses/MA/MA';
+import BA from './pages/Courses/BA/BA';
+import Hostel from './pages/Services/Hostel/Hostel';
+import Computer from './pages/Services/Computer/Computer';
+import Library from './pages/Services/Library/Library';
+import Mess from './pages/Services/Mess/Mess';
+import Yoga from './pages/Services/Yoga/Yoga';
+import Events from './pages/Events';
+import VGallery from './pages/VGallery';
+import Greviances from './pages/Greviances';
 import AddNewsForm from './components/Editpage/AddNewsForm';
 import AddImageForm from './components/Editpage/AddImageForm';
 import AddNewRow from './components/Editpage/AddNewRow';
-import AddsubBA from './components/Editpage/AddsubBA';
 import AddImgDesc from './components/Editpage/AddImgDesc';
 import AddNewCourse from './components/Editpage/AddNewCourse';
-import Managingcommitee from './Pages/Administration/Managingcommitee';
+import AddAlumniDetails from './components/Editpage/AddAlumniDetails';
+import AddDonatorsName from './components/Editpage/AddDonatorsName';
+import AddsubBA from './components/Editpage/AddsubBA';
 import AddsubMA from './components/Editpage/AddsubBA';
 import EditAdministration from './components/Editpage/EditAdministration';
+import Managingcommitee from './pages/Administration/Managingcommitee'
+import EditSHostelinfo from './components/Editpage/EditSHostelinfo';
+import EditLatest from './components/Editpage/EditLatest';
+import EditSptlght from './components/Editpage/EditSptlght';
+import EditSComputer from './components/Editpage/EditSComputer';
+import Editevents from './components/Editpage/Editevents';
+import EditTestimonials from './components/Editpage/EditTestimonials';
+import EditSlibraryinfo from './components/Editpage/EditSlibraryinfo';
+import EditSMessinfo from './components/Editpage/EditSMessinfo';
+import EditSYogainfo from './components/Editpage/EditSYogainfo';
+import AddTestimonials from './components/Editpage/AddTestimonials';
+import AddAlumniEvents from './components/Editpage/AddAlumniEvents';
+import AddLatest from './components/Editpage/AddLatest';
+import AddAlumniVGallery from './components/Editpage/AddAlumniVGallery';
 import EditManage from './components/Editpage/EditManage';
 import AddReport from './components/Editpage/AddReport';
 import EditFounder from './components/Editpage/EditFounder';
@@ -44,13 +57,19 @@ import EditPrinciple from './components/Editpage/EditPrinciple'
 import EditObjective from './components/Editpage/EditObjectives';
 import EditSSMVAbout from './components/Editpage/EditSSMVAbout';
 import AddBACourse from './components/Editpage/AddBACourse';
+import LoadingPage from './pages/loading/loading';
+import Logout from './components/Logout/Logout';
+import IndivCoursesPage from './pages/IndivCoursesPage';
+import EditDonators from './components/Editpage/EditDonators';
+import MediaPage from './pages/MediaPage';
+import Gallery from './pages/VGallery';
 import EditGroup from './components/Editpage/EditGroup';
 import AddGroup from './components/Editpage/Addgroup'
 
 
 function App() {
 
-  const [isAdmin, setIsAdmin]=useState(false);
+  const [isAdmin, setIsAdmin]=useState(true);
 
     return (
     <MyContext.Provider value={[isAdmin,setIsAdmin]} >
@@ -60,6 +79,7 @@ function App() {
         <Route path='/Alumni' element={<Alumni/>} />
         <Route path='/Admission' element={<Admission/>}/>
         <Route path='/Login' element={<LoginPage/>}/>
+        <Route path='/Logout' element={<Logout/>}/>
         <Route path='/ViewAll/AllCourses' element={<AllCourses/>}/>
         <Route path='/About Us/SSMV' element={<AboutUs/>} />
         <Route path='/Admininstration/CollegeAdministration' element={<Administration/>}/>
@@ -70,7 +90,7 @@ function App() {
         <Route path='/About Us/Principle' element={<Principle/>}/>
         <Route path='/About Us/Objectives' element={<Objective/>}/>
         <Route path='/About Us/Map' element={<Map/>}/>
-        {/* <Route path='/Donate' element={<Donate/>}/> */}
+        <Route path='/Donate' element={<Donate/>}/>
         <Route path='/Courses/BA' element={<BA/>}/>
         <Route path='/Courses/MA' element={<MA/>}/>
         <Route path='/Services/Hostel' element={<Hostel/>}/>
@@ -79,10 +99,11 @@ function App() {
         <Route path='/Services/Mess' element={<Mess/>}/>
         <Route path='/Services/Yoga' element={<Yoga/>}/>
         <Route path='/ViewAll/AllEvents' element={<Events/>}/>
+        <Route path='/ViewAll/VGallery' element={<VGallery/>}/>
         <Route path='/ViewAll/Gallery' element={<Gallery/>}/>
+        <Route path='/Media' element={<MediaPage/>}/>
         <Route path='/Greviances' element={<Greviances/>}/>
-        <Route path='/add-item' element={<Editpage/>}/>
-        <Route path='/update-item' element={<Updatepage/>}/>
+        <Route path='/learn-more/course' element={<IndivCoursesPage/>}/>
         <Route path='/add-item/news' element={<AddNewsForm/>}/>
         <Route path='/add-item/image' element={<AddImageForm/>}/>
         <Route path='/add-item/row' element={<AddNewRow/>}/>
@@ -90,7 +111,22 @@ function App() {
         <Route path='/add-item/course-MA' element={<AddsubMA/>}/>
         <Route path='/add-item/Image-Desc' element={<AddImgDesc/>}/>
         <Route path='/add-item/new-course' element={<AddNewCourse/>}/>
+        <Route path='/add-item/alumni-details' element={<AddAlumniDetails/>}/>
+        <Route path='/add-item/alumni-testimonials' element={<AddTestimonials/>}/>
+        <Route path='/add-item/alumni-events' element={<AddAlumniEvents/>}/>
+        <Route path='/add-item/alumni-latest' element={<AddLatest/>}/>
+        <Route path='/add-item/alumni-video-gallery' element={<AddAlumniVGallery/>}/>
+        <Route path='/add-item/donators-name' element={<AddDonatorsName/>}/>
         <Route path='/add-item/EditAdmin' element={<EditAdministration/>}/>
+        <Route path='/edit-item/services-info-hostel' element={<EditSHostelinfo/>}/>
+        <Route path='/edit-item/alumni-latest' element={<EditLatest/>}/>
+        <Route path='/edit-item/spotlight' element={<EditSptlght/>}/>
+        <Route path='/edit-item/services-info-computer' element={<EditSComputer/>}/>
+        <Route path='/edit-item/alumni-events' element={<Editevents/>}/>
+        <Route path='/edit-item/alumni-testimonials' element={<EditTestimonials/>}/>
+        <Route path='/edit-item/services-info-library' element={<EditSlibraryinfo/>}/>
+        <Route path='/edit-item/services-info-mess' element={<EditSMessinfo/>}/>
+        <Route path='/edit-item/services-info-yoga' element={<EditSYogainfo/>}/>
         <Route path='/add-item/EditManage' element={<EditManage/>}/>
         <Route path='/add-item/AddReport' element={<AddReport/>}/>
         <Route path='/add-item/EditFounder' element={<EditFounder/>}/>
@@ -98,9 +134,11 @@ function App() {
         <Route path='add-item/EditObjective' element={<EditObjective/>}/>
         <Route path='/add-item/ssmv-about' element={<EditSSMVAbout/>}/>
         <Route path='/add-item/AddBACourse' element={<AddBACourse/>}/>
+        <Route path='/edit-item/Donate' element={<EditDonators/>}/>
         <Route path='/add-item/EditGroup' element={<EditGroup/>}/>
         <Route path='/add-item/AddGroup' element={<AddGroup/>}/>
         <Route path='*' element={<Home/>}></Route>
+        <Route path='/loading' element={<LoadingPage/>}></Route>
     </Routes>
     </Router>
     </MyContext.Provider>

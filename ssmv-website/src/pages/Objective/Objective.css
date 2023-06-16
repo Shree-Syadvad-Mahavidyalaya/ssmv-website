@@ -1,22 +1,23 @@
 .objective-box{
     box-sizing: border-box;
     border: 5px solid red;
-    border-color:  #174873;
-    background-color: #f2f7e5;
+    border-color:  #1B2E56;
+    background-color: #f6fcf4;
     width: 90%;
     text-align: center;
     align-items: center;
-    margin-left: 120px;
+    margin: 0px auto;
+    padding: 10px;
 }
 
 
 .objective-head{
-    background-color: #174873;
+    background-color:#1B2E56;
     color: white;
     margin: 0px;
     width: 90%;
     font-family: Times New Roman,Times,serif;
-    margin-left: 120px;
+    margin: 0px auto;
     padding: 20px;
 }
 .objective-div{

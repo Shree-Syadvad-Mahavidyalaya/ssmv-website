@@ -172,6 +172,7 @@ const SideNews = (props) => {
             return (
               <div onClick={() => setMainNewsId(index)} key={index}>
                 <Card items={item} key={index} />
+                <Delete/> <Update/>
               </div>
             );
           })}
@@ -183,11 +184,10 @@ const SideNews = (props) => {
 
   return (
     <>
-      <div className="side-news" items={news}></div>
-      {news.map((item, index) => {
-        if (index === mainNewsId) return <MainNews items={item} key={index} />;
-        return null;
-      })}
+      {/* <div className="side-news" items={news}></div> */}
+      {news.map((item, index) =>
+        index === mainNewsId ? <MainNews items={item} /> : null
+      )}
       {renderNews()}
     </>
   );

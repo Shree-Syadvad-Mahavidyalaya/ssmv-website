@@ -1,0 +1,48 @@
+.donate {
+    margin: 20px 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.donate-card{
+    background: #1B2E56;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+    border-radius: 14px;
+    margin: 5px;
+    color: white;
+}
+
+.donate-img{
+    padding: 20px;
+    width: 96%;
+    height: 188px;
+    object-fit: cover;
+    border-radius: 129px;
+}
+
+@media screen and (max-width: 769px){
+    .donate {
+        margin: 20px 5px;
+    }
+
+    .donate-card{
+        width: 190px;
+    }
+}
+
+
+@media screen and (max-width: 410px){
+    .donate {
+        margin: 20px 1px;
+    }
+
+    .donate-card{
+        width: 165px;
+        height: 270px;
+    }
+}

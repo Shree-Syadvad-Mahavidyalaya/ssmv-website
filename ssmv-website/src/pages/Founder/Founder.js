@@ -37,7 +37,7 @@ const Founder = () => {
               </div>
             </h3>
             <div className='founder-box'>
-              <p>{founderData.description}</p>
+              <p>{founderData.description}</p><Update/>
             </div>
           </div>
           <Footer className='Foot' />

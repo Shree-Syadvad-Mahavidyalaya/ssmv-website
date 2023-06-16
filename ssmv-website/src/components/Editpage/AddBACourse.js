@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState,useEffect } from 'react';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import './AddNewsForm.css'
@@ -38,7 +39,7 @@ function AddBACourse() {
         console.error('Error:', error);
         // Handle any error that occurred during the request.
       });
-      location.setBAcourses
+      location(setBAcourse)
       navigate('/Courses/BA');
       
   };
@@ -64,4 +65,3 @@ function AddBACourse() {
 }
 
 export default AddBACourse;
-

@@ -2,51 +2,72 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
 }
 
 #alum{
-    margin: 20px 20px;
-    color: #45cb70;
+    margin: 5px 20px;
+    color: #1B2E56;
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 28px;
+    font-weight: 600;
 }
 
-.Alumni-container{
-    margin-top: 10px;
-    margin-left: 70px;
-    margin-right: 70px;
-    padding: -18px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    background: #1B2E56;
-    /* box-shadow: 20px 20px 50px 15px rgb(179, 171, 171); */
-}
-
-.alumni-img{
-    width: 100%;
-    height: 12em;
-    object-fit: cover;
+ hr{
+    margin: 5px auto;
+    width: 55px;
+    border: 2px solid #45cb70;
 }
 
 .card1{
-    max-width: 320px;
-    margin: auto 1rem;
-    text-align: center;
-    background: #45cb70;
+    margin: 0px auto;
+    width: 75%;
+    background-color: #1B2E56;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px;
+    gap: 1.2rem;
+    font-family: 'Karla', sans-serif;
 }
 
+.alumni-card{
+    width: 200px;
+    background-color: #45cb70;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
 
-.cont-alumni p {
-    font-size: 22px;
-    color: #1B2E56;
+.alumni-img{
+    padding: 20px;
+    width: 96%;
+    height: 188px;
+    object-fit: cover;
+    border-radius: 129px;
+}
+
+.alumni-card p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #06122c;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.alumni-card hr{
+    width: 120px;
+    border: 2px solid white;
 }
 
 .alumni-about{
-    margin: 20px 170px;
     color: #ffffff;
     font-weight: 300;
     text-align: center;
+    padding: 0px 70px;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 769px) {
@@ -67,5 +88,15 @@
         flex-direction: column;
         background: #1B2E56;
         /* box-shadow: 20px 20px 50px 15px rgb(179, 171, 171); */
+    }
+    .card1{
+        margin: 0px auto;
+        width: 100%;
+        background-color: #1B2E56;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 45px;
+        gap: 1.2rem;
     }
 }

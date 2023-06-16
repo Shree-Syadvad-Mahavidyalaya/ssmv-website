@@ -7,7 +7,7 @@
 .main-container {
     margin: 60px 300px;
     background: #1B2E56;
-    box-shadow: 20px 20px 50px 15px rgb(179, 171, 171);
+    box-shadow: 20px 20px 50px 10px rgb(220, 216, 216);
 }
 
 .container{
@@ -20,9 +20,9 @@
     background: #ffffff;
 }
 
-/* .image-aboutus img{
-    background: no repeat cover cover;
-} */
+.image-aboutus img{
+    object-fit: cover;
+}
 
 .about{
     flex: 50%;
@@ -34,11 +34,14 @@
     color: #ffffff;
     padding: 20px 0px;
     margin-left: 0;
+    font-family: 'Lato';
+    font-weight: 500;
 }
 
 .content{
     color: rgb(255, 255, 255);
     font-weight: 100;
+    font-family: 'Nunito Sans';
 }
 
 .about button{
@@ -49,6 +52,7 @@
     border: none;
     border-radius: 3px;
     font-weight: 400;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 769px) {

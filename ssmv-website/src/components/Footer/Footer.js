@@ -18,17 +18,17 @@ const Footer = () => {
             <div className='Support'>
               <h3 className='footer-head'>Support</h3>
               <div className='sub-section-footer'>
-              <div>@LoremIp</div><hr></hr>
-              <div>@LoremI</div><hr></hr>
+              <div>@LoremIp</div><hr id='line3'></hr>
+              <div>@LoremI</div><hr id='line3'></hr>
               </div>
             </div>
             <div className='QuickLinks'>
               <h3 className='footer-head'>Quick Links</h3>
               <div className='sub-section-footer'>
                 <div>link 1</div>
-                <hr></hr>
+                <hr id='line3'></hr>
                 <div>link 1</div>
-                <hr></hr>
+                <hr id='line3'></hr>
               </div>
             </div>
             <div className='Contact-us'>

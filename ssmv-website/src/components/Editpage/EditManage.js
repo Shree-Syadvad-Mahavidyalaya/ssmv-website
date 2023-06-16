@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from 'react';
 import './AddNewsForm.css'
-import course_id from '../../Pages/Courses/BA/BA'
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function EditManage() {

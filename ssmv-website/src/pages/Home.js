@@ -5,7 +5,6 @@ import AboutUs from '../components/about us/about us';
 import Courses from '../components/Courses/Courses';
 import Footer from '../components/Footer/Footer';
 import Newsnav from '../components/News/Newsnav';
-import Aboutcarousel from '../Pages/AboutUs/Aboutcarousel';
 
 function Home () {
     const slides = [

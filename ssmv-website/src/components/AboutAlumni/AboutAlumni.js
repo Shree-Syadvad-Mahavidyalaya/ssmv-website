@@ -7,7 +7,7 @@ const AboutAlumni = () => {
     <>
       <div className='main-container2'>
         <div className='container-1'>
-            <h1>Alumni Platform Vision <Update/></h1> 
+            <h1>ALUMNI PLATFORM VISION <Update/> <hr></hr></h1> 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
         </div>
         <div className='container-2'>

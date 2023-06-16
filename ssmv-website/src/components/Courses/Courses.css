@@ -14,13 +14,22 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 20px;
-  margin: 10px 281px;
+  margin: 10px 250px;
+  font-family: 'Lato';
+}
+
+.Courses h2{
+  text-align: center;
+  color: #45cb70;
+  padding-top: 20px;
+  font-weight: 500;
 }
 
 #view-course{
-  padding: 10px;
+  padding: 6px;
   background: #45cb70;
   border: none;
+  font-family: 'Lato';
 }
 
 #view-course a{
@@ -45,8 +54,8 @@
   flex-direction: column;
   gap: 1rem;
   color: white;
-  margin-left: 58px;
-  padding-left: 205px;
+  margin-left: 41px;
+  padding-left: 204px;
 }
 
 .image-courses{
@@ -58,7 +67,7 @@
 }
 
 .image-courses img{
-  width: 70%;
+  width: 78%;
   height: 200px;
   object-fit: cover;
   border-top: 10px solid #45cb70;
@@ -73,14 +82,24 @@
   border: none;
 }
 
+#course-name{
+  font-family: 'Karla';
+  font-weight: 500;
+  font-size: 20px;
+}
+
 #course-desc{
   padding-right: 50px;
+  font-family: 'Karla';
+  font-weight: 300;
+  font-size: 15px;
 }
+
 
 
 @media screen and (max-width: 769px){
   .Courses .heading_c{
-    margin: 10px 28px;
+    margin: 10px 10px;
   }
   .Courses h2{
     text-align: center;
@@ -112,8 +131,8 @@
     flex-direction: column;
     gap: 10px;
     color: white;
-    margin-left: 10px;
-    padding-left: 15px;
+    margin-left: 6px;
+    padding-left: 3px;
   }
 
   #course-desc{
@@ -123,7 +142,7 @@
 
   #course-btn {
     width: 80px;
-    height: 20px;
+    height: 23px;
     background: #45cb70;
     color: white;
     border: none;

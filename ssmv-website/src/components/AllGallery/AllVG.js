@@ -6,7 +6,7 @@ import Create from '../CRUD/Create/Create'
 export default function AllVG() {
   return (
     <>
-        <h1>Gallery</h1><Create url={'/add-item/image'}/>
+        <h1>VIDEO GALLERY</h1><Create url={'/add-item/image'}/>
         <div className='gallery-boxes-videos'>
             <div className='box1-videos'><Delete/></div>       
             <div className='box1-videos'><Delete/></div>          
@@ -17,4 +17,3 @@ export default function AllVG() {
     </>
   )
 }
-{/* <a href='/add-item/image'><button className='add-btn'>Add</button></a> */}

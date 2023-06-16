@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './AddNewsForm.css'
-import course_id from '../../Pages/Courses/BA/BA'
+// import course_id from '../../pages/Courses/BA/BA'
 import { useLocation ,useNavigate} from 'react-router-dom';
 
 

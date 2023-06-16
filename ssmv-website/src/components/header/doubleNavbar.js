@@ -5,12 +5,15 @@ import { useNavigate } from 'react-router-dom';
 import './navbar.css';
   
 const DoubleNavbar = () => {
+
   const navigate = useNavigate();
   const [isNavExpanded, setIsNavExpanded] = useState(window.innerWidth>768);
 
-  useEffect(()=>{
-    window.addEventListener("resize", ()=>{setIsNavExpanded(window.innerWidth>768)})
-  });
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setIsNavExpanded(window.innerWidth > 768);
+    });
+  }, []);
 
   const handleclicked=()=>{
     setIsNavExpanded(!isNavExpanded);
@@ -27,11 +30,13 @@ const DoubleNavbar = () => {
         <nav className="navbar-top">
             <div className="top-section-links">
                 <ul className = "section-links-indiv">
+                    <li><a href= "/ssmv-website" onClick={handleClick}> Home </a></li>
                     <li><a href= "/Admission" onClick={handleClick}> Admission </a></li>
                     <li><a href = "/Alumni" onClick={handleClick}> Alumni </a> </li>
                     <li><a href = "/Donate" onClick={handleClick}> Donate </a></li>
                     <li><a href = "/Greviances" onClick={handleClick}> Grievancess </a></li>
-                    <li><a href = "/Login" onClick={handleClick}> Login </a></li>
+                    <li><a href="/Login" onClick={handleClick}>Login</a></li>
+                    <li><a href="/Logout" onClick={handleClick}>Logout</a></li>
                 </ul>
             </div>
             {/* social media links */}
@@ -84,7 +89,7 @@ const DoubleNavbar = () => {
                                 <li><a href= "/Services/Yoga" onClick={handleClick}>Yoga and Kamakanda</a></li>
                         </ul>
                     </li>
-                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Media</a></li>
+                    <li><a href="/Media">Media</a></li>
                 </ul>
             </div> }   
             <div id='mobile'>

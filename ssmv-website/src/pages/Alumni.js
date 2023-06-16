@@ -7,8 +7,9 @@ import Events from '../components/events/Events';
 import LatestSSMV from '../components/carousel/LatestSSMV/LatestSSMV';
 import VideoG from '../components/VideoG/VideoG';
 import Testimonials from '../components/carousel/Testimonials/Testimonials';
-import SocialMedia from '../components/SocialMedia/SocialMedia';
+// import SocialMedia from '../components/SocialMedia/SocialMedia';
 import Footer from '../components/Footer/Footer'
+import Glry from '../components/VideoG/Glry';
 
 
 const Alumni = () => {
@@ -33,9 +34,10 @@ const Alumni = () => {
     <div><AlumniSpotlight/></div>
     <div><Events/></div>
     <div><LatestSSMV/></div>
+    <div><Glry/></div>
     <div><VideoG/></div>
     <div><Testimonials/></div>
-    <div><SocialMedia/></div>
+    {/* <div><SocialMedia/></div> */}
     <div><Footer/></div>
     </>
   )

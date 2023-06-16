@@ -28,8 +28,7 @@
 
     @media screen and (max-width: 769px){
       .image-slider{
-        max-width: 441px;
-        min-width: 156px;
+        width: 100%;
         max-height: 543px;
       }
     }

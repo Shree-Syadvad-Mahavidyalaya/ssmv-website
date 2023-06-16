@@ -3,12 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './Update.css'
 import MyContext from '../../events/MyContext'
 
-// export default function Update() {
-//   const isAdmin=useContext(MyContext)[0];
-//   return (isAdmin &&
-//     <button className='edit-btn'>Edit</button>
-//   )
-// }
 export default function Update(props) {
   const navigate=useNavigate();
   const isAdmin=useContext(MyContext)[0];

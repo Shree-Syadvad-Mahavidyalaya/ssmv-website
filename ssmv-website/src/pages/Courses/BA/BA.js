@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/scope */
 import React,{useState,useEffect,useContext} from 'react'
 import '../BA/BA.css'
-import { useNavigate } from 'react-router-dom';
-import Foot from '../../../components/Footer/Footer'
+// import { useNavigate } from 'react-router-dom';
 import DoubleNavbar from '../../../components/header/doubleNavbar'
 import Delete from '../../../components/CRUD/Delete/Delete'
 import Update from '../../../components/CRUD/Update/Update'
 import Create from '../../../components/CRUD/Create/Create'
-import MyContext from '../../../components/events/MyContext'
+// import MyContext from '../../../components/events/MyContext'
 import AddsubBA from '../../../components/Editpage/AddsubBA'
+import Footer from '../../../components/Footer/Footer';
 
 
 const BA = () => {
@@ -84,7 +84,7 @@ const BA = () => {
           </table>
         </div>
       </div>
-      <Foot />
+      <Footer/>
     </>
   );
 };

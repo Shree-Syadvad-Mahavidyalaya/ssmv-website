@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Delete({url,baseurl}) {
   const isAdmin = useContext(MyContext)[0];
-const navigate=useNavigate();
+  const navigate=useNavigate();
   const handleDelete = () => {
-    console.log(url);
+  console.log(url);
     
       fetch(url, {
         method: 'DELETE',
@@ -23,8 +23,11 @@ const navigate=useNavigate();
         })
         .catch((error) => {
           console.error('An error occurred while deleting the item:', error);
-        });
-    navigate(baseurl);
+        })
+        .finally(()=>{
+          navigate(baseurl);
+        })
+    navigate("/loading");
   };
   return isAdmin && <button className='delete-btn' onClick={handleDelete}>Delete</button>;
 }
