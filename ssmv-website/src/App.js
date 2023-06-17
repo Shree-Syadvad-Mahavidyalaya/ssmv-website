@@ -1,31 +1,31 @@
 import React, { useState } from 'react';
 import MyContext from './components/events/MyContext';
 import './App.css';
-import Home from './pages/Home';
+import Home from './Pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Alumni from './pages/Alumni'
-import Admission from './pages/Admission';
-import LoginPage from './pages/LoginPage';
+import Alumni from './Pages/Alumni'
+import Admission from './Pages/Admission';
+import LoginPage from './Pages/LoginPage';
 import AllCourses from './components/AllCourse/AllCourses';
-import AboutUs from './pages/AboutUs/AboutUs';
-import Administration from './pages/Administration/Administration';
-import Group from '../src/pages/Group/Group'
-import AnnualReport from './pages/AboutUs/AnnualReport/AnnualReport';
-import Founder from './pages/Founder/Founder';
-import Principle from './pages/Principle/Principle';
-import Objective from './pages/Objective/Objective';
-import Map from './pages/Map/Map';
-import Donate from './pages/Donate/Donate';
-import MA from './pages/Courses/MA/MA';
-import BA from './pages/Courses/BA/BA';
-import Hostel from './pages/Services/Hostel/Hostel';
-import Computer from './pages/Services/Computer/Computer';
-import Library from './pages/Services/Library/Library';
-import Mess from './pages/Services/Mess/Mess';
-import Yoga from './pages/Services/Yoga/Yoga';
-import Events from './pages/Events';
-import VGallery from './pages/VGallery';
-import Greviances from './pages/Greviances';
+import AboutUs from './Pages/AboutUs/AboutUs';
+import Administration from './Pages/Administration/Administration';
+import Group from '../src/Pages/Group/Group'
+import AnnualReport from './Pages/AboutUs/AnnualReport/AnnualReport';
+import Founder from './Pages/Founder/Founder';
+import Principle from './Pages/Principle/Principle';
+import Objective from './Pages/Objective/Objective';
+import Map from './Pages/Map/Map';
+import Donate from './Pages/Donate/Donate';
+import MA from './Pages/Courses/MA/MA';
+import BA from './Pages/Courses/BA/BA';
+import Hostel from './Pages/Services/Hostel/Hostel';
+import Computer from './Pages/Services/Computer/Computer';
+import Library from './Pages/Services/Library/Library';
+import Mess from './Pages/Services/Mess/Mess';
+import Yoga from './Pages/Services/Yoga/Yoga';
+import Events from './Pages/Events';
+import VGallery from './Pages/VGallery';
+import Greviances from './Pages/Greviances';
 import AddNewsForm from './components/Editpage/AddNewsForm';
 import AddImageForm from './components/Editpage/AddImageForm';
 import AddNewRow from './components/Editpage/AddNewRow';
@@ -33,10 +33,10 @@ import AddImgDesc from './components/Editpage/AddImgDesc';
 import AddNewCourse from './components/Editpage/AddNewCourse';
 import AddAlumniDetails from './components/Editpage/AddAlumniDetails';
 import AddDonatorsName from './components/Editpage/AddDonatorsName';
-import AddsubBA from './components/Editpage/AddsubBA';
-import AddsubMA from './components/Editpage/AddsubBA';
+import AddsubBA from './components/Editpage/EditBAcourses';
+import AddsubMA from './components/Editpage/EditBAcourses';
 import EditAdministration from './components/Editpage/EditAdministration';
-import Managingcommitee from './pages/Administration/Managingcommitee'
+import Managingcommitee from './Pages/Administration/Managingcommitee'
 import EditSHostelinfo from './components/Editpage/EditSHostelinfo';
 import EditLatest from './components/Editpage/EditLatest';
 import EditSptlght from './components/Editpage/EditSptlght';
@@ -57,14 +57,16 @@ import EditPrinciple from './components/Editpage/EditPrinciple'
 import EditObjective from './components/Editpage/EditObjectives';
 import EditSSMVAbout from './components/Editpage/EditSSMVAbout';
 import AddBACourse from './components/Editpage/AddBACourse';
-import LoadingPage from './pages/loading/loading';
+import LoadingPage from './Pages/loading/loading';
 import Logout from './components/Logout/Logout';
-import IndivCoursesPage from './pages/IndivCoursesPage';
+import IndivCoursesPage from './Pages/IndivCoursesPage';
 import EditDonators from './components/Editpage/EditDonators';
-import MediaPage from './pages/MediaPage';
-import Gallery from './pages/VGallery';
+import MediaPage from './Pages/MediaPage';
+import Gallery from './Pages/VGallery';
 import EditGroup from './components/Editpage/EditGroup';
 import AddGroup from './components/Editpage/Addgroup'
+import EditHomeCourses from './components/Editpage/EditHomeCourses';
+import EditNews from './components/Editpage/EditNews';
 
 
 function App() {
@@ -137,6 +139,8 @@ function App() {
         <Route path='/edit-item/Donate' element={<EditDonators/>}/>
         <Route path='/add-item/EditGroup' element={<EditGroup/>}/>
         <Route path='/add-item/AddGroup' element={<AddGroup/>}/>
+        <Route path='/add-item/EditHomeCourses' element={<EditHomeCourses/>}/>
+        <Route path='/add-item/EditNews' element={<EditNews/>}/>
         <Route path='*' element={<Home/>}></Route>
         <Route path='/loading' element={<LoadingPage/>}></Route>
     </Routes>

@@ -22,7 +22,7 @@ const AboutUs = () => {
         <Aboutcarousel/>
         </div>
         <div className='div'>
-            <h3 className='head'>ABOUT US <Update url={'/add-item/ssmv-about'} AboutId={data._id}/></h3>
+            <h3 className='head'>ABOUT US</h3>
         <div className='box2'>
         
         {data.ssmv?.map((item)=>

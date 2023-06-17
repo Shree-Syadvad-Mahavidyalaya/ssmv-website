@@ -6,7 +6,6 @@ import MyContext from '../../events/MyContext'
 export default function Update(props) {
   const navigate=useNavigate();
   const isAdmin=useContext(MyContext)[0];
-  console.log(props);
   
   const handleClick=(e,p)=>{
     // e.preventDefault();

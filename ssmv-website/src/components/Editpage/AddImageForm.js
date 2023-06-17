@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './AddNewsForm.css'
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function AddImageForm() {
+  const navigate = useNavigate();
   const [news, setNews] = useState({
     image: '',
   });
@@ -16,8 +18,24 @@ function AddImageForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Perform any additional actions, such as sending the data to the server
-    console.log(news);
+    
+    fetch('https://test-moid.vercel.app/ssmv/aboutus/annualReport/new', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(news),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        // Do any additional actions after successfully adding the news, such as showing a success message or refreshing the data.
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        // Handle any error that occurred during the request.
+      });
+      navigate('/About Us/SSMV');
   };
 
   return (

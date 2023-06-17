@@ -7,7 +7,7 @@ import Delete from '../../../components/CRUD/Delete/Delete'
 import Update from '../../../components/CRUD/Update/Update'
 import Create from '../../../components/CRUD/Create/Create'
 // import MyContext from '../../../components/events/MyContext'
-import AddsubBA from '../../../components/Editpage/AddsubBA'
+import AddsubBA from '../../../components/Editpage/EditBAcourses'
 import Footer from '../../../components/Footer/Footer';
 
 

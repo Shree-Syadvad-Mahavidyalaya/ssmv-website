@@ -19,15 +19,7 @@ const Newsnav = () => {
             <a href="#" className='atag' onClick={() => setNewsId("CommunityNews")}>Community</a>&nbsp;&nbsp;
             <a href="#" className='atag' onClick={() => setNewsId("ChannelNews")}>Channels</a>
         </nav>
-        {/* <nav>
-    <ul>
-      <li class="item"><a href="#">link 1</a></li>
-      <li class="item"><a href="#">link 2</a></li>
-      <li class="item"><a href="#">link 3</a></li>
-      <li class="item"><a href="#">link 4</a></li>
-      <li class="item"><a href="#">link 5</a></li>
-    </ul>
-  </nav> */}
+        
         
         <div className='NewsSection'>
         <SideNews NewsId={NewsId} width='700px'/>

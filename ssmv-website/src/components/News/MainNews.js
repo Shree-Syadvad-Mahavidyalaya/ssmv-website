@@ -13,8 +13,6 @@ const MainNews = (props) => {
             <p className="main-date">{props.items.date}</p>
             <p className="main-desc">
               <b>{props.items.desc}Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,</b>
-              <Delete/>
-              <Update/>
             </p>
           </div>
         {/* </div> */}

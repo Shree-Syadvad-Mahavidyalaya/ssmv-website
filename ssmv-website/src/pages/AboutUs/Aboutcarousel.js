@@ -4,6 +4,7 @@ import MyContext from '../../components/events/MyContext';
 import Carousel from "react-multi-carousel";
 import '../AboutUs/About.css'
 import Create from '../../components/CRUD/Create/Create';
+import Delete from '../../components/CRUD/Delete/Delete';
 
 const Aboutcarousel = () => {
   const [images, setImages] = useState([]);
@@ -87,7 +88,7 @@ const Aboutcarousel = () => {
         {images.map((imageUrl, index) => (
           <div className="about-carousel" key={index} width="100%" height="100%">
             <Create url = {'/add-item/image'}/>
-            {isAdmin && <DeleteButton onClick={() => handleDelete(index)} />}
+            {isAdmin && <Delete url={`https://test-moid.vercel.app/ssmv/aboutus/SSMV/${index._id}/`} baseurl={'/About Us/SSMV'}/>}
             <img src={imageUrl} className="about-img" alt={`Carousel Image ${index}`} />
           </div>
         ))}
@@ -96,10 +97,5 @@ const Aboutcarousel = () => {
   );
 };
 
-const DeleteButton = ({ onClick }) => {
-  return (
-    <button className="delete-btn" onClick={onClick}>Delete</button>
-  );
-};
 
 export default Aboutcarousel;
