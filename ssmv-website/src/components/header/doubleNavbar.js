@@ -3,7 +3,7 @@ import { useState } from "react"
 import { FaFacebookSquare , FaTwitterSquare, FaYoutubeSquare} from 'react-icons/fa';
 import './navbar.css';
 import MyContext from '../events/MyContext';
-import A from '../../A';
+import A from '../AnchorTag';
   
 const DoubleNavbar = () => {
 

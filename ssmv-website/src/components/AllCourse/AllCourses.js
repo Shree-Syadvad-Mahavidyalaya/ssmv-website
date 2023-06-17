@@ -4,7 +4,7 @@ import './AllCourses.css'
 import { useState } from 'react';
 import Delete from "../CRUD/Delete/Delete";
 import Update from '../CRUD/Update/Update';
-import A from '../../A';
+import A from '../AnchorTag';
 
 export default function AllCourses() {
 

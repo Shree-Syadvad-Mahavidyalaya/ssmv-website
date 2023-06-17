@@ -3,7 +3,7 @@ import './VideoG.css';
 import Delete from '../CRUD/Delete/Delete';
 import Create from '../CRUD/Create/Create';
 import axios from 'axios';
-import A from '../../A';
+import A from '../AnchorTag';
 
 const Glry = () => {
     

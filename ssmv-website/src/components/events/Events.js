@@ -7,7 +7,7 @@ import Create from '../CRUD/Create/Create';
 import Update from '../CRUD/Update/Update';
 import { responsive } from './Data';
 import Delete from '../CRUD/Delete/Delete';
-import A from '../../A';
+import A from '../AnchorTag';
 
 
 const Events = () => {

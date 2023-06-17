@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from "react";
 import SideNews from './SideNews';
 import '../News/Newsnav.css';
-import A from '../../A';
+import A from '../AnchorTag';
 
 const Newsnav = () => {
     

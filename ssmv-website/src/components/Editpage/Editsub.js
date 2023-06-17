@@ -4,43 +4,43 @@ import './AddNewsForm.css'
 import { useLocation ,useNavigate} from 'react-router-dom';
 
 
-function AddsubMA() {
+function EditSub() {
   const navigate=useNavigate();
   const [subject, setSubject] = useState();
-const location=useLocation();
-const courseId = location.state.props;
-  console.log(useLocation());
+  const location=useLocation();
+  console.log(location.state)
+  const courseId = location.state.id;
+  const courseType=location.state.courseType;
+  console.log(location.state)
 
   const handleInputChange = (event) => {
     setSubject(event.target.value);
   };
 
-  const handleEdit = async (event) => {
+  const handleEdit =  (event) => {
     event.preventDefault();
 
     const updatedData = { subject };
 
-    try {
-      const response = await fetch(`https://test-moid.vercel.app/ssmv/courses/ba/${courseId}/`, {
+      fetch(`https://test-moid.vercel.app/ssmv/courses/${courseType}/${courseId}/`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(updatedData),
-      });
-
-      if (response.ok) {
-        console.log('Course updated successfully');
-        // Handle any further actions or notifications after successful update
-      } else {
-        console.error('Failed to update course');
-        // Handle errors or display error messages
-      }
-    } catch (error) {
-      console.error('Error updating course:', error);
-      // Handle errors or display error messages
-    }
-    navigate('/Courses/BA');
+      })
+      .then((res)=>{
+        console.log(res);
+      })
+      .catch ((error)=>{
+        console.error('Error updating course:', error);
+      }) 
+      .finally(()=>{
+          // console.log(response);
+          navigate(`/Courses/${courseType}`);
+      })
+      navigate("/loading")
+    
   };
 
   return (
@@ -63,4 +63,4 @@ const courseId = location.state.props;
   );
 }
 
-export default AddsubMA;
+export default EditSub;

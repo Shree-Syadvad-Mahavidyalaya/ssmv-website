@@ -11,7 +11,7 @@ export default function Create(props) {
   const handleClick=(e)=>{
     e.preventDefault();
     console.log(props.url);
-    navigate(props.url, {setBAcourses:props.setBAcourses})
+    navigate(props.url,{state:props})
   }
   return ( isAdmin &&
     <button className='add-btn' onClick={(e)=>handleClick(e)}>Add</button>

@@ -6,7 +6,7 @@ import DoubleNavbar from '../../components/header/doubleNavbar'
 import Delete from '../../components/CRUD/Delete/Delete'
 import Update from '../../components/CRUD/Update/Update'
 import Create from '../../components/CRUD/Create/Create'
-import A from '../../A'
+import A from '../../components/AnchorTag'
 
 
 const Group = () => {

@@ -8,9 +8,9 @@ export default function Update(props) {
   const isAdmin=useContext(MyContext)[0];
   console.log(props);
   
-  const handleClick=(e,p)=>{
+  const handleClick=(e)=>{
     // e.preventDefault();
-    navigate(p.url,{state:{props:p.id}})
+    navigate(props.url,{state:props})
   }
   return ( isAdmin &&
     <button className='edit-btn' onClick={(e)=>handleClick(e,props)}>Edit</button>

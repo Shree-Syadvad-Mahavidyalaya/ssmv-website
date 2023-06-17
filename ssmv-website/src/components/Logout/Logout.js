@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import './Logout.css'
 import MyContext from '../events/MyContext'
 import { useEffect } from 'react';
-import A from '../../A';
+import A from '../AnchorTag';
 
 export default function Logout() {
   const setIsAdmin=useContext(MyContext)[1];

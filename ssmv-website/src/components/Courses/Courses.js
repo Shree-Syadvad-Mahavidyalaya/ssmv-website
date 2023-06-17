@@ -5,7 +5,7 @@ import { CoursesItem } from './CoursesItem'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Create from '../CRUD/Create/Create';
-import A from '../../A';
+import A from '../AnchorTag';
 
 
 export const Courses = () => {

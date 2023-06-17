@@ -4,10 +4,11 @@ import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import './AddNewsForm.css'
 
 
-function AddBACourse() {
+function AddBACourse(props) {
   const navigate=useNavigate();
   const location=useLocation();
-
+  console.log(location.state)
+  const courseType=location.state.courseType;
   const [bacourse, setBAcourse] = useState({
     subject: '',
   });
@@ -23,7 +24,7 @@ function AddBACourse() {
   const handleSubmit = (event) => {
     event.preventDefault();
     
-    fetch('https://test-moid.vercel.app/ssmv/courses/ba/new', {
+    fetch(`https://test-moid.vercel.app/ssmv/courses/${courseType}/new`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -38,9 +39,12 @@ function AddBACourse() {
       .catch(error => {
         console.error('Error:', error);
         // Handle any error that occurred during the request.
-      });
-      location(setBAcourse)
-      navigate('/Courses/BA');
+      })
+      .finally(()=>{
+        navigate(`/Courses/${courseType}`);
+      })
+      // location(setBAcourse)
+      navigate("/loading");
       
   };
 

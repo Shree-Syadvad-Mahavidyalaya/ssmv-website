@@ -16,8 +16,6 @@ import Principle from './pages/Principle/Principle';
 import Objective from './pages/Objective/Objective';
 import Map from './pages/Map/Map';
 import Donate from './pages/Donate/Donate';
-import MA from './pages/Courses/MA/MA';
-import BA from './pages/Courses/BA/BA';
 import Hostel from './pages/Services/Hostel/Hostel';
 import Computer from './pages/Services/Computer/Computer';
 import Library from './pages/Services/Library/Library';
@@ -33,8 +31,8 @@ import AddImgDesc from './components/Editpage/AddImgDesc';
 import AddNewCourse from './components/Editpage/AddNewCourse';
 import AddAlumniDetails from './components/Editpage/AddAlumniDetails';
 import AddDonatorsName from './components/Editpage/AddDonatorsName';
-import AddsubBA from './components/Editpage/AddsubBA';
-import AddsubMA from './components/Editpage/AddsubBA';
+import EditSub from './components/Editpage/Editsub';
+import AddsubMA from './components/Editpage/Editsub';
 import EditAdministration from './components/Editpage/EditAdministration';
 import Managingcommitee from './pages/Administration/Managingcommitee'
 import EditSHostelinfo from './components/Editpage/EditSHostelinfo';
@@ -56,7 +54,7 @@ import EditFounder from './components/Editpage/EditFounder';
 import EditPrinciple from './components/Editpage/EditPrinciple'
 import EditObjective from './components/Editpage/EditObjectives';
 import EditSSMVAbout from './components/Editpage/EditSSMVAbout';
-import AddBACourse from './components/Editpage/AddBACourse';
+import AddCourse from './components/Editpage/AddCourse';
 import LoadingPage from './pages/loading/loading';
 import Logout from './components/Logout/Logout';
 import IndivCoursesPage from './pages/IndivCoursesPage';
@@ -69,11 +67,13 @@ import AddAllEvents from './components/Editpage/AddAllEvents';
 import EditAllEvents from './components/Editpage/EditAllEvents';
 import AddVideos from './components/Editpage/AddVideos';
 import AddImages from './components/Editpage/AddImages';
+import MA from "./pages/Academics/MA"
+import BA from "./pages/Academics/BA"
 
 
 function App() {
 
-  const [isAdmin, setIsAdmin]=useState(false);
+  const [isAdmin, setIsAdmin]=useState(true);
 
     return (
     <MyContext.Provider value={[isAdmin,setIsAdmin]} >
@@ -111,8 +111,8 @@ function App() {
         <Route path='/add-item/news' element={<AddNewsForm/>}/>
         <Route path='/add-item/image' element={<AddImageForm/>}/>
         <Route path='/add-item/row' element={<AddNewRow/>}/>
-        <Route path='/add-item/course-BA' element={<AddsubBA/>}/>
-        <Route path='/add-item/course-MA' element={<AddsubMA/>}/>
+        <Route path='/edit-item/course-BA' element={<EditSub/>}/>
+        <Route path='/edit-item/course-MA' element={<AddsubMA/>}/>
         <Route path='/add-item/Image-Desc' element={<AddImgDesc/>}/>
         <Route path='/add-item/new-course' element={<AddNewCourse/>}/>
         <Route path='/add-item/alumni-details' element={<AddAlumniDetails/>}/>
@@ -137,7 +137,8 @@ function App() {
         <Route path='/add-item/EditPrinciple' element={<EditPrinciple/>}/>
         <Route path='add-item/EditObjective' element={<EditObjective/>}/>
         <Route path='/add-item/ssmv-about' element={<EditSSMVAbout/>}/>
-        <Route path='/add-item/AddBACourse' element={<AddBACourse/>}/>
+        <Route path='/add-item/AddBACourse' element={<AddCourse/>}/>
+        <Route path='/add-item/AddMACourse' element={<AddCourse/>}/>
         <Route path='/edit-item/Donate' element={<EditDonators/>}/>
         <Route path='/add-item/EditGroup' element={<EditGroup/>}/>
         <Route path='/add-item/AddGroup' element={<AddGroup/>}/>
