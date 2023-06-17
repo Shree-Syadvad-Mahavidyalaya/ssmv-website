@@ -88,4 +88,3 @@ const Libraryimgcarousel = () => {
 
 export default Libraryimgcarousel;
 
-{/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a> */}

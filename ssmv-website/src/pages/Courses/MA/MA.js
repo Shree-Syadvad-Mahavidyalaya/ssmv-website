@@ -7,6 +7,7 @@ import Delete from '../../../components/CRUD/Delete/Delete'
 import Update from '../../../components/CRUD/Update/Update'
 import Create from '../../../components/CRUD/Create/Create'
 import AddsubMA from '../../../components/Editpage/AddsubMA'
+import A from '../../../A'
 
 
 const MA = () => {
@@ -43,8 +44,8 @@ const MA = () => {
     <>
       <DoubleNavbar />
       <div>
-        <a href="/add-item/course-row">
-        </a>
+        <A href="/add-item/course-row">
+        </A>
         <div className="Table">
           <table>
             <thead>

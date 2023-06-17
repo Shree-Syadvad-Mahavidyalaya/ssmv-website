@@ -93,4 +93,3 @@ const Hostelcarousel = () => {
 export default Hostelcarousel
 
 
-{/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a> */}

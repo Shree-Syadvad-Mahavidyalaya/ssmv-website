@@ -8,7 +8,7 @@ import Newsnav from '../components/News/Newsnav';
 
 function Home () {
     const slides = [
-    { url: "https://i.ibb.co/mGYVThg/1.jpg", title: "img1" },
+    { url: "https://drive.google.com/uc?export=view&id=1b_DhyJJ-5ejhfBohiDMWkSiTdtGM6ws-", title: "img1" },
     { url: "https://i.ibb.co/GVmQMJV/2.jpg", title: "img2" },
     { url: "https://i.ibb.co/TYsbCBt/3.jpg", title: "img3" },
   ];

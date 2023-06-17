@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from 'react';
 import { useState } from "react"
 import { FaFacebookSquare , FaTwitterSquare, FaYoutubeSquare} from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 import './navbar.css';
 import MyContext from '../events/MyContext';
+import A from '../../A';
   
 const DoubleNavbar = () => {
 
-  const navigate = useNavigate();
+
   const [isNavExpanded, setIsNavExpanded] = useState(window.innerWidth>768);
   const isAdmin=useContext(MyContext)[0];
 
@@ -22,78 +22,71 @@ const DoubleNavbar = () => {
     setIsNavExpanded(!isNavExpanded);
   }
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    navigate(event.target.getAttribute("href"));
-    
-  };
-
-
   return (
     <>
         <nav className="navbar-top">
             <div className="top-section-links">
                 <ul className = "section-links-indiv">
-                    <li><a href= "/ssmv-website" onClick={handleClick}> Home </a></li>
-                    <li><a href= "/Admission" onClick={handleClick}> Admission </a></li>
-                    <li><a href = "/Alumni" onClick={handleClick}> Alumni </a> </li>
-                    <li><a href = "/Donate" onClick={handleClick}> Donate </a></li>
-                    <li><a href = "/Greviances" onClick={handleClick}> Grievancess </a></li>
-                    <li><a href={isAdmin ? "/Logout" : "/Login"} onClick={handleClick}>{isAdmin ? "Logout" : "Login"}</a>
+                    <li><A href= "/ssmv-website" > Home </A></li>
+                    <li><A href= "/Admission" > Admission </A></li>
+                    <li><A href = "/Alumni" > Alumni </A> </li>
+                    <li><A href = "/Donate" > Donate </A></li>
+                    <li><A href = "/Greviances" > Grievancess </A></li>
+                    <li><A href={isAdmin ? "/Logout" : "/Login"} >{isAdmin ? "Logout" : "Login"}</A>
     </li>
                 </ul>
             </div>
             {/* social media links */}
             <div className="social-media-icons">
                 <ul className="social-media-desktop">
-                    <li><a href="/#"> <FaFacebookSquare className="facebook"/></a></li>
-                    <li><a href="/#"><FaTwitterSquare className="twitter"/></a></li>
-                    <li><a href="/#"><FaYoutubeSquare className="youtube"/></a></li>
+                    <li><A href="/#"> <FaFacebookSquare className="facebook"/></A></li>
+                    <li><A href="/#"><FaTwitterSquare className="twitter"/></A></li>
+                    <li><A href="/#"><FaYoutubeSquare className="youtube"/></A></li>
                 </ul>
             </div>
         </nav>
         <nav className='navbar-bottom'>
             <div className='logo'>
-                <img src="" alt="loading"/>
+                <img src="https://drive.google.com/uc?export=view&id=15KYpqXFAgLWzBOlH5-WTLwk2-8gSkuba" alt="loading"/>
             </div>
             { isNavExpanded && <div className="main-menu">
                 <ul>
-                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>About Us</a> 
+                    <li><A href="/" >About Us</A> 
                             <ul id="abt">
-                                <li><a href= "/About Us/SSMV" onClick={handleClick}>SSMV</a></li>
-                                <li><a href= "/About Us/Annual Report" onClick={handleClick}>Annual Report</a></li>
-                                <li><a href= "/About Us/Founder" onClick={handleClick}>Founder</a></li>
-                                <li><a href= "/About Us/Principle" onClick={handleClick}>Principle</a></li>
-                                <li><a href= "/About Us/Objectives" onClick={handleClick}>Objectives</a></li>
-                                <li><a href= "/About Us/Map" onClick={handleClick}>SSMV Map</a></li>
-                                <li><a href= "/" onClick={handleClick}>Temple</a></li>
-                                <li><a href= "/" onClick={handleClick}>Kulgeet</a></li>
+                                <li><A href= "/About Us/SSMV" >SSMV</A></li>
+                                <li><A href= "/About Us/Annual Report" >Annual Report</A></li>
+                                <li><A href= "/About Us/Founder" >Founder</A></li>
+                                <li><A href= "/About Us/Principle" >Principle</A></li>
+                                <li><A href= "/About Us/Objectives" >Objectives</A></li>
+                                <li><A href= "/About Us/Map" >SSMV Map</A></li>
+                                <li><A href= "/" >Temple</A></li>
+                                <li><A href= "/" >Kulgeet</A></li>
                             </ul>
                     </li> 
                     
-                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Academics</a>
+                    <li><A href="/" >Academics</A>
                         <ul id='acads'>
-                                <li><a href= "/Courses/BA" onClick={handleClick}>BA (Shastri)  </a></li>
-                                <li><a href= "/Courses/MA" onClick={handleClick}>MA (Aacharya)  </a></li>
+                                <li><A href= "/Courses/BA" >BA (Shastri)  </A></li>
+                                <li><A href= "/Courses/MA" >MA (Aacharya)  </A></li>
                         </ul>
                     </li>
-                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Administration</a>
+                    <li><A href="/">Administration</A>
                     <ul id="admn">
-                                <li><a href= "/Admininstration/CollegeAdministration" onClick={handleClick}>College Administration</a></li>
-                                <li><a href= "/Administration/ManagingCommitee" onClick={handleClick}>Managing Committee</a></li>
-                                <li><a href= "/Administration/Group" onClick={handleClick}>Group 3/4</a></li>
+                                <li><A href= "/Admininstration/CollegeAdministration" >College Administration</A></li>
+                                <li><A href= "/Administration/ManagingCommitee" >Managing Committee</A></li>
+                                <li><A href= "/Administration/Group" >Group 3/4</A></li>
                         </ul>
                     </li>
-                    <li><a href="/" onClick={(e)=>{e.preventDefault();}}>Services</a>
+                    <li><A href="/" >Services</A>
                         <ul id='ss'>
-                                <li><a href= "/Services/Hostel" onClick={handleClick}>Hostel</a></li>
-                                <li><a href= "/Services/Library" onClick={handleClick}>Library</a></li>
-                                <li><a href= "/Services/Computer" onClick={handleClick}>Computer Lab</a></li>
-                                <li><a href= "/Services/Mess"onClick={handleClick}>Mess</a></li>
-                                <li><a href= "/Services/Yoga" onClick={handleClick}>Yoga and Kamakanda</a></li>
+                                <li><A href= "/Services/Hostel" >Hostel</A></li>
+                                <li><A href= "/Services/Library" >Library</A></li>
+                                <li><A href= "/Services/Computer" >Computer Lab</A></li>
+                                <li><A href= "/Services/Mess">Mess</A></li>
+                                <li><A href= "/Services/Yoga" >Yoga and Kamakanda</A></li>
                         </ul>
                     </li>
-                    <li><a href="/Media">Media</a></li>
+                    <li><A href="/Media">Media</A></li>
                 </ul>
             </div> }   
             <div id='mobile'>

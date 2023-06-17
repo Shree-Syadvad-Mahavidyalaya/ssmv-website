@@ -3,6 +3,7 @@ import './VideoG.css';
 import Delete from '../CRUD/Delete/Delete';
 import Create from '../CRUD/Create/Create';
 import axios from 'axios';
+import A from '../../A';
 
 const VideoG = () => {
     
@@ -23,7 +24,7 @@ const VideoG = () => {
     <div id='container'>
       <div id='heading'>
         <h1>VIDEO GALLERY <Create url={'/add-item/alumni-video-gallery'}/> <hr id='line2'></hr></h1>
-        <button className='view-btn'><a href='/ViewAll/VGallery'>View</a></button>
+        <button className='view-btn'><A href='/ViewAll/VGallery'>View</A></button>
       </div>
       
       <div className='gallery-boxes'>

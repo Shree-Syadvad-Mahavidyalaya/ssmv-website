@@ -4,6 +4,7 @@ import './AllCourses.css'
 import { useState } from 'react';
 import Delete from "../CRUD/Delete/Delete";
 import Update from '../CRUD/Update/Update';
+import A from '../../A';
 
 export default function AllCourses() {
 
@@ -23,7 +24,7 @@ export default function AllCourses() {
 
   return (
     <>
-    <h1>Courses<a href='/add-item/new-course'><button className='add-btn'>Add</button></a></h1>
+    <h1>Courses<A href='/add-item/new-course'><button className='add-btn'>Add</button></A></h1>
     <div className='viewALL-container'>
       {acourses.map((item) => (
         <div className="Viewcards" key={item.id}>

@@ -7,6 +7,7 @@ import Create from '../CRUD/Create/Create';
 import Update from '../CRUD/Update/Update';
 import { responsive } from './Data';
 import Delete from '../CRUD/Delete/Delete';
+import A from '../../A';
 
 
 const Events = () => {
@@ -29,7 +30,7 @@ const Events = () => {
     <div className="events-container">
       <div id='heading1'>
         <h1>EVENTS <Create url={'/add-item/alumni-events'}/> <hr id='line2'></hr></h1>
-        <button className='view-btn'><a href='/ViewAll/AllEvents'>View All</a></button>
+        <button className='view-btn'><A href='/ViewAll/AllEvents'>View All</A></button>
       </div>
       <Carousel responsive={responsive}>
         {eventsData.map(event => (

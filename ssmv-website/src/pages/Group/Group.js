@@ -6,6 +6,7 @@ import DoubleNavbar from '../../components/header/doubleNavbar'
 import Delete from '../../components/CRUD/Delete/Delete'
 import Update from '../../components/CRUD/Update/Update'
 import Create from '../../components/CRUD/Create/Create'
+import A from '../../A'
 
 
 const Group = () => {
@@ -33,9 +34,9 @@ const Group = () => {
     <>
       <DoubleNavbar />
       <div>
-        <a href="/add-item/row">
+        <A href="/add-item/row">
           <Create url={'/add-item/AddGroup'}/>
-        </a>
+        </A>
         <div className="Table">
           <table>
             <thead>

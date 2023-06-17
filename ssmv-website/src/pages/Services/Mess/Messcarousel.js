@@ -92,5 +92,3 @@ const Messcarousel = () => {
 
 export default Messcarousel
 
-
-{/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a> */}

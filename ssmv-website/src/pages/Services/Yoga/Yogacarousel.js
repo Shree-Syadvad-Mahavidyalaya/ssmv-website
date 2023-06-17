@@ -59,7 +59,6 @@ const Yogacarousel = () => {
     slidesToSlide={1}
     swipeable
     >
-       {/* <a href='/add-item/Image'><button className='add-btn'>Add</button></a>  */}
         <div className='yoga-carousel'  width="100%" height="100%">
         <Create url={'//add-item/Image'}/> <Delete/>
         <img src="https://source.unsplash.com/random/150x150/?news" className='yoga-img' />
