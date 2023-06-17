@@ -1,11 +1,11 @@
-/* eslint-disable jsx-a11y/alt-text */
+
 import React from 'react'
 import Carousel from "react-multi-carousel";
-import '../Computer/Computer.css'
-import Delete from '../../../components/CRUD/Delete/Delete';
-import Create from '../../../components/CRUD/Create/Create';
+import '../Service/Service'
+import Delete from "../CRUD/Delete/Delete"
+import Create from "../CRUD/Create/Create"
 
-const Computercarousel = () => {
+const ServiceCarousel = () => {
   return (
     <div>
          <Carousel
@@ -60,29 +60,29 @@ const Computercarousel = () => {
     swipeable
     >
         
-        <div className='computer-carousel'  width="100%" height="100%">
+        <div className='service-carousel'  width="100%" height="100%">
         <Create url={'/add-item/Image'}/> <Delete/>
-        <img src="https://source.unsplash.com/random/150x150/?news" className='computer-img' />
+        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
         </div>
-        <div className='computer-carousel'  width="100%" height="100%">
+        <div className='service-carousel'  width="100%" height="100%">
         
-        <img src="https://source.unsplash.com/random/150x150/?news" className='computer-img' />
+        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
         </div>
-        <div className='computer-carousel'  width="100%" height="100%">
+        <div className='service-carousel'  width="100%" height="100%">
         
-        <img src="https://source.unsplash.com/random/150x150/?news" className='computer-img' />
+        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
         </div>
-        <div className='computer-carousel'  width="100%" height="100%">
+        <div className='service-carousel'  width="100%" height="100%">
         
-        <img src="https://source.unsplash.com/random/150x150/?news" className='computer-img' />
+        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
         </div>
-        <div className='computer-carousel' width="100%" height="100%">
+        <div className='service-carousel' width="100%" height="100%">
         
-        <img src="https://source.unsplash.com/random/150x150/?news" className='computer-img' />
+        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
         </div>
-        <div className='computer-carousel'  width="100%" height="100%">
+        <div className='service-carousel'  width="100%" height="100%">
         
-        <img src="https://source.unsplash.com/random/150x150/?news" className='computer-img' />
+        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
         </div>
         
     </Carousel>
@@ -90,4 +90,6 @@ const Computercarousel = () => {
   )
 }
 
-export default Computercarousel;
+export default ServiceCarousel
+
+

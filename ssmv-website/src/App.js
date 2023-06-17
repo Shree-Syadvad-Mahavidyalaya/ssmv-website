@@ -16,11 +16,11 @@ import Principle from './pages/Principle/Principle';
 import Objective from './pages/Objective/Objective';
 import Map from './pages/Map/Map';
 import Donate from './pages/Donate/Donate';
-import Hostel from './pages/Services/Hostel/Hostel';
-import Computer from './pages/Services/Computer/Computer';
-import Library from './pages/Services/Library/Library';
-import Mess from './pages/Services/Mess/Mess';
-import Yoga from './pages/Services/Yoga/Yoga';
+import Hostel from './pages/Services/Hostel';
+import ComputerLab from './pages/Services/ComputerLab';
+import Library from './pages/Services/Library';
+import Mess from './pages/Services/Mess';
+import Yoga from './pages/Services/Yoga';
 import Events from './pages/Events';
 import VGallery from './pages/VGallery';
 import Greviances from './pages/Greviances';
@@ -98,7 +98,7 @@ function App() {
         <Route path='/Courses/BA' element={<BA/>}/>
         <Route path='/Courses/MA' element={<MA/>}/>
         <Route path='/Services/Hostel' element={<Hostel/>}/>
-        <Route path='/Services/Computer' element={<Computer/>}/>
+        <Route path='/Services/Computer' element={<ComputerLab/>}/>
         <Route path='/Services/Library' element={<Library/>}/>
         <Route path='/Services/Mess' element={<Mess/>}/>
         <Route path='/Services/Yoga' element={<Yoga/>}/>
