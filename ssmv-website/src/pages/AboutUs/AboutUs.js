@@ -24,10 +24,9 @@ const AboutUs = () => {
         <div className='div'>
             <h3 className='head'>ABOUT US</h3>
         <div className='box2'>
-        
+        <Update url={'/add-item/ssmv-about'} id={data._id}/>
         {data.ssmv?.map((item)=>
         <>
-        <Update url={'/add-item/ssmv-about'} id={item._id}/>
           <p>{item.description}</p>
           
         </>)
