@@ -1,7 +1,7 @@
 import React from 'react'
 import AllVG from '../components/AllGallery/AllVG'
 import Footer from '../components/Footer/Footer'
-import DoubleNavbar from '../components/header/doubleNavbar'
+import DoubleNavbar from '../components/Header/Header'
 
 export default function Gallery() {
   return (

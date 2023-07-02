@@ -1,13 +1,23 @@
 
+import backendApi from "../../BackendApi"
 import Service from "../../components/Service/Service"
+import Header from "../../components/Header/Header"
+import ServiceCarousel from "../../components/Service/ServiceCarousel"
 
 const Library=()=>{
   return(<>
+     <Header/>
+   <ServiceCarousel
+     title={`library`}
+     api={`${backendApi}/services/libraryImagesSlider/`}
+     fields={['imageurl']}
+     baseUrl='/Services/Library'
+   />
    <Service
-     service={`library`}
-     url={`https://test-moid.vercel.app/ssmv/services/library/`}
-     text='Library'
-     updateUrl='/edit-item/services-info-library'
+     title={`library`}
+     api={`${backendApi}/services/library/`}
+     fields={['description']}
+     baseUrl='/Services/Library'
    />
   </>)
 }

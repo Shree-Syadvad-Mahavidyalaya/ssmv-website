@@ -3,12 +3,28 @@ import React from 'react'
 import Carousel from "react-multi-carousel";
 import '../Service/Service'
 import Delete from "../CRUD/Delete/Delete"
-import Create from "../CRUD/Create/Create"
+import Create from '../CRUD/Create/Create';
+import { useState , useEffect} from 'react';
+import axios from 'axios';
 
-const ServiceCarousel = () => {
+const ServiceCarousel = (props) => {
+    const [dataArray, setDataArray] = useState([]);
+    const {title,api,fields,baseUrl}=props;
+  
+    useEffect(() => {
+      axios.get(api)
+        .then(response => {
+          setDataArray(response.data.data);
+        })
+        .catch(error => {
+          console.error('Error fetching events data:', error);
+        });
+    }, [api]);
+
   return (
     <div>
-         <Carousel
+         <Create {...props}/>
+         {dataArray  && <Carousel
     additionalTransfrom={0}
     arrows
     autoPlaySpeed={3000}
@@ -59,33 +75,14 @@ const ServiceCarousel = () => {
     slidesToSlide={1}
     swipeable
     >
-        
-        <div className='service-carousel'  width="100%" height="100%">
-        <Create url={'/add-item/Image'}/> <Delete/>
-        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
-        </div>
-        <div className='service-carousel'  width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
-        </div>
-        <div className='service-carousel'  width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
-        </div>
-        <div className='service-carousel'  width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
-        </div>
-        <div className='service-carousel' width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
-        </div>
-        <div className='service-carousel'  width="100%" height="100%">
-        
-        <img src="https://source.unsplash.com/random/150x150/?news" className='service-img' />
-        </div>
-        
-    </Carousel>
+        {dataArray?.map((data)=>{
+            return(
+            <div key={data._id} className='service-carousel'  width="100%" height="100%">
+               <Delete {...props} api={api+data._id}/>
+               <img src={data.imageurl} alt="img" className='service-img' />
+            </div>)
+        })}
+    </Carousel>}
     </div>
   )
 }

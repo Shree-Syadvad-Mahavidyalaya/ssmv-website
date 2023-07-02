@@ -9,34 +9,35 @@ import Create from '../../CRUD/Create/Create';
 import Delete from '../../CRUD/Delete/Delete';
 import Update from '../../CRUD/Update/Update';
 
-const LatestSSMV = () => {
-  const [latestData, setLatestData] = useState([]);
+const LatestSSMV = (props) => {
+  const {api,fields,baseUrl}=props;
+  const [dataArray, setDataArray] = useState([]);
 
   useEffect(() => {
-    axios.get('https://test-moid.vercel.app/ssmv/alumni/latest/')
+    axios.get(api)
       .then(response => {
         const { alumni_latest } = response.data;
-        setLatestData(alumni_latest);
+        setDataArray(alumni_latest);
       })
       .catch(error => {
         console.error('Error fetching latest data:', error);
       });
-  }, []);
+  }, [api]);
 
   return (
      <>
-      <h1 id='Latest'>LATEST @SSMV <Create url={'/add-item/alumni-latest'}/><hr></hr></h1>
+      <h1 id='Latest'>LATEST @SSMV <Create {...props}/><hr></hr></h1>
       <div className='Latest-container'>
         <Carousel responsive={responsive}>
-          {latestData.map(latestItem => (
-            <div className="card2" key={latestItem._id}>
+          {dataArray.map(data => (
+            <div className="card2" key={data._id}>
               <div className="body-section">
-                <h3>{latestItem.name}</h3>
-                <p>{latestItem.description}</p>
-                <Delete url={`https://test-moid.vercel.app/ssmv/alumni/latest/${latestItem._id}`} baseurl={'/Alumni'} />
-                <Update url = {'/edit-item/alumni-latest'} id={latestItem._id}/>
+                <h3>{data.name}</h3>
+                <p>{data.description}</p>
+                <Delete {...props} api={api+data._id}/>
+                <Update {...props} api={api+data._id} data={data}/>
               </div>
-              <img className="img-section" src={latestItem.imagesurl} alt="" />
+              <img className="img-section" src={data.imagesurl} alt="" />
             </div>
           ))}
         </Carousel>

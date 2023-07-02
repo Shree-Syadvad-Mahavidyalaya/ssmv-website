@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import DoubleNavbar from '../header/doubleNavbar';
+import DoubleNavbar from '../Header/Header';
 import Delete from '../CRUD/Delete/Delete';
 import Update from '../CRUD/Update/Update';
 import Create from '../CRUD/Create/Create';
@@ -7,20 +7,20 @@ import Footer from '../Footer/Footer';
 import A from '../AnchorTag';
 import "./BA.css";
 
-const Courses = ({ coursesUrl, deleteUrl, addUrl, updateUrl,baseUrl, courseIdKey, subjectKey, addSubComponent,courseType }) => {
-  const [courses, setCourses] = useState([]);
-  const [editingCourseId, setEditingCourseId] = useState(null);
+const Courses = (props) => {
+  const {title, api, fields, baseUrl}=props;
 
+  const [dataArray, setDataArray] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
     try {
-      const response = await fetch(coursesUrl);
+      const response = await fetch(api);
       const data = await response.json();
       if (data.success) {
-        setCourses(data[courseIdKey]);
+         setDataArray(data.data);
       } else {
         console.log('Error:', data.error);
       }
@@ -29,33 +29,28 @@ const Courses = ({ coursesUrl, deleteUrl, addUrl, updateUrl,baseUrl, courseIdKey
     }
   };
 
-
   return (
     <>
       <DoubleNavbar />
+      <Create {...props} />
       <div>
-        <A href={addUrl}></A>
+        <A href={title}></A>
         <div className="Table">
           <table>
-          <Create url={addUrl} courseType={courseType}/>
             <thead>
               <tr>
                 <th scope="col">Course</th>
               </tr>
             </thead>
             <tbody>
-              {courses.map((val, key) => (
-                <tr key={key}>
+              {dataArray.map((data) => (
+                <tr key={data._id}>
                   <td>
-                    {editingCourseId === val._id ? (
-                      { addSubComponent }
-                    ) : (
                       <>
-                        {val[subjectKey]}
-                        <Delete url={deleteUrl + val._id} baseurl={baseUrl} />
-                        <Update url={updateUrl} id={val._id} courseType={courseType}/>
+                        {data.subject}
+                        <Delete {...props} api={api+data._id} />
+                        <Update {...props} api={api+data._id}  data={data}/>
                       </>
-                    )}
                   </td>
                 </tr>
               ))}

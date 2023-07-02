@@ -1,40 +1,24 @@
-import React,{useState,useEffect} from 'react'
-import Aboutcarousel from './Aboutcarousel'
-import '../AboutUs/About.css'
-import Footer from '../../components/Footer/Footer'
-import DoubleNavbar from '../../components/header/doubleNavbar'
-import Update from '../../components/CRUD/Update/Update'
+import backendApi from "../../BackendApi"
+import Service from "../../components/Service/Service"
+import Header from "../../components/Header/Header"
+import ServiceCarousel from "../../components/Service/ServiceCarousel"
 
-const AboutUs = () => {
-  const [data,setData]=useState([])
-  useEffect(()=>{
-    fetch("https://test-moid.vercel.app/ssmv/aboutus/SSMV/").then((result)=>{
-      result.json().then((resp)=>{
-        // console.warn("result",resp)
-        setData(resp)
-      })
-    })
-  },[])
-  return (
-    <div>
-      <DoubleNavbar/>
-      <div className='carousel'>
-        <Aboutcarousel/>
-        </div>
-        <div className='div'>
-            <h3 className='head'>ABOUT US <Update url={'/add-item/ssmv-about'} AboutId={data._id}/></h3>
-        <div className='box2'>
-        {data.ssmv?.map((item)=>
-        <>
-          <p>{item.description}</p>
-          
-        </>)
- }
-        </div>
-        </div>
-        <Footer/>
-    </div>
-  )
+const ComputerLab=()=>{
+  return(<>
+   <Header/>
+   <ServiceCarousel
+     title={`About SSMV`}
+     api={`${backendApi}/aboutus/SSMV/`}
+     fields={['imageurl']}
+     baseUrl='/About Us/SSMV'
+   />
+   <Service
+     title={`About SSMV`}
+     api={`${backendApi}/aboutus/SSMV/`}
+     fields={['description']}
+     baseUrl='/About Us/SSMV'
+   />
+  </>)
 }
 
-export default AboutUs;
+export default ComputerLab

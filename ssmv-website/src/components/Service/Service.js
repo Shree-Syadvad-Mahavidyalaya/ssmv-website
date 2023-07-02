@@ -1,42 +1,39 @@
 import React,{useState,useEffect} from 'react'
 import Footer from '../../components/Footer/Footer'
-import ServiceCarousel from './ServiceCarousel'
-import DoubleNavbar from '../header/doubleNavbar'
 import  Update from '../CRUD/Update/Update'
 import "./Service.css"
 
 
-const Service = ({service,url,text,updateUrl}) => {
-  const [serviceData, setServiceData] = useState(null);
+const Service = (props) => {
+  const {title,api,fields,baseUrl}=props;
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(url)
+    fetch(api)
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        if (data.success && data[`service_${service}`].length > 0) {
-          setServiceData(data[`service_${service}`][0]);
+        console.log(data.data[0])
+        if (data.success && data.data.length > 0) {
+          setData(data.data[0]);
+          console.log(data.data[0])
           
         }
       })
       .catch(error => {
         console.error('Error fetching service data:', error);
       });
-  },[url,service]);
+  },[api,title]);
 
   return (
     <div>
-      <DoubleNavbar />
-      <div className='service-carousel'>
-        <ServiceCarousel />
-      </div>
-      {serviceData && (
+      {data && (
         <div className='service-div'>
           <h3 className='service-head'>
-            <b>{text}<Update url ={updateUrl} id={serviceData._id}/></b>
+            <b>{title} <Update {...props} api={api+data._id} data={data}/></b>
           </h3>
           <div className='service-box'>
-            <p>{serviceData.description}</p>
+            <p>{data.description}</p>
           </div>
         </div>
       )}

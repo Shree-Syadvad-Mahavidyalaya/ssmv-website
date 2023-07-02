@@ -1,6 +1,6 @@
 import React from 'react'
-import './AboutUs/About.css'
-import DoubleNavbar from '../components/header/doubleNavbar'
+// import './AboutUs/About.css'
+import DoubleNavbar from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 
 export default function IndivCoursesPage() {

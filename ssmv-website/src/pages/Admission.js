@@ -1,13 +1,13 @@
 import React from 'react'
-import AdmnForm from '../components/Form/AdmnForm'
-import DoubleNavbar from '../components/header/doubleNavbar';
+import AdmnForm from '../components/Admission/AdmnForm'
+import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer'
 
 
 const Admission = () => {
   return (
     <>
-        <DoubleNavbar />
+        <Header/>
         <AdmnForm/>
         <Footer/>
     </>

@@ -1,13 +1,23 @@
 
+import backendApi from "../../BackendApi"
 import Service from "../../components/Service/Service"
+import Header from "../../components/Header/Header"
+import ServiceCarousel from "../../components/Service/ServiceCarousel"
 
 const ComputerLab=()=>{
   return(<>
+   <Header/>
+   <ServiceCarousel
+     title={`computerLab`}
+     api={`${backendApi}/services/computerLabImagesSlider/`}
+     fields={['imageurl']}
+     baseUrl='/Services/Computer'
+   />
    <Service
-     service={`computerlab`}
-     url={`https://test-moid.vercel.app/ssmv/services/computerLab/`}
-     text='ComputerLab'
-     updateUrl='/edit-item/services-info-computer'
+     title={`computerlab`}
+     api={`${backendApi}/services/computerLab/`}
+     fields={['description']}
+     baseUrl='/Services/Computer'
    />
   </>)
 }

@@ -4,41 +4,43 @@ import Delete from '../CRUD/Delete/Delete';
 import Create from '../CRUD/Create/Create';
 import axios from 'axios';
 import A from '../AnchorTag';
+import Update from '../CRUD/Update/Update';
 
-const VideoG = () => {
+const VideoG = (props) => {
     
-  const [Data, setData] = useState([]);
-
+  const [dataArrayta, setDataArray] = useState([]);
+  const {api, fields, baseUrl}=props;
   useEffect(() => {
-    axios.get('https://test-moid.vercel.app/ssmv/alumni/videoGallery/')
+    axios.get(api)
       .then(response => {
         const { alumni_videoGallery } = response.data;
-        setData(alumni_videoGallery);
+        setDataArray(alumni_videoGallery);
       })
       .catch(error => {
         console.error('Error fetching events data:', error);
       });
-  }, []);
+  }, [api]);
 
   return (
     <div id='container'>
       <div id='heading'>
-        <h1>VIDEO GALLERY <Create url={'/add-item/alumni-video-gallery'}/> <hr id='line2'></hr></h1>
+        <h1>VIDEO GALLERY <Create {...props}/> <hr id='line2'></hr></h1>
         <button className='view-btn'><A href='/ViewAll/VGallery'>View</A></button>
       </div>
       
       <div className='gallery-boxes'>
-      {Data.map(item => (
-          <div className='box1' key={item._id}>
+      {dataArrayta.map(data => (
+          <div className='box1' key={data._id}>
             <iframe
             width="100%"
             height="100%"
-            src={item.videolink}
+            src={data.videolink}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-          <Delete url={`https://test-moid.vercel.app/ssmv/alumni/videoGallery/${item._id}`} baseurl={'/Alumni'} />
+          <Update {...props} api={api+data._id} data={data} />
+          <Delete {...props} api={api+data._id} />
           </div>                      
       ))}
       </div>

@@ -3,13 +3,13 @@ import './Delete.css'
 import MyContext from '../../events/MyContext'
 import { useNavigate } from 'react-router-dom';
 
-export default function Delete({url,baseurl}) {
+export default function Delete({title,api,fields,baseUrl,addSubComponent}) {
   const isAdmin = useContext(MyContext)[0];
   const navigate=useNavigate();
   const handleDelete = () => {
-  console.log(url);
+  console.log(api);
     
-      fetch(url, {
+      fetch(api, {
         method: 'DELETE',
       })
         .then((response) => {
@@ -25,11 +25,10 @@ export default function Delete({url,baseurl}) {
           console.error('An error occurred while deleting the item:', error);
         })
         .finally(()=>{
-          navigate(baseurl);
+          navigate(baseUrl);
         })
     navigate("/loading");
   };
-  console.log(isAdmin)
   return isAdmin && <button className='delete-btn' onClick={handleDelete}>Delete</button>;
 }
 

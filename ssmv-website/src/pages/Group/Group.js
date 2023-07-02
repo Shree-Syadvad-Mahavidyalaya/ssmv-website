@@ -2,7 +2,7 @@
 import React,{useState,useEffect} from 'react'
 import '../Group/Group.css'
 import Footer from '../../components/Footer/Footer'
-import DoubleNavbar from '../../components/header/doubleNavbar'
+import DoubleNavbar from '../../components/Header/Header'
 import Delete from '../../components/CRUD/Delete/Delete'
 import Update from '../../components/CRUD/Update/Update'
 import Create from '../../components/CRUD/Create/Create'

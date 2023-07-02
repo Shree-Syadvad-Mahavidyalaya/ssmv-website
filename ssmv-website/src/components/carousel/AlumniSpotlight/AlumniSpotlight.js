@@ -5,38 +5,38 @@ import Create from '../../CRUD/Create/Create';
 import axios from 'axios';
 import Delete from '../../CRUD/Delete/Delete';
 import Update from '../../CRUD/Update/Update';
-
-const AlumniSpotlight = () => {
+const AlumniSpotlight = (props) => {
   
-  const [SpotlightData, setSpotlightData] = useState([]);
+  const [dataArray, setDataArray] = useState([]);
+  const {api,fields,baseUrl}=props;
 
   useEffect(() => {
-    axios.get('https://test-moid.vercel.app/ssmv/alumni/spotlight/')
+    axios.get(api)
       .then(response => {
         const { alumni_spotlight } = response.data;
-        setSpotlightData(alumni_spotlight);
+        setDataArray(alumni_spotlight);
       })
       .catch(error => {
         console.error('Error fetching latest data:', error);
       });
-  }, []);
+  }, [api]);
 
   return (
     <>
-      <h1 id='alum'>ALUMNI SPOTLIGHT <Create url={'/add-item/alumni-details'} />
+      <h1 id='alum'>ALUMNI SPOTLIGHT <Create {...props} />
       <hr></hr></h1>
       <Carousel>
-      {SpotlightData.map(SpotlightItem => (
-        <div className='card1' key={SpotlightItem._id}>
+      {dataArray.map(data => (
+        <div className='card1' key={data._id}>
         <div className='alumni-card'>
-        <img className='alumni-img' src={SpotlightItem.imagesurl} alt=''/>
-          <p>{SpotlightItem.name}</p>
+        <img className='alumni-img' src={data.imagesurl} alt=''/>
+          <p>{data.name}</p>
           <hr></hr>
-          <p>{SpotlightItem.profile}</p>
+          <p>{data.profile}</p>
         </div>
-        <div className='alumni-about'><p>{SpotlightItem.description}</p>
-        <Delete url={`https://test-moid.vercel.app/ssmv/alumni/spotlight/${SpotlightItem._id}`} baseurl={'/Alumni'} />
-        <Update url={'/edit-item/spotlight'} id={SpotlightItem._id}/>
+        <div className='alumni-about'><p>{data.description}</p>
+        <Delete {...props} api={api+data._id}/>
+        <Update {...props} api={api+data._id} data={data}/>
         </div>
       </div>
       ))}

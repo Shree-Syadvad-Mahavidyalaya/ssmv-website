@@ -1,32 +1,38 @@
 import React from 'react'
-import DoubleNavbar from '../components/header/doubleNavbar';
-import ImageSlider from "../components/carousel/ImageSlider/ImageSlider";
-import AboutUs from '../components/about us/about us';
-import Courses from '../components/Courses/Courses';
+import OnlineCourses from '../components/Home/OnlineCourses/OnlineCourses';
 import Footer from '../components/Footer/Footer';
-import Newsnav from '../components/News/Newsnav';
+import Header from '../components/Header/Header';
+import backendApi from '../BackendApi';
+import AboutUs from '../components/Home/about us/About us';
+import Newsnav from '../components/Home/Stories/Newsnav';
+import ServiceCarousel from '../components/Service/ServiceCarousel';
 
 function Home () {
-    const slides = [
-    { url: "https://drive.google.com/uc?export=view&id=1b_DhyJJ-5ejhfBohiDMWkSiTdtGM6ws-", title: "img1" },
-    { url: "https://i.ibb.co/GVmQMJV/2.jpg", title: "img2" },
-    { url: "https://i.ibb.co/TYsbCBt/3.jpg", title: "img3" },
-  ];
-  const containerStyles = {
-    width: "100%",
-    height: "610px",
-    margin: "0",
-  };
-  
   return (
     <>
-      <DoubleNavbar />
-      <div style={containerStyles}><ImageSlider slides={slides} /></div>
-      {/* <div><Aboutcarousel/></div> */}
-      <div><AboutUs/></div>
-      <div><Newsnav/></div>
-      <div><Courses/></div>
-      <div><Footer/></div>
+      <Header />
+
+      <ServiceCarousel
+        api={backendApi+'/homeImagesSlider/'}
+        fields={['imageurl']}
+        baseUrl={'/Home'}
+      />
+      <AboutUs
+       api='https://test-moid.vercel.app/ssmv/aboutus/SSMV/'
+       fields={['description', 'imageurl']}
+       baseUrl={'/Home'}
+      />
+      <Newsnav
+       api='https://test-moid.vercel.app/ssmv/'
+       fields={['description', 'imageurl', 'date']}
+       baseUrl={'/Home'}
+      />
+      <OnlineCourses
+        api={backendApi+'/home/onlineCourses/'}
+        fields={['description','imageurl','youtubeLink','title']}
+        baseUrl={'/Home'}
+      />
+      <Footer/>
     </>
   )
 };
